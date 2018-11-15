@@ -12,11 +12,11 @@
 <script type="text/javascript" src="lib/html5shiv.js"></script>
 <script type="text/javascript" src="lib/respond.min.js"></script>
 <![endif]-->
-<link rel="stylesheet" type="text/css" href="/Fun/Public/static/h-ui/css/H-ui.min.css" />
-<link rel="stylesheet" type="text/css" href="/Fun/Public/static/h-ui.admin/css/H-ui.admin.css" />
-<link rel="stylesheet" type="text/css" href="/Fun/Public/lib/Hui-iconfont/1.0.8/iconfont.css" />
-<link rel="stylesheet" type="text/css" href="/Fun/Public/static/h-ui.admin/skin/yellow/skin.css" id="skin" />
-<link rel="stylesheet" type="text/css" href="/Fun/Public/static/h-ui.admin/css/style.css" />
+<link rel="stylesheet" type="text/css" href="/Fun1/Public/static/h-ui/css/H-ui.min.css" />
+<link rel="stylesheet" type="text/css" href="/Fun1/Public/static/h-ui.admin/css/H-ui.admin.css" />
+<link rel="stylesheet" type="text/css" href="/Fun1/Public/lib/Hui-iconfont/1.0.8/iconfont.css" />
+<link rel="stylesheet" type="text/css" href="/Fun1/Public/static/h-ui.admin/skin/default/skin.css" id="skin" />
+<link rel="stylesheet" type="text/css" href="/Fun1/Public/static/h-ui.admin/css/style.css" />
 <!--[if IE 6]>
 <script type="text/javascript" src="lib/DD_belatedPNG_0.0.8a-min.js" ></script>
 <script>DD_belatedPNG.fix('*');</script>
@@ -50,8 +50,8 @@
 					<a href="#" class="dropDown_A"><?php echo (session('admin_name')); ?> <i class="Hui-iconfont">&#xe6d5;</i></a>
 					<ul class="dropDown-menu menu radius box-shadow">
 						<li><a href="javascript:;" onClick="myselfinfo()">个人信息</a></li>
-						<li><a href="/Fun/Admin/Login/logout">切换账户</a></li>
-						<li><a href="/Fun/Admin/Login/logout">退出</a></li>
+						<li><a href="/Fun1/Admin/Login/logout">切换账户</a></li>
+						<li><a href="/Fun1/Admin/Login/logout">退出</a></li>
 					</ul>
 				</li>
 				<li id="Hui-msg"> <a href="#" title="消息"><span class="badge badge-danger">1</span><i class="Hui-iconfont" style="font-size:18px">&#xe68a;</i></a> </li>
@@ -67,7 +67,7 @@
 			<dt><i class="Hui-iconfont">&#xe616;</i> 文章管理<i class="Hui-iconfont menu_dropdown-arrow">&#xe6d5;</i></dt>
 			<dd>
 				<ul>
-					<li><a data-href="/Fun/Admin/Article/index" data-title="文章列表" href="javascript:void(0)">文章列表</a></li>
+					<li><a data-href="/Fun1/Admin/Article/index" data-title="文章列表" href="javascript:void(0)">文章列表</a></li>
 				</ul>
 			</dd>
 		</dl>
@@ -75,7 +75,7 @@
 			<dt><i class="Hui-iconfont">&#xe616;</i> 轮播图管理<i class="Hui-iconfont menu_dropdown-arrow">&#xe6d5;</i></dt>
 			<dd>
 				<ul>
-					<li><a data-href="/Fun/Admin/Banner/index" data-title="轮播图列表" href="javascript:void(0)">轮播图列表</a></li>
+					<li><a data-href="/Fun1/Admin/Banner/index" data-title="轮播图列表" href="javascript:void(0)">轮播图列表</a></li>
 				</ul>
 			</dd>
 		</dl>
@@ -83,8 +83,8 @@
 			<dt><i class="Hui-iconfont">&#xe616;</i> 问卷管理<i class="Hui-iconfont menu_dropdown-arrow">&#xe6d5;</i></dt>
 			<dd>
 				<ul>
-					<li><a data-href="/Fun/Admin/Question/index" data-title="问卷列表" href="javascript:void(0)">问卷列表</a></li>
-					<li><a data-href="/Fun/Admin/Question/test" data-title="测试列表" href="javascript:void(0)">测试列表</a></li>
+					<li><a data-href="/Fun1/Admin/Question/index" data-title="问卷列表" href="javascript:void(0)">问卷列表</a></li>
+					<li><a data-href="/Fun1/Admin/Question/test" data-title="测试列表" href="javascript:void(0)">测试列表</a></li>
 				</ul>
 			</dd>
 		</dl>
@@ -92,7 +92,7 @@
 			<dt><i class="Hui-iconfont">&#xe616;</i> 用户管理<i class="Hui-iconfont menu_dropdown-arrow">&#xe6d5;</i></dt>
 			<dd>
 				<ul>
-					<li><a data-href="/Fun/Admin/Users/index" data-title="用户列表" href="javascript:void(0)">用户列表</a></li>
+					<li><a data-href="/Fun1/Admin/Users/index" data-title="用户列表" href="javascript:void(0)">用户列表</a></li>
 				</ul>
 			</dd>
 		</dl>
@@ -100,7 +100,7 @@
 			<dt><i class="Hui-iconfont">&#xe616;</i> 管理员管理<i class="Hui-iconfont menu_dropdown-arrow">&#xe6d5;</i></dt>
 			<dd>
 				<ul>
-					<li><a data-href="/Fun/Admin/Management/index" data-title="管理员列表" href="javascript:void(0)">管理员列表</a></li>
+					<li><a data-href="/Fun1/Admin/Management/index" data-title="管理员列表" href="javascript:void(0)">管理员列表</a></li>
 				</ul>
 			</dd>
 		</dl>
@@ -117,7 +117,7 @@
 			<dt><i class="Hui-iconfont">&#xe613;</i> 图片管理<i class="Hui-iconfont menu_dropdown-arrow">&#xe6d5;</i></dt>
 			<dd>
 				<ul>
-					<li><a data-href="/Fun/Admin/Goods/index" data-title="图片管理" href="javascript:void(0)">图片管理</a></li>
+					<li><a data-href="/Fun1/Admin/Goods/index" data-title="图片管理" href="javascript:void(0)">图片管理</a></li>
 			</ul>
 		</dd>
 	</dl>
@@ -198,7 +198,7 @@
 		<div class="Hui-tabNav-wp">
 			<ul id="min_title_list" class="acrossTab cl">
 				<li class="active">
-					<span title="我的桌面" data-href="/Fun/Admin/Welcome/index">我的桌面</span>
+					<span title="我的桌面" data-href="/Fun1/Admin/Welcome/index">我的桌面</span>
 					<em></em></li>
 		</ul>
 	</div>
@@ -207,7 +207,7 @@
 	<div id="iframe_box" class="Hui-article">
 		<div class="show_iframe">
 			<div style="display:none" class="loading"></div>
-			<iframe scrolling="yes" frameborder="0" src="/Fun/Admin/Welcome/index"></iframe>
+			<iframe scrolling="yes" frameborder="0" src="/Fun1/Admin/Welcome/index"></iframe>
 	</div>
 </div>
 </section>
@@ -219,13 +219,13 @@
 </ul>
 </div>
 <!--_footer 作为公共模版分离出去-->
-<script type="text/javascript" src="/Fun/Public/lib/jquery/1.9.1/jquery.min.js"></script> 
-<script type="text/javascript" src="/Fun/Public/lib/layer/2.4/layer.js"></script>
-<script type="text/javascript" src="/Fun/Public/static/h-ui/js/H-ui.min.js"></script>
-<script type="text/javascript" src="/Fun/Public/static/h-ui.admin/js/H-ui.admin.js"></script> <!--/_footer 作为公共模版分离出去-->
+<script type="text/javascript" src="/Fun1/Public/lib/jquery/1.9.1/jquery.min.js"></script> 
+<script type="text/javascript" src="/Fun1/Public/lib/layer/2.4/layer.js"></script>
+<script type="text/javascript" src="/Fun1/Public/static/h-ui/js/H-ui.min.js"></script>
+<script type="text/javascript" src="/Fun1/Public/static/h-ui.admin/js/H-ui.admin.js"></script> <!--/_footer 作为公共模版分离出去-->
 
 <!--请在下方写此页面业务相关的脚本-->
-<script type="text/javascript" src="/Fun/Public/lib/jquery.contextmenu/jquery.contextmenu.r2.js"></script>
+<script type="text/javascript" src="/Fun1/Public/lib/jquery.contextmenu/jquery.contextmenu.r2.js"></script>
 <script type="text/javascript">
 $(function(){
 	/*$("#min_title_list li").contextMenu('Huiadminmenu', {

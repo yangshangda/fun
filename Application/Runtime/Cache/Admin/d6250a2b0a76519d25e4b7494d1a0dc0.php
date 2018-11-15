@@ -10,11 +10,11 @@
 <script type="text/javascript" src="lib/html5shiv.js"></script>
 <script type="text/javascript" src="lib/respond.min.js"></script>
 <![endif]-->
-<link rel="stylesheet" type="text/css" href="/Fun/Public/static/h-ui/css/H-ui.min.css" />
-<link rel="stylesheet" type="text/css" href="/Fun/Public/static/h-ui.admin/css/H-ui.admin.css" />
-<link rel="stylesheet" type="text/css" href="/Fun/Public/lib/Hui-iconfont/1.0.8/iconfont.css" />
-<link rel="stylesheet" type="text/css" href="/Fun/Public/static/h-ui.admin/skin/yellow/skin.css" id="skin" />
-<link rel="stylesheet" type="text/css" href="/Fun/Public/static/h-ui.admin/css/style.css" />
+<link rel="stylesheet" type="text/css" href="/Fun1/Public/static/h-ui/css/H-ui.min.css" />
+<link rel="stylesheet" type="text/css" href="/Fun1/Public/static/h-ui.admin/css/H-ui.admin.css" />
+<link rel="stylesheet" type="text/css" href="/Fun1/Public/lib/Hui-iconfont/1.0.8/iconfont.css" />
+<link rel="stylesheet" type="text/css" href="/Fun1/Public/static/h-ui.admin/skin/yellow/skin.css" id="skin" />
+<link rel="stylesheet" type="text/css" href="/Fun1/Public/static/h-ui.admin/css/style.css" />
 <!--[if IE 6]>
 <script type="text/javascript" src="lib/DD_belatedPNG_0.0.8a-min.js" ></script>
 <script>DD_belatedPNG.fix('*');</script>
@@ -49,8 +49,8 @@
 			<p>More Templates <a href="http://www.cssmoban.com/" target="_blank" title="模板之家">模板之家</a> - Collect from <a href="http://www.cssmoban.com/" title="网页模板" target="_blank">网页模板</a></p>
 	</div>
 </footer>
-<script type="text/javascript" src="/Fun/Public/lib/jquery/1.9.1/jquery.min.js"></script> 
-<script type="text/javascript" src="/Fun/Public/static/h-ui/js/H-ui.min.js"></script> 
+<script type="text/javascript" src="/Fun1/Public/lib/jquery/1.9.1/jquery.min.js"></script> 
+<script type="text/javascript" src="/Fun1/Public/static/h-ui/js/H-ui.min.js"></script> 
 
 </body>
 </html>

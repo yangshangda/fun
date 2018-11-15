@@ -10,11 +10,11 @@
 <script type="text/javascript" src="lib/html5shiv.js"></script>
 <script type="text/javascript" src="lib/respond.min.js"></script>
 <![endif]-->
-<link rel="stylesheet" type="text/css" href="/Fun/Public/static/h-ui/css/H-ui.min.css" />
-<link rel="stylesheet" type="text/css" href="/Fun/Public/static/h-ui.admin/css/H-ui.admin.css" />
-<link rel="stylesheet" type="text/css" href="/Fun/Public/lib/Hui-iconfont/1.0.8/iconfont.css" />
-<link rel="stylesheet" type="text/css" href="/Fun/Public/static/h-ui.admin/skin/yellow/skin.css" id="skin" />
-<link rel="stylesheet" type="text/css" href="/Fun/Public/static/h-ui.admin/css/style.css" />
+<link rel="stylesheet" type="text/css" href="/Fun1/Public/static/h-ui/css/H-ui.min.css" />
+<link rel="stylesheet" type="text/css" href="/Fun1/Public/static/h-ui.admin/css/H-ui.admin.css" />
+<link rel="stylesheet" type="text/css" href="/Fun1/Public/lib/Hui-iconfont/1.0.8/iconfont.css" />
+<link rel="stylesheet" type="text/css" href="/Fun1/Public/static/h-ui.admin/skin/yellow/skin.css" id="skin" />
+<link rel="stylesheet" type="text/css" href="/Fun1/Public/static/h-ui.admin/css/style.css" />
 <!--[if IE 6]>
 <script type="text/javascript" src="lib/DD_belatedPNG_0.0.8a-min.js" ></script>
 <script>DD_belatedPNG.fix('*');</script>
@@ -75,8 +75,8 @@
 						<td><?php echo ($v["admindescription"]); ?></td>
 						<td class="f-14 td-manage">
 							<a class="btn btn-success radius edit" data-adminid="<?php echo ($v["adminid"]); ?>" data-adminname="<?php echo ($v["adminname"]); ?>" data-adminsex="<?php echo ($v["adminsex"]); ?>" data-adminphone="<?php echo ($v["adminphone"]); ?>" data-adminaddress="<?php echo ($v["adminaddress"]); ?>" data-admindepartment="<?php echo ($v["admindepartment"]); ?>" data-adminqq="<?php echo ($v["adminqq"]); ?>" data-adminwechat="<?php echo ($v["adminwechat"]); ?>" data-adminemail="<?php echo ($v["adminemail"]); ?>" data-adminstate="<?php echo ($v["adminstate"]); ?>" data-admindescription="<?php echo ($v["admindescription"]); ?>" id="edit" href="javascript:void(0);" data-toggle="modal" data-target="#modify">修改</a>
-							<a data-href="/Fun/Admin/Management/editManagement" data-title="系统设置" href="javascript:void(0)">系统设置</a>
-							<a class="btn btn-blue radius" onclick="admin_add('添加文章','add-article.html')" href="javascript:;">重置密码</a>
+							<a data-href="/Fun1/Admin/Management/editManagement" data-title="系统设置" href="javascript:void(0)">系统设置</a>
+							<a class="btn btn-secondary radius" onclick="" href="javascript:;">重置密码</a>
 							<a class="btn btn-warning radius" onclick="admin_add('添加文章','add-article.html')" href="javascript:;">重置密码</a>
 						</td>
 					</tr><?php endforeach; endif; else: echo "" ;endif; ?>
@@ -110,6 +110,7 @@
             <div class="modal-body">
                 <form action="<?php echo U('Management/editManagement');?>" method="GET" class="form form-horizontal" id="form-admin-add">
 	<div class="row cl">
+		<input type="text" hidden="true" id="adminId" name="adminId">
 		<label class="form-label col-xs-4 col-sm-3"><span class="c-red">*</span>管理员登录名：</label>
 		<div class="formControls col-xs-8 col-sm-9">
 			<input type="text" class="input-text" placeholder="" id="adminName" name="adminName">
@@ -192,23 +193,23 @@
 	</form>
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary submitModMomentData">Save</button>
+           		<button type="button" class="btn btn-primary save">保存</button>
+                <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>               
             </div>
         </div>
     </div>
 </div>
 <!--_footer 作为公共模版分离出去-->
- <script type="text/javascript" src="/Fun/Public/lib/jquery/1.9.1/jquery.min.js"></script> 
-<script type="text/javascript" src="/Fun/Public/lib/layer/2.4/layer.js"></script>
-<!-- <script type="text/javascript" src="/Fun/Public/li<!-- b/layer/2.4/layer.js"></script> -->
-<script type="text/javascript" src="/Fun/Public/static/h-ui/js/H-ui.min.js"></script> 
-<script type="text/javascript" src="/Fun/Public/static/h-ui.admin/js/H-ui.admin.js"></script> <!--/_footer 作为公共模版分离出去
+ <script type="text/javascript" src="/Fun1/Public/lib/jquery/1.9.1/jquery.min.js"></script> 
+<script type="text/javascript" src="/Fun1/Public/lib/layer/2.4/layer.js"></script>
+<!-- <script type="text/javascript" src="/Fun1/Public/li<!-- b/layer/2.4/layer.js"></script> -->
+<script type="text/javascript" src="/Fun1/Public/static/h-ui/js/H-ui.min.js"></script> 
+<script type="text/javascript" src="/Fun1/Public/static/h-ui.admin/js/H-ui.admin.js"></script> <!--/_footer 作为公共模版分离出去
 
 <!--请在下方写此页面业务相关的脚本-->
-<script type="text/javascript" src="/Fun/Public/lib/My97DatePicker/4.8/WdatePicker.js"></script> 
-<!-- <script type="text/javascript" src="/Fun/Public/lib/datatables/1.10.0/jquery.dataTables.min.js"></script>  -->
-<script type="text/javascript" src="/Fun/Public/lib/laypage/1.2/laypage.js"></script>
+<script type="text/javascript" src="/Fun1/Public/lib/My97DatePicker/4.8/WdatePicker.js"></script> 
+<!-- <script type="text/javascript" src="/Fun1/Public/lib/datatables/1.10.0/jquery.dataTables.min.js"></script>  -->
+<script type="text/javascript" src="/Fun1/Public/lib/laypage/1.2/laypage.js"></script>
 <script type="text/javascript">
 
 // $('.table-sort').dataTable({
@@ -229,42 +230,8 @@ function admin_add(title,url){
 	});
 	layer.full(index);
 }
-function admin_edit(title,url){
-	var index = layer.open({
-		type: 2,
-		title: title,
-		content: url
-	});
-	layer.full(index);
-}
+
 /*管理员-修改*/
-// $('.edit').click(function(){
-// 	var id = $(this).data('id');
-// 	admin_edit('修改管理员',"<?php echo U('Management/editManagement',array('id'=>"+id+"));?>");
-// });
-
-// $('.edit').click(function(){
-// 	var id = $(this).data('id');
-// 	alert(id);
-// 	$.ajax({
-// 		url: "<?php echo U('Management/editManagement');?>",
-// 		type: 'POST',
-// 		//dataType: 'json',
-// 		data : {
-// 			id:id
-// 		},
-// 		success: function(data){
-// 			// alert(data);
-// 			// console.log(data);
-
-// 			admin_edit('修改管理员',"<?php echo U('Management/editManagement','id="+data+"');?>");
-// 		},
-// 		error:function(data) {
-// 			console.log(data);
-// 		},
-// 	});	
-// });
-
 $('.edit').click(function(){
 	var adminid = $(this).data('adminid');
 	var adminname = $(this).data('adminname');
@@ -278,27 +245,41 @@ $('.edit').click(function(){
 	var adminstate = $(this).data('adminstate');
 	var admindescription = $(this).data('admindescription');
 
-	 $('#adminName').val(adminname);
-	 var radios = $(".sex");
-	 if(adminsex == '1'){
-	 	$("input[name='sex']").get(0).checked=true; 
-	 	// radios.eq(1).attr("checked", true);
-   //      radios.eq(0).attr("checked", false);
-	 }else{
-	 	$("input[name='sex']").get(1).checked=true; 
-	 	// radios.eq(1).attr("checked", false);
-   //      radios.eq(0).attr("checked", true);
-	 }
-	 
-	 $('#phone').val(adminphone);
-	 $('#address').val(adminaddress);
-	 $('#department').val(admindepartment);
-	 $('#qq').val(adminqq);
-	 $('#weChat').val(adminwechat);
-	 $('#email').val(adminemail);
-	 $('#state').val(adminstate);
-	 $('#description').val(admindescription);
-	
+	$('#adminId').val(adminid);
+	$('#adminName').val(adminname);
+	var radios = $(".sex");
+	if(adminsex == '1'){
+		$("input[name='sex']").get(0).checked=true;
+	}else{
+		$("input[name='sex']").get(1).checked=true;
+	}
+
+	$('#phone').val(adminphone);
+	$('#address').val(adminaddress);
+	$('#department').val(admindepartment);
+	$('#qq').val(adminqq);
+	$('#weChat').val(adminwechat);
+	$('#email').val(adminemail);
+	$('#state').val(adminstate);
+	$('#description').val(admindescription);
+});
+
+/*管理员-保存修改*/
+$('.save').click(function(){
+	var adminid = $('#adminId').val();
+	var adminname = $('#adminName').val();
+	//var adminsex = $('#adminId').val();
+	var adminphone = $('#phone').val();
+	var adminaddress = $('#address').val();
+	var admindepartment = $('#department').val();
+	var adminqq = $('#qq').val();
+	var adminwechat = $('#weChat').val();
+	var adminemail = $('#email').val();
+	var adminstate = $('#state').val();
+	var admindescription = $('#description').val();
+	alert(adminid);
+
+
 });
 
 

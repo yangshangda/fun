@@ -15,6 +15,7 @@ class ManagementController extends CommonController {
 
 	}
 
+//添加管理员
 	public function addManagement(){
 		//$data = I('post');
 		$data['adminName'] = I('adminName');
@@ -26,25 +27,37 @@ class ManagementController extends CommonController {
 		$data['adminWeChat'] = I('weChat');
 		$data['adminEmail'] = I('email');
 		$data['adminState'] = I('state');
-		$data['adminDescription'] = I('department');
+		$data['adminDescription'] = I('textarea');
 		$admin_table = M('fun_admin');
 		$admin_add = $admin_table->where()->add($data);die;
 		//var_dump($data);
 
 	}
 
+//修改管理员信息
 	public function editManagement(){
-		$data= $_POST['id'];
-		//var_dump($data);die;
-
-		$where['adminId'] = I('id');
+		$where['adminId'] = I('adminId');
+		$data['adminName'] = I('adminName');
+		$data['adminSex'] = I('sex');
+		$data['adminPhone'] = I('phone');
+		$data['adminAddress'] = I('address');
+		$data['adminDepartment'] = I('department');
+		$data['adminQQ'] = I('qq');
+		$data['adminWeChat'] = I('weChat');
+		$data['adminEmail'] = I('email');
+		$data['adminState'] = I('state');
+		$data['adminDescription'] = I('textarea');
 		$admin_table = M('fun_admin');
-		$admin_info = $admin_table->where($where)->select();
-		//var_dump($admin_info);die;
-		 // $this->ajaxReturn($data);
-		$this -> assign('info',$data);
-		$this->display('edit-management');
+		$admin_add = $admin_table->where($where)->limit(1)->save($data);die;
 
+	}
+
+//重置员工密码
+	public function resetPassword(){
+		$where['adminId'] = I('adminId');
+		$data['adminPassword'] = md5('123456');
+		$admin_table = M('fun_admin');
+		$admin_add = $admin_table->where($where)->limit(1)->save($data);die;
 	}
 
 }

@@ -75,9 +75,8 @@
 						<td><?php echo ($v["admindescription"]); ?></td>
 						<td class="f-14 td-manage">
 							<a class="btn btn-success radius edit" data-adminid="<?php echo ($v["adminid"]); ?>" data-adminname="<?php echo ($v["adminname"]); ?>" data-adminsex="<?php echo ($v["adminsex"]); ?>" data-adminphone="<?php echo ($v["adminphone"]); ?>" data-adminaddress="<?php echo ($v["adminaddress"]); ?>" data-admindepartment="<?php echo ($v["admindepartment"]); ?>" data-adminqq="<?php echo ($v["adminqq"]); ?>" data-adminwechat="<?php echo ($v["adminwechat"]); ?>" data-adminemail="<?php echo ($v["adminemail"]); ?>" data-adminstate="<?php echo ($v["adminstate"]); ?>" data-admindescription="<?php echo ($v["admindescription"]); ?>" id="edit" href="javascript:void(0);" data-toggle="modal" data-target="#modify">修改</a>
-							<a data-href="/Fun1/Admin/Management/editManagement" data-title="系统设置" href="javascript:void(0)">系统设置</a>
-							<a class="btn btn-secondary radius" onclick="" href="javascript:;">重置密码</a>
-							<a class="btn btn-warning radius" onclick="admin_add('添加文章','add-article.html')" href="javascript:;">重置密码</a>
+							<a class="btn btn-warning radius reset" data-adminid="<?php echo ($v["adminid"]); ?>" onclick="" href="javascript:;">重置密码</a>
+							<!-- <a class="btn btn-secondary radius"  href="javascript:;">重置密码</a> -->
 						</td>
 					</tr><?php endforeach; endif; else: echo "" ;endif; ?>
 
@@ -108,7 +107,7 @@
                 <h5 class="modal-title" id="modLabel">视频桌面 > 更改视频信息</h5>
             </div>
             <div class="modal-body">
-                <form action="<?php echo U('Management/editManagement');?>" method="GET" class="form form-horizontal" id="form-admin-add">
+                <form class="form form-horizontal" id="form-admin-add">
 	<div class="row cl">
 		<input type="text" hidden="true" id="adminId" name="adminId">
 		<label class="form-label col-xs-4 col-sm-3"><span class="c-red">*</span>管理员登录名：</label>
@@ -229,7 +228,10 @@ function admin_add(title,url){
 		content: url
 	});
 	layer.full(index);
-}
+};
+</script>
+
+<script type="text/javascript">
 
 /*管理员-修改*/
 $('.edit').click(function(){
@@ -268,7 +270,7 @@ $('.edit').click(function(){
 $('.save').click(function(){
 	var adminid = $('#adminId').val();
 	var adminname = $('#adminName').val();
-	//var adminsex = $('#adminId').val();
+	var adminsex = $('input[name="sex"]:checked').val();
 	var adminphone = $('#phone').val();
 	var adminaddress = $('#address').val();
 	var admindepartment = $('#department').val();
@@ -277,9 +279,61 @@ $('.save').click(function(){
 	var adminemail = $('#email').val();
 	var adminstate = $('#state').val();
 	var admindescription = $('#description').val();
-	alert(adminid);
 
+	$.ajax({
+			url : "<?php echo U('Management/editManagement');?>",
+			type : 'post',
+			//dataType : 'json',
+			data : {
+				adminId:adminid,
+				adminName:adminname,
+				sex:adminsex,
+				phone:adminphone,
+				email:adminemail,
+				address:adminaddress,
+				department:admindepartment,
+				qq:adminqq,
+				weChat:adminwechat,
+				state:adminstate,
+				textarea:admindescription,
+			},
+			success : function(e){
+				alert('操作成功！');
+				location.reload();
+			},
+			error : function(e){
+				console.log(e);
+				//layer.msg('error!',{icon:1,time:1000});
+				alert('网络错误');
+			}
+		});
+});
 
+/*管理员-重置密码*/
+$('.reset').click(function(){
+	var adminid = $(this).data('adminid');
+
+	if(confirm("确定重置该员工密码?")){
+	 　　$.ajax({
+			url : "<?php echo U('Management/resetPassword');?>",
+			type : 'post',
+			//dataType : 'json',
+			data : {
+				adminId:adminid,
+			},
+			success : function(e){
+				alert('操作成功！');
+				//location.reload();
+			},
+			error : function(e){
+				console.log(e);
+				//layer.msg('error!',{icon:1,time:1000});
+				alert('网络错误');
+
+			}
+		});
+	}
+	
 });
 
 

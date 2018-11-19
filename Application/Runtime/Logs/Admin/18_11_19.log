@@ -32,3 +32,134 @@ ERR: 非法操作:product-brand
 [ 2018-11-19T10:33:25+08:00 ] ::1 /Fun1/Admin/Index/charts-1.html
 ERR: 非法操作:charts-1
 
+[ 2018-11-19T15:43:20+08:00 ] ::1 /Fun1/Admin/Management/addManagement.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000500s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `fun_admin` [ RunTime:0.0055s ]
+NOTIC: [2] Missing argument 1 for Think\Model::where(), called in D:\myphp_www\PHPTutorial\WWW\Fun1\Application\Admin\Controller\ManagementController.class.php on line 32 and defined D:\myphp_www\PHPTutorial\WWW\Fun1\ThinkPHP\Library\Think\Model.class.php 第 1797 行.
+NOTIC: [8] Undefined variable: where D:\myphp_www\PHPTutorial\WWW\Fun1\ThinkPHP\Library\Think\Model.class.php 第 1805 行.
+NOTIC: [8] Undefined variable: where D:\myphp_www\PHPTutorial\WWW\Fun1\ThinkPHP\Library\Think\Model.class.php 第 1808 行.
+NOTIC: [8] Undefined variable: where D:\myphp_www\PHPTutorial\WWW\Fun1\ThinkPHP\Library\Think\Model.class.php 第 1816 行.
+SQL: INSERT INTO `fun_admin` (`adminName`,`adminSex`,`adminPhone`,`adminAddress`,`adminDepartment`,`adminQQ`,`adminWeChat`,`adminEmail`,`adminState`,`adminDescription`) VALUES ('','0','','','','','','','0','') [ RunTime:0.0005s ]
+
+[ 2018-11-19T16:40:15+08:00 ] ::1 /Fun1/Admin/Article/add-article.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002500s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001500s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001500s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001501s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001501s ]
+
+[ 2018-11-19T16:40:47+08:00 ] ::1 /Fun1/Admin/fileTools/uploadThumb.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+
+[ 2018-11-19T16:43:02+08:00 ] ::1 /Fun1/Admin/fileTools/uploadThumb.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002500s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003501s ]
+
+[ 2018-11-19T16:43:53+08:00 ] ::1 /Fun1/Admin/fileTools/uploadThumb.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003500s ]
+
+[ 2018-11-19T16:48:35+08:00 ] ::1 /Fun1/Admin/fileTools/uploadThumb.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002501s ]
+
+[ 2018-11-19T16:49:35+08:00 ] ::1 /Fun1/Admin/fileTools/uploadThumb.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004000s ]
+
+[ 2018-11-19T16:50:47+08:00 ] ::1 /Fun1/Admin/fileTools/uploadThumb.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001500s ]
+
+[ 2018-11-19T16:51:34+08:00 ] ::1 /Fun1/Admin/fileTools/uploadThumb.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002500s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+
+[ 2018-11-19T16:53:33+08:00 ] ::1 /Fun1/Admin/FileTools/uploadThumb.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000500s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001500s ]
+
+[ 2018-11-19T16:53:42+08:00 ] ::1 /Fun1/Admin/FileTools/uploadThumb.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003501s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-11-19T16:54:16+08:00 ] ::1 /Fun1/Admin/FileTools/uploadThumb.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000500s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001501s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001501s ]
+
+[ 2018-11-19T16:55:52+08:00 ] ::1 /Fun1/Admin/FileTools/uploadThumb.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001500s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-11-19T16:58:11+08:00 ] ::1 /Fun1/Admin/FileTools/uploadThumb.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001500s ]
+
+[ 2018-11-19T16:58:26+08:00 ] ::1 /Fun1/Admin/FileTools/uploadThumb.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-11-19T16:58:52+08:00 ] ::1 /Fun1/Admin/FileTools/uploadThumb.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001500s ]
+
+[ 2018-11-19T17:06:26+08:00 ] ::1 /Fun1/Admin/FileTools/uploadThumb.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000501s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001001s ]
+
+[ 2018-11-19T17:06:35+08:00 ] ::1 /Fun1/Admin/FileTools/uploadThumb.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+
+[ 2018-11-19T17:06:43+08:00 ] ::1 /Fun1/Admin/FileTools/uploadThumb.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001500s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001500s ]
+
+[ 2018-11-19T20:23:13+08:00 ] ::1 /Fun1/Admin/Article/e
+ERR: 非法操作:e
+
+[ 2018-11-19T20:23:47+08:00 ] ::1 /Fun1/Admin/Article/e
+ERR: 非法操作:e
+
+[ 2018-11-19T20:24:11+08:00 ] ::1 /Fun1/Admin/Article/e
+ERR: 非法操作:e
+

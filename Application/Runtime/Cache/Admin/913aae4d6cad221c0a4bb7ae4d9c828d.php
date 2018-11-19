@@ -281,32 +281,32 @@ $('.save').click(function(){
 	var admindescription = $('#description').val();
 
 	$.ajax({
-			url : "<?php echo U('Management/editManagement');?>",
-			type : 'post',
-			//dataType : 'json',
-			data : {
-				adminId:adminid,
-				adminName:adminname,
-				sex:adminsex,
-				phone:adminphone,
-				email:adminemail,
-				address:adminaddress,
-				department:admindepartment,
-				qq:adminqq,
-				weChat:adminwechat,
-				state:adminstate,
-				textarea:admindescription,
-			},
-			success : function(e){
-				alert('操作成功！');
-				location.reload();
-			},
-			error : function(e){
-				console.log(e);
-				//layer.msg('error!',{icon:1,time:1000});
-				alert('网络错误');
-			}
-		});
+		url : "<?php echo U('Management/editManagement');?>",
+		type : 'post',
+		//dataType : 'json',
+		data : {
+			adminId:adminid,
+			adminName:adminname,
+			sex:adminsex,
+			phone:adminphone,
+			email:adminemail,
+			address:adminaddress,
+			department:admindepartment,
+			qq:adminqq,
+			weChat:adminwechat,
+			state:adminstate,
+			textarea:admindescription,
+		},
+		success : function(e){
+			alert('操作成功！');
+			location.reload();
+		},
+		error : function(e){
+			console.log(e);
+			//layer.msg('error!',{icon:1,time:1000});
+			alert('网络错误');
+		}
+	});
 });
 
 /*管理员-重置密码*/

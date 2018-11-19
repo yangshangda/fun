@@ -1,0 +1,34 @@
+[ 2018-11-19T09:35:18+08:00 ] ::1 /Fun1/Admin/Management/editManagement.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001500s ]
+SQL: SHOW COLUMNS FROM `fun_admin` [ RunTime:0.0105s ]
+SQL: UPDATE `fun_admin` SET `adminName`='aa',`adminSex`='0',`adminPhone`='12121212121',`adminAddress`='lalala',`adminDepartment`='aa',`adminQQ`='123456789',`adminWeChat`='124578',`adminEmail`='111111@qq.com',`adminState`='0',`adminDescription`='我是普通管理员4' WHERE `adminId` = 4 LIMIT 1  [ RunTime:0.0010s ]
+
+[ 2018-11-19T09:35:30+08:00 ] ::1 /Fun1/Admin/Management/editManagement.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001500s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002500s ]
+SQL: SHOW COLUMNS FROM `fun_admin` [ RunTime:0.0105s ]
+SQL: UPDATE `fun_admin` SET `adminName`='bbb',`adminSex`='1',`adminPhone`='77777',`adminAddress`='aaaaa',`adminDepartment`='bbb',`adminQQ`='111111',`adminWeChat`='22222',`adminEmail`='465468545@qq.com',`adminState`='0',`adminDescription`='我是普通管理员9' WHERE `adminId` = 9 LIMIT 1  [ RunTime:0.0005s ]
+
+[ 2018-11-19T09:52:38+08:00 ] ::1 /Fun1/Admin/Users/add-management.html
+ERR: 非法操作:add-management
+
+[ 2018-11-19T10:01:49+08:00 ] ::1 /Fun1/Admin/Management/resetPassword.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002500s ]
+SQL: SHOW COLUMNS FROM `fun_admin` [ RunTime:0.0105s ]
+SQL: UPDATE `fun_admin` SET `adminPassword`='e10adc3949ba59abbe56e057f20f883e' WHERE `adminId` = 1 LIMIT 1  [ RunTime:0.0005s ]
+
+[ 2018-11-19T10:33:20+08:00 ] ::1 /Fun1/Admin/Goods/index
+ERR: 1146:Table 'funtest.category' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `category`
+
+[ 2018-11-19T10:33:21+08:00 ] ::1 /Fun1/Admin/Index/product-brand.html
+ERR: 非法操作:product-brand
+
+[ 2018-11-19T10:33:25+08:00 ] ::1 /Fun1/Admin/Index/charts-1.html
+ERR: 非法操作:charts-1
+

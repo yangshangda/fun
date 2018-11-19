@@ -14,5 +14,17 @@ class ArticleController extends CommonController {
 		$this->display();
 	}
 
+	//添加文章
+	public function addArticle(){
+		//$data = I('post');
+		$data['adminName'] = I('adminName');
+		$data['adminSex'] = I('sex');
+
+		$article_table = M('fun_article');
+		//$admin_add = $admin_table->where()->add($data);die;
+		var_dump($data);
+
+	}
+
 
 }

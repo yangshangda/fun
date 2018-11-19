@@ -116,48 +116,48 @@
 	});
 	
 
-	// $("#submit").click(function(){
-	// 	// var adminName = $("#adminName").val();
-	// 	// var phone = $("#phone").val();
-	// 	// var email = $("#email").val();
-	// 	// var address = $("#address").val();
-	// 	// var department = $("#department").val();
-	// 	// var qq = $("#qq").val();
-	// 	// var weChat = $("#weChat").val();
-	// 	// var textarea = $("#textarea").val();
-	// 	// var data = $("#handle-form").serialize();
-	// 	$.ajax({
-	// 		url : "{:U('FileTools/uploadThumb')}",
-	// 		type : 'post',
-	// 		//dataType : 'json',
-	// 		data : {
-	// 			// adminName:adminName,
-	// 			// phone:phone,
-	// 			// email:email,
-	// 			// address:address,
-	// 			// department:department,
-	// 			// qq:qq,
-	// 			// weChat:weChat,
-	// 			// textarea:textarea,
-	// 		},
-	// 		success : function(e){
-	// 			console.log(e);
-	// 			// alert('添加成功！');
-	// 			// location.reload();
-	// 			// parent.location.reload();
-	// 			// var index = parent.layer.getFrameIndex(window.name);
-	// 			// parent.$('.btn-refresh').click();
-	// 			// parent.layer.close(index);
-	// 			//layer.msg('添加成功!',{icon:1,time:1000});
-	// 		},
-	// 		error : function(e){
-	// 			console.log(e);
-	// 			//layer.msg('error!',{icon:1,time:1000});
-	// 			alert('网络错误');
-	// 		}
-	// 	});
+	$("#submit").click(function(){
+		// var adminName = $("#adminName").val();
+		// var phone = $("#phone").val();
+		// var email = $("#email").val();
+		// var address = $("#address").val();
+		// var department = $("#department").val();
+		// var qq = $("#qq").val();
+		// var weChat = $("#weChat").val();
+		// var textarea = $("#textarea").val();
+		// var data = $("#handle-form").serialize();
+		$.ajax({
+			//url : "{:U('FileTools/uploadThumb')}",
+			type : 'post',
+			//dataType : 'json',
+			data : {
+				// adminName:adminName,
+				// phone:phone,
+				// email:email,
+				// address:address,
+				// department:department,
+				// qq:qq,
+				// weChat:weChat,
+				// textarea:textarea,
+			},
+			success : function(e){
+				console.log(e);
+				// alert('添加成功！');
+				// location.reload();
+				// parent.location.reload();
+				// var index = parent.layer.getFrameIndex(window.name);
+				// parent.$('.btn-refresh').click();
+				// parent.layer.close(index);
+				//layer.msg('添加成功!',{icon:1,time:1000});
+			},
+			error : function(e){
+				console.log(e);
+				//layer.msg('error!',{icon:1,time:1000});
+				alert('网络错误');
+			}
+		});
 		
-	// });
+	});
 	
 	// 文件上传（JQUERY异步上传插件）
     function uploadImg(file) {

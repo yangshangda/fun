@@ -169,10 +169,8 @@
 			},
 			success : function(e){
 				alert('添加成功！');
-				location.reload();
 				parent.location.reload();
 				var index = parent.layer.getFrameIndex(window.name);
-				parent.$('.btn-refresh').click();
 				parent.layer.close(index);
 			},
 			error : function(e){

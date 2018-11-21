@@ -26,10 +26,9 @@
 <div class="page-container">
 
 	<div class="cl pd-5 bg-1 bk-gray mt-20"> 
-		<span class="l">
+		<?php if($_SESSION['state']== 1): ?><span class="l">
 		<a class="btn btn-primary radius" onclick="admin_add('添加管理员','add-management.html','800','500')" href="javascript:;"><i class="Hui-iconfont"></i> 添加管理员</a>
-		
-		</span> 
+		</span><?php endif; ?>
 		<span class="r">共有数据：<strong><?php echo ($count); ?></strong> 条</span> 
 	</div>
 	
@@ -50,7 +49,7 @@
 					<th>邮箱</th>
 					<th>角色</th>
 					<th>描述</th>
-					<th>操作</th>
+					<?php if($_SESSION['state']== 1): ?><th>操作</th><?php endif; ?>
 				</tr>
 			</thead>
 			<tbody>
@@ -73,11 +72,11 @@
 							<?php if($v["adminstate"] == 0): ?>普通管理员<?php endif; ?>
 						</td>
 						<td><?php echo ($v["admindescription"]); ?></td>
-						<td class="f-14 td-manage">
-							<a class="btn btn-success radius edit" data-adminid="<?php echo ($v["adminid"]); ?>" data-adminname="<?php echo ($v["adminname"]); ?>" data-adminsex="<?php echo ($v["adminsex"]); ?>" data-adminphone="<?php echo ($v["adminphone"]); ?>" data-adminaddress="<?php echo ($v["adminaddress"]); ?>" data-admindepartment="<?php echo ($v["admindepartment"]); ?>" data-adminqq="<?php echo ($v["adminqq"]); ?>" data-adminwechat="<?php echo ($v["adminwechat"]); ?>" data-adminemail="<?php echo ($v["adminemail"]); ?>" data-adminstate="<?php echo ($v["adminstate"]); ?>" data-admindescription="<?php echo ($v["admindescription"]); ?>" id="edit" href="javascript:void(0);" data-toggle="modal" data-target="#modify">修改</a>
-							<a class="btn btn-warning radius reset" data-adminid="<?php echo ($v["adminid"]); ?>" onclick="" href="javascript:;">重置密码</a>
+						<?php if($_SESSION['state']== 1): ?><td class="f-14 td-manage">							
+							<a class="btn btn-success radius edit" data-adminid="<?php echo ($v["adminid"]); ?>" data-adminname="<?php echo ($v["adminname"]); ?>" data-adminsex="<?php echo ($v["adminsex"]); ?>" data-adminphone="<?php echo ($v["adminphone"]); ?>" data-adminaddress="<?php echo ($v["adminaddress"]); ?>" data-admindepartment="<?php echo ($v["admindepartment"]); ?>" data-adminqq="<?php echo ($v["adminqq"]); ?>" data-adminwechat="<?php echo ($v["adminwechat"]); ?>" data-adminemail="<?php echo ($v["adminemail"]); ?>" data-adminstate="<?php echo ($v["adminstate"]); ?>" data-admindescription="<?php echo ($v["admindescription"]); ?>" id="edit" href="javascript:void(0);" data-toggle="modal" data-target="#modify">修改</a>						
+							<a class="btn btn-warning radius reset" data-adminid="<?php echo ($v["adminid"]); ?>" onclick="" href="javascript:;">重置密码</a>						
 							<!-- <a class="btn btn-secondary radius"  href="javascript:;">重置密码</a> -->
-						</td>
+						</td><?php endif; ?>
 					</tr><?php endforeach; endif; else: echo "" ;endif; ?>
 
 				<!-- <tr class="text-c">
@@ -203,7 +202,7 @@
 <script type="text/javascript" src="/Fun1/Public/lib/layer/2.4/layer.js"></script>
 <!-- <script type="text/javascript" src="/Fun1/Public/li<!-- b/layer/2.4/layer.js"></script> -->
 <script type="text/javascript" src="/Fun1/Public/static/h-ui/js/H-ui.min.js"></script> 
-<script type="text/javascript" src="/Fun1/Public/static/h-ui.admin/js/H-ui.admin.js"></script> <!--/_footer 作为公共模版分离出去
+<script type="text/javascript" src="/Fun1/Public/static/h-ui.admin/js/H-ui.admin.js"></script> 
 
 <!--请在下方写此页面业务相关的脚本-->
 <script type="text/javascript" src="/Fun1/Public/lib/My97DatePicker/4.8/WdatePicker.js"></script> 
@@ -217,7 +216,7 @@ $('.table-sort').dataTable({
 	"pading":false,
 	"aoColumnDefs": [
 	  //{"bVisible": false, "aTargets": [ 3 ]} //控制列的隐藏显示
-	  {"orderable":false,"aTargets":[0,2,3,4,5,6,7,8,9,11,12]}// 不参与排序的列
+	  {"orderable":false,"aTargets":[0,2,3,4,5,6,7,8,9,11]}// 不参与排序的列
 	]
 });
 /*管理员-增加*/

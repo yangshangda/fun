@@ -19,17 +19,8 @@
 <script type="text/javascript" src="lib/DD_belatedPNG_0.0.8a-min.js" ></script>
 <script>DD_belatedPNG.fix('*');</script>
 <![endif]-->
-<title>添加文章 - 文章管理</title>
-<link href="/Fun1/Public/ueditor/themes/default/css/umeditor.min.css" rel="stylesheet" />
-<script src="/Fun1/Public/ueditor/third-party/jquery.min.js"></script>
-<script src="/Fun1/Public/ueditor/umeditor.config.js"></script>
-<script src="/Fun1/Public/ueditor/umeditor.min.js"></script>
-<script src="/Fun1/Public/ueditor/lang/zh-cn/zh-cn.js"></script>
-<script>
-    $(function () {
-        UM.getEditor('myEditor');
-    });
-</script>
+<title>轮播图管理 - 添加轮播图</title>
+
 <meta name="keywords" content="">
 <meta name="description" content="">
 </head>
@@ -37,53 +28,32 @@
 <article class="page-container" display="none">
 	<form class="form form-horizontal" id="form-admin-add" display="none">
 	<div class="row cl">
-		<label class="form-label col-xs-4 col-sm-3"><span class="c-red">*</span>文章标题：</label>
+		<label class="form-label col-xs-4 col-sm-3"><span class="c-red">*</span>文章Id：</label>
+		<div class="formControls col-xs-8 col-sm-9">
+			<input type="text" class="input-text" placeholder="" id="articleid" name="articleid">
+		</div>
+	</div>
+	<div class="row cl">
+		<label class="form-label col-xs-4 col-sm-3"><span class="c-red">*</span>标题：</label>
 		<div class="formControls col-xs-8 col-sm-9">
 			<input type="text" class="input-text" placeholder="" id="title" name="title">
 		</div>
 	</div>
 	<div class="row cl">
-		<label class="form-label col-xs-4 col-sm-3"><span class="c-red">*</span>封面上传：</label>
+		<label class="form-label col-xs-4 col-sm-3"><span class="c-red">*</span>轮播图上传：</label>
 		<div class="formControls col-xs-8 col-sm-9">
 			<button type="button" class="btn btn-secondary radius" onclick="uploadImg();">上传图片</button>
-			<a hidden="ture" target="_blank" id="set_img"><img src="" id="img" width="200px" height="200px"/></a>
+			<a hidden="ture" target="_blank" id="set_img"><img src="" id="img" width="400px" height="200px"/></a>
 			<!-- <input style="width: 60px;height: 25px;" hidden="ture" id="delect" type="button" onclick="delectImg();" value="删除"/> -->
 		</div>
 	</div>
 
 	<div class="row cl">
-		<label class="form-label col-xs-4 col-sm-3">描述：</label>
-		<div class="formControls col-xs-8 col-sm-9">
-			<input type="text" class="input-text" placeholder="" id="description" name="description">
-		</div>
-	</div>
-
-	<div class="row cl">
-		<label class="form-label col-xs-4 col-sm-3">内容：</label>
-		<div class="formControls col-xs-8 col-sm-9">
-			<script type="text/plain" id="myEditor" name="content"></script>
-		</div>
-	</div>
-
-	<div class="row cl">
-		<label class="form-label col-xs-4 col-sm-3"><span class="c-red">*</span>类型：</label>
+		<label class="form-label col-xs-4 col-sm-3"><span class="c-red">*</span>是否发布：</label>
 		<div class="formControls col-xs-8 col-sm-9"> <span class="select-box" style="width:150px;">
-			<select id="type" class="select" name="type" size="1">
-				<option value="1">情感</option>
-				<option value="2">性格</option>
-				<option value="3">趣味</option>
-				<option value="10">综合</option>				
-			</select>
-			</span> 
-		</div>
-	</div>
-
-	<div class="row cl">
-		<label class="form-label col-xs-4 col-sm-3"><span class="c-red">*</span>是否推送：</label>
-		<div class="formControls col-xs-8 col-sm-9"> <span class="select-box" style="width:150px;">
-			<select id="recommend" class="select" name="recommend" size="1">
-				<option value="0">不推送</option>
-				<option value="1">推送</option>
+			<select id="status" class="select" name="status" size="1">
+				<option value="0">不发布</option>
+				<option value="1">发布</option>
 			</select>
 			</span> 
 		</div>
@@ -118,23 +88,19 @@
 	});
 	
 	$("#submit").click(function(){
+		var articleid = $("#articleid").val();
 		var title = $("#title").val();
 		var img = $("#set_img").attr('href');
-		var description = $("#description").val();
-		var content = UM.getEditor('myEditor').getContent();
-		var type = $("#type option:selected").val();
-		var recommend = $("#recommend option:selected").val();
+		var status = $("#status option:selected").val();
 		$.ajax({
-			url : "<?php echo U('Article/addArticle');?>",
+			url : "<?php echo U('Banner/addBanner');?>",
 			type : 'post',
 			//dataType : 'json',
 			data : {
+				articleid:articleid,
 				title:title,
 				img:img,
-				description:description,
-				content:content,
-				type:type,
-				recommend:recommend,
+				status:status,
 			},
 			success : function(e){
 				console.log(e);

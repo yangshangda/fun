@@ -17,7 +17,7 @@ class ManagementController extends CommonController {
 
 //添加管理员
 	public function addManagement(){
-		//$data = I('post');
+		//$data = I('post.');
 		$data['adminName'] = I('adminName');
 		$data['adminSex'] = I('sex');
 		$data['adminPhone'] = I('phone');
@@ -28,6 +28,7 @@ class ManagementController extends CommonController {
 		$data['adminEmail'] = I('email');
 		$data['adminState'] = I('state');
 		$data['adminDescription'] = I('textarea');
+		$data['adminCreateTime'] = date("Y-m-d h:i:s");
 		$admin_table = M('fun_admin');
 		$admin_add = $admin_table->where()->add($data);die;
 		//var_dump($data);
@@ -48,7 +49,7 @@ class ManagementController extends CommonController {
 		$data['adminState'] = I('state');
 		$data['adminDescription'] = I('textarea');
 		$admin_table = M('fun_admin');
-		$admin_add = $admin_table->where($where)->limit(1)->save($data);die;
+		$admin_edit = $admin_table->where($where)->limit(1)->save($data);die;
 
 	}
 
@@ -57,7 +58,7 @@ class ManagementController extends CommonController {
 		$where['adminId'] = I('adminId');
 		$data['adminPassword'] = md5('123456');
 		$admin_table = M('fun_admin');
-		$admin_add = $admin_table->where($where)->limit(1)->save($data);die;
+		$admin_password_reset = $admin_table->where($where)->limit(1)->save($data);die;
 	}
 
 }

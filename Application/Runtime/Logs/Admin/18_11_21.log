@@ -1,0 +1,319 @@
+[ 2018-11-21T10:34:22+08:00 ] ::1 /Fun1/Admin/Article/setRecommend.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000500s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001500s ]
+SQL: SHOW COLUMNS FROM `fun_article` [ RunTime:0.0095s ]
+
+[ 2018-11-21T10:34:30+08:00 ] ::1 /Fun1/Admin/Article/setRecommend.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001500s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002500s ]
+SQL: SHOW COLUMNS FROM `fun_article` [ RunTime:0.0095s ]
+
+[ 2018-11-21T10:35:47+08:00 ] ::1 /Fun1/Admin/Article/setRecommend.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `fun_article` [ RunTime:0.0105s ]
+NOTIC: [2] Missing argument 1 for Think\Model::where(), called in D:\myphp_www\PHPTutorial\WWW\Fun1\Application\Admin\Controller\ArticleController.class.php on line 38 and defined D:\myphp_www\PHPTutorial\WWW\Fun1\ThinkPHP\Library\Think\Model.class.php 第 1797 行.
+NOTIC: [8] Undefined variable: where D:\myphp_www\PHPTutorial\WWW\Fun1\ThinkPHP\Library\Think\Model.class.php 第 1805 行.
+NOTIC: [8] Undefined variable: where D:\myphp_www\PHPTutorial\WWW\Fun1\ThinkPHP\Library\Think\Model.class.php 第 1808 行.
+NOTIC: [8] Undefined variable: where D:\myphp_www\PHPTutorial\WWW\Fun1\ThinkPHP\Library\Think\Model.class.php 第 1816 行.
+SQL: UPDATE `fun_article` SET `articleRecommend`='1' WHERE `articleId` = 13 LIMIT 1  [ RunTime:0.0005s ]
+
+[ 2018-11-21T10:35:52+08:00 ] ::1 /Fun1/Admin/Article/setRecommend.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001500s ]
+SQL: SHOW COLUMNS FROM `fun_article` [ RunTime:0.0070s ]
+NOTIC: [2] Missing argument 1 for Think\Model::where(), called in D:\myphp_www\PHPTutorial\WWW\Fun1\Application\Admin\Controller\ArticleController.class.php on line 38 and defined D:\myphp_www\PHPTutorial\WWW\Fun1\ThinkPHP\Library\Think\Model.class.php 第 1797 行.
+NOTIC: [8] Undefined variable: where D:\myphp_www\PHPTutorial\WWW\Fun1\ThinkPHP\Library\Think\Model.class.php 第 1805 行.
+NOTIC: [8] Undefined variable: where D:\myphp_www\PHPTutorial\WWW\Fun1\ThinkPHP\Library\Think\Model.class.php 第 1808 行.
+NOTIC: [8] Undefined variable: where D:\myphp_www\PHPTutorial\WWW\Fun1\ThinkPHP\Library\Think\Model.class.php 第 1816 行.
+SQL: UPDATE `fun_article` SET `articleRecommend`='0' WHERE `articleId` = 13 LIMIT 1  [ RunTime:0.0005s ]
+
+[ 2018-11-21T10:35:58+08:00 ] ::1 /Fun1/Admin/Article/setRecommend.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001500s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002500s ]
+SQL: SHOW COLUMNS FROM `fun_article` [ RunTime:0.0120s ]
+NOTIC: [2] Missing argument 1 for Think\Model::where(), called in D:\myphp_www\PHPTutorial\WWW\Fun1\Application\Admin\Controller\ArticleController.class.php on line 38 and defined D:\myphp_www\PHPTutorial\WWW\Fun1\ThinkPHP\Library\Think\Model.class.php 第 1797 行.
+NOTIC: [8] Undefined variable: where D:\myphp_www\PHPTutorial\WWW\Fun1\ThinkPHP\Library\Think\Model.class.php 第 1805 行.
+NOTIC: [8] Undefined variable: where D:\myphp_www\PHPTutorial\WWW\Fun1\ThinkPHP\Library\Think\Model.class.php 第 1808 行.
+NOTIC: [8] Undefined variable: where D:\myphp_www\PHPTutorial\WWW\Fun1\ThinkPHP\Library\Think\Model.class.php 第 1816 行.
+SQL: UPDATE `fun_article` SET `articleRecommend`='1' WHERE `articleId` = 13 LIMIT 1  [ RunTime:0.0005s ]
+
+[ 2018-11-21T10:36:02+08:00 ] ::1 /Fun1/Admin/Article/setRecommend.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001500s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `fun_article` [ RunTime:0.0075s ]
+NOTIC: [2] Missing argument 1 for Think\Model::where(), called in D:\myphp_www\PHPTutorial\WWW\Fun1\Application\Admin\Controller\ArticleController.class.php on line 38 and defined D:\myphp_www\PHPTutorial\WWW\Fun1\ThinkPHP\Library\Think\Model.class.php 第 1797 行.
+NOTIC: [8] Undefined variable: where D:\myphp_www\PHPTutorial\WWW\Fun1\ThinkPHP\Library\Think\Model.class.php 第 1805 行.
+NOTIC: [8] Undefined variable: where D:\myphp_www\PHPTutorial\WWW\Fun1\ThinkPHP\Library\Think\Model.class.php 第 1808 行.
+NOTIC: [8] Undefined variable: where D:\myphp_www\PHPTutorial\WWW\Fun1\ThinkPHP\Library\Think\Model.class.php 第 1816 行.
+SQL: UPDATE `fun_article` SET `articleRecommend`='0' WHERE `articleId` = 13 LIMIT 1  [ RunTime:0.0005s ]
+
+[ 2018-11-21T10:36:06+08:00 ] ::1 /Fun1/Admin/Article/setRecommend.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001501s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002001s ]
+SQL: SHOW COLUMNS FROM `fun_article` [ RunTime:0.0125s ]
+NOTIC: [2] Missing argument 1 for Think\Model::where(), called in D:\myphp_www\PHPTutorial\WWW\Fun1\Application\Admin\Controller\ArticleController.class.php on line 38 and defined D:\myphp_www\PHPTutorial\WWW\Fun1\ThinkPHP\Library\Think\Model.class.php 第 1797 行.
+NOTIC: [8] Undefined variable: where D:\myphp_www\PHPTutorial\WWW\Fun1\ThinkPHP\Library\Think\Model.class.php 第 1805 行.
+NOTIC: [8] Undefined variable: where D:\myphp_www\PHPTutorial\WWW\Fun1\ThinkPHP\Library\Think\Model.class.php 第 1808 行.
+NOTIC: [8] Undefined variable: where D:\myphp_www\PHPTutorial\WWW\Fun1\ThinkPHP\Library\Think\Model.class.php 第 1816 行.
+SQL: UPDATE `fun_article` SET `articleRecommend`='0' WHERE `articleId` = 8 LIMIT 1  [ RunTime:0.0005s ]
+
+[ 2018-11-21T10:36:10+08:00 ] ::1 /Fun1/Admin/Article/setRecommend.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001500s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002500s ]
+SQL: SHOW COLUMNS FROM `fun_article` [ RunTime:0.0100s ]
+NOTIC: [2] Missing argument 1 for Think\Model::where(), called in D:\myphp_www\PHPTutorial\WWW\Fun1\Application\Admin\Controller\ArticleController.class.php on line 38 and defined D:\myphp_www\PHPTutorial\WWW\Fun1\ThinkPHP\Library\Think\Model.class.php 第 1797 行.
+NOTIC: [8] Undefined variable: where D:\myphp_www\PHPTutorial\WWW\Fun1\ThinkPHP\Library\Think\Model.class.php 第 1805 行.
+NOTIC: [8] Undefined variable: where D:\myphp_www\PHPTutorial\WWW\Fun1\ThinkPHP\Library\Think\Model.class.php 第 1808 行.
+NOTIC: [8] Undefined variable: where D:\myphp_www\PHPTutorial\WWW\Fun1\ThinkPHP\Library\Think\Model.class.php 第 1816 行.
+SQL: UPDATE `fun_article` SET `articleRecommend`='1' WHERE `articleId` = 9 LIMIT 1  [ RunTime:0.0005s ]
+
+[ 2018-11-21T11:05:12+08:00 ] ::1 /Fun1/Admin/Article/addArticle.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001500s ]
+SQL: SHOW COLUMNS FROM `fun_article` [ RunTime:0.0110s ]
+NOTIC: [2] Missing argument 1 for Think\Model::where(), called in D:\myphp_www\PHPTutorial\WWW\Fun1\Application\Admin\Controller\ArticleController.class.php on line 30 and defined D:\myphp_www\PHPTutorial\WWW\Fun1\ThinkPHP\Library\Think\Model.class.php 第 1797 行.
+NOTIC: [8] Undefined variable: where D:\myphp_www\PHPTutorial\WWW\Fun1\ThinkPHP\Library\Think\Model.class.php 第 1805 行.
+NOTIC: [8] Undefined variable: where D:\myphp_www\PHPTutorial\WWW\Fun1\ThinkPHP\Library\Think\Model.class.php 第 1808 行.
+NOTIC: [8] Undefined variable: where D:\myphp_www\PHPTutorial\WWW\Fun1\ThinkPHP\Library\Think\Model.class.php 第 1816 行.
+SQL: INSERT INTO `fun_article` (`articleTitle`,`articleCreateTime`,`articleCover`,`articleDescription`,`articleContent`,`articleType`,`articleRecommend`) VALUES ('aaaa','1542769511','http://localhost/Fun1/Public/upload/temp/2018-11/21//articlede2d28099b3552b76901ce038678b1901861972.jpg','ddd','&lt;p&gt;bdfbsfvb&lt;/p&gt;','1','1') [ RunTime:0.0005s ]
+
+[ 2018-11-21T11:07:01+08:00 ] ::1 /Fun1/Admin/Article/addArticle.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001500s ]
+SQL: SHOW COLUMNS FROM `fun_article` [ RunTime:0.0110s ]
+NOTIC: [2] Missing argument 1 for Think\Model::where(), called in D:\myphp_www\PHPTutorial\WWW\Fun1\Application\Admin\Controller\ArticleController.class.php on line 30 and defined D:\myphp_www\PHPTutorial\WWW\Fun1\ThinkPHP\Library\Think\Model.class.php 第 1797 行.
+NOTIC: [8] Undefined variable: where D:\myphp_www\PHPTutorial\WWW\Fun1\ThinkPHP\Library\Think\Model.class.php 第 1805 行.
+NOTIC: [8] Undefined variable: where D:\myphp_www\PHPTutorial\WWW\Fun1\ThinkPHP\Library\Think\Model.class.php 第 1808 行.
+NOTIC: [8] Undefined variable: where D:\myphp_www\PHPTutorial\WWW\Fun1\ThinkPHP\Library\Think\Model.class.php 第 1816 行.
+SQL: INSERT INTO `fun_article` (`articleTitle`,`articleCreateTime`,`articleCover`,`articleDescription`,`articleContent`,`articleType`,`articleRecommend`) VALUES ('nnnn','2018-11-21 11:07:00am','','','','1','0') [ RunTime:0.0005s ]
+
+[ 2018-11-21T11:07:23+08:00 ] ::1 /Fun1/Admin/Article/addArticle.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001500s ]
+SQL: SHOW COLUMNS FROM `fun_article` [ RunTime:0.0115s ]
+NOTIC: [2] Missing argument 1 for Think\Model::where(), called in D:\myphp_www\PHPTutorial\WWW\Fun1\Application\Admin\Controller\ArticleController.class.php on line 30 and defined D:\myphp_www\PHPTutorial\WWW\Fun1\ThinkPHP\Library\Think\Model.class.php 第 1797 行.
+NOTIC: [8] Undefined variable: where D:\myphp_www\PHPTutorial\WWW\Fun1\ThinkPHP\Library\Think\Model.class.php 第 1805 行.
+NOTIC: [8] Undefined variable: where D:\myphp_www\PHPTutorial\WWW\Fun1\ThinkPHP\Library\Think\Model.class.php 第 1808 行.
+NOTIC: [8] Undefined variable: where D:\myphp_www\PHPTutorial\WWW\Fun1\ThinkPHP\Library\Think\Model.class.php 第 1816 行.
+SQL: INSERT INTO `fun_article` (`articleTitle`,`articleCreateTime`,`articleCover`,`articleDescription`,`articleContent`,`articleType`,`articleRecommend`) VALUES ('hhhh','2018-11-21 11:07:22','','','','1','0') [ RunTime:0.0010s ]
+
+[ 2018-11-21T11:08:59+08:00 ] ::1 /Fun1/Admin/Article/setRecommend.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001500s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002500s ]
+SQL: SHOW COLUMNS FROM `fun_article` [ RunTime:0.0110s ]
+NOTIC: [2] Missing argument 1 for Think\Model::where(), called in D:\myphp_www\PHPTutorial\WWW\Fun1\Application\Admin\Controller\ArticleController.class.php on line 39 and defined D:\myphp_www\PHPTutorial\WWW\Fun1\ThinkPHP\Library\Think\Model.class.php 第 1797 行.
+NOTIC: [8] Undefined variable: where D:\myphp_www\PHPTutorial\WWW\Fun1\ThinkPHP\Library\Think\Model.class.php 第 1805 行.
+NOTIC: [8] Undefined variable: where D:\myphp_www\PHPTutorial\WWW\Fun1\ThinkPHP\Library\Think\Model.class.php 第 1808 行.
+NOTIC: [8] Undefined variable: where D:\myphp_www\PHPTutorial\WWW\Fun1\ThinkPHP\Library\Think\Model.class.php 第 1816 行.
+SQL: UPDATE `fun_article` SET `articleRecommend`='1' WHERE `articleId` = 13 LIMIT 1  [ RunTime:0.0005s ]
+
+[ 2018-11-21T11:12:52+08:00 ] ::1 /Fun1/Admin/Article/setRecommend.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001500s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `fun_article` [ RunTime:0.0115s ]
+NOTIC: [2] Missing argument 1 for Think\Model::where(), called in D:\myphp_www\PHPTutorial\WWW\Fun1\Application\Admin\Controller\ArticleController.class.php on line 39 and defined D:\myphp_www\PHPTutorial\WWW\Fun1\ThinkPHP\Library\Think\Model.class.php 第 1797 行.
+NOTIC: [8] Undefined variable: where D:\myphp_www\PHPTutorial\WWW\Fun1\ThinkPHP\Library\Think\Model.class.php 第 1805 行.
+NOTIC: [8] Undefined variable: where D:\myphp_www\PHPTutorial\WWW\Fun1\ThinkPHP\Library\Think\Model.class.php 第 1808 行.
+NOTIC: [8] Undefined variable: where D:\myphp_www\PHPTutorial\WWW\Fun1\ThinkPHP\Library\Think\Model.class.php 第 1816 行.
+SQL: UPDATE `fun_article` SET `articleRecommend`='0' WHERE `articleId` = 9 LIMIT 1  [ RunTime:0.0005s ]
+
+[ 2018-11-21T11:12:55+08:00 ] ::1 /Fun1/Admin/Article/setRecommend.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `fun_article` [ RunTime:0.0070s ]
+NOTIC: [2] Missing argument 1 for Think\Model::where(), called in D:\myphp_www\PHPTutorial\WWW\Fun1\Application\Admin\Controller\ArticleController.class.php on line 39 and defined D:\myphp_www\PHPTutorial\WWW\Fun1\ThinkPHP\Library\Think\Model.class.php 第 1797 行.
+NOTIC: [8] Undefined variable: where D:\myphp_www\PHPTutorial\WWW\Fun1\ThinkPHP\Library\Think\Model.class.php 第 1805 行.
+NOTIC: [8] Undefined variable: where D:\myphp_www\PHPTutorial\WWW\Fun1\ThinkPHP\Library\Think\Model.class.php 第 1808 行.
+NOTIC: [8] Undefined variable: where D:\myphp_www\PHPTutorial\WWW\Fun1\ThinkPHP\Library\Think\Model.class.php 第 1816 行.
+SQL: UPDATE `fun_article` SET `articleRecommend`='1' WHERE `articleId` = 9 LIMIT 1  [ RunTime:0.0005s ]
+
+[ 2018-11-21T11:20:06+08:00 ] ::1 /Fun1/Admin/Article/setRecommend.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001500s ]
+SQL: SHOW COLUMNS FROM `fun_article` [ RunTime:0.0180s ]
+NOTIC: [2] Missing argument 1 for Think\Model::where(), called in D:\myphp_www\PHPTutorial\WWW\Fun1\Application\Admin\Controller\ArticleController.class.php on line 39 and defined D:\myphp_www\PHPTutorial\WWW\Fun1\ThinkPHP\Library\Think\Model.class.php 第 1797 行.
+NOTIC: [8] Undefined variable: where D:\myphp_www\PHPTutorial\WWW\Fun1\ThinkPHP\Library\Think\Model.class.php 第 1805 行.
+NOTIC: [8] Undefined variable: where D:\myphp_www\PHPTutorial\WWW\Fun1\ThinkPHP\Library\Think\Model.class.php 第 1808 行.
+NOTIC: [8] Undefined variable: where D:\myphp_www\PHPTutorial\WWW\Fun1\ThinkPHP\Library\Think\Model.class.php 第 1816 行.
+SQL: UPDATE `fun_article` SET `articleRecommend`='0' WHERE `articleId` = 13 LIMIT 1  [ RunTime:0.0005s ]
+
+[ 2018-11-21T11:24:24+08:00 ] ::1 /Fun1/Admin/Article/setRecommend.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001500s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `fun_article` [ RunTime:0.0125s ]
+NOTIC: [2] Missing argument 1 for Think\Model::where(), called in D:\myphp_www\PHPTutorial\WWW\Fun1\Application\Admin\Controller\ArticleController.class.php on line 39 and defined D:\myphp_www\PHPTutorial\WWW\Fun1\ThinkPHP\Library\Think\Model.class.php 第 1797 行.
+NOTIC: [8] Undefined variable: where D:\myphp_www\PHPTutorial\WWW\Fun1\ThinkPHP\Library\Think\Model.class.php 第 1805 行.
+NOTIC: [8] Undefined variable: where D:\myphp_www\PHPTutorial\WWW\Fun1\ThinkPHP\Library\Think\Model.class.php 第 1808 行.
+NOTIC: [8] Undefined variable: where D:\myphp_www\PHPTutorial\WWW\Fun1\ThinkPHP\Library\Think\Model.class.php 第 1816 行.
+SQL: UPDATE `fun_article` SET `articleRecommend`='0' WHERE `articleId` = 9 LIMIT 1  [ RunTime:0.0005s ]
+
+[ 2018-11-21T11:24:29+08:00 ] ::1 /Fun1/Admin/Article/setRecommend.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001501s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002001s ]
+SQL: SHOW COLUMNS FROM `fun_article` [ RunTime:0.0040s ]
+NOTIC: [2] Missing argument 1 for Think\Model::where(), called in D:\myphp_www\PHPTutorial\WWW\Fun1\Application\Admin\Controller\ArticleController.class.php on line 39 and defined D:\myphp_www\PHPTutorial\WWW\Fun1\ThinkPHP\Library\Think\Model.class.php 第 1797 行.
+NOTIC: [8] Undefined variable: where D:\myphp_www\PHPTutorial\WWW\Fun1\ThinkPHP\Library\Think\Model.class.php 第 1805 行.
+NOTIC: [8] Undefined variable: where D:\myphp_www\PHPTutorial\WWW\Fun1\ThinkPHP\Library\Think\Model.class.php 第 1808 行.
+NOTIC: [8] Undefined variable: where D:\myphp_www\PHPTutorial\WWW\Fun1\ThinkPHP\Library\Think\Model.class.php 第 1816 行.
+SQL: UPDATE `fun_article` SET `articleRecommend`='1' WHERE `articleId` = 9 LIMIT 1  [ RunTime:0.0005s ]
+
+[ 2018-11-21T12:39:01+08:00 ] ::1 /Fun1/Admin/Article/addArticle.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001500s ]
+SQL: SHOW COLUMNS FROM `fun_article` [ RunTime:0.0090s ]
+SQL: UPDATE `fun_article` SET `articleTitle`='',`articleCover`='',`articleDescription`='',`articleContent`='&lt;p&gt;&amp;nbsp; &amp;nbsp; 我们遇到那些跋扈自恣的人往往会表现出反感，这类人通常是不懂得该如何尊重别人的，他778&lt;/p&gt;',`articleType`='0',`articleRecommend`='0' WHERE `articleId` = 9 LIMIT 1  [ RunTime:0.0005s ]
+
+[ 2018-11-21T12:43:58+08:00 ] ::1 /Fun1/Admin/Article/addArticle.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001500s ]
+SQL: SHOW COLUMNS FROM `fun_article` [ RunTime:0.0060s ]
+SQL: UPDATE `fun_article` SET `articleTitle`='',`articleCover`='',`articleDescription`='',`articleContent`='&lt;p&gt;&amp;nbsp; &amp;nbsp; 我们遇到那些跋扈自恣的人往往会表现出反感，这类人通常是不懂得该如何尊重别人的，他778&lt;/p&gt;',`articleType`='0',`articleRecommend`='0' WHERE `articleId` = 9 LIMIT 1  [ RunTime:0.0000s ]
+
+[ 2018-11-21T12:44:16+08:00 ] ::1 /Fun1/Admin/Article/addArticle.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000500s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001500s ]
+SQL: SHOW COLUMNS FROM `fun_article` [ RunTime:0.0090s ]
+SQL: UPDATE `fun_article` SET `articleTitle`='',`articleCover`='',`articleDescription`='你离婚后，77777？',`articleContent`='&lt;p&gt;&amp;nbsp; &amp;nbsp; 我们遇到那些跋扈自恣的人往往会表现出反感，这类人通常是不懂得该如何尊重别人的，他778&lt;/p&gt;',`articleType`='1',`articleRecommend`='1' WHERE `articleId` = 9 LIMIT 1  [ RunTime:0.0005s ]
+
+[ 2018-11-21T12:44:57+08:00 ] ::1 /Fun1/Admin/Article/addArticle.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001501s ]
+SQL: SHOW COLUMNS FROM `fun_article` [ RunTime:0.0150s ]
+SQL: UPDATE `fun_article` SET `articleTitle`='情感类7777',`articleCover`='',`articleDescription`='你离婚后，77777？',`articleContent`='&lt;p&gt;&amp;nbsp; &amp;nbsp; 我们遇到那些跋扈自恣的人往往会表现出反感，这类人通常是不懂得该如何尊重别人的，他778&lt;/p&gt;',`articleType`='1',`articleRecommend`='1' WHERE `articleId` = 9 LIMIT 1  [ RunTime:0.0005s ]
+
+[ 2018-11-21T12:53:34+08:00 ] ::1 /Fun1/Admin/Article/addArticle.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001500s ]
+SQL: SHOW COLUMNS FROM `fun_article` [ RunTime:0.0100s ]
+SQL: UPDATE `fun_article` SET `articleTitle`='情感类7777',`articleCover`='http://localhost/Fun1/Public/upload/temp/2018-11/21//article409fc7e75a1f32e35b4622f25d91c3591273474.jpg',`articleDescription`='你离婚后，77777？',`articleContent`='&lt;p&gt;&amp;nbsp; &amp;nbsp; 我们遇到那些跋扈自恣的人往往会表现出反感，这类人通常是不懂得该如何尊重别人的，他778&lt;/p&gt;',`articleType`='1',`articleRecommend`='1' WHERE `articleId` = 9 LIMIT 1  [ RunTime:0.0005s ]
+
+[ 2018-11-21T13:02:58+08:00 ] ::1 /Fun1/Admin/Banner/add-management.html
+ERR: 非法操作:add-management
+
+[ 2018-11-21T13:12:39+08:00 ] ::1 /Fun1/Admin/Banner/add-management.html
+ERR: 非法操作:add-management
+
+[ 2018-11-21T13:12:54+08:00 ] ::1 /Fun1/Admin/Banner/add-management.html
+ERR: 非法操作:add-management
+
+[ 2018-11-21T13:22:22+08:00 ] ::1 /Fun1/Admin/Article/addArticle.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `fun_article` [ RunTime:0.0105s ]
+SQL: UPDATE `fun_article` SET `articleTitle`='情感类7777',`articleCover`='http://localhost/Fun1/Public/upload/temp/2018-11/21//article409fc7e75a1f32e35b4622f25d91c3591273474.jpg',`articleDescription`='你离婚后，77777？',`articleContent`='&lt;p&gt;&amp;nbsp; &amp;nbsp; 我们遇到那些跋扈自恣的人往往会表现出反感，这类人通常是不懂得该如何尊重别人的，他778&lt;/p&gt;',`articleType`='1',`articleRecommend`='1' WHERE `articleId` = 9 LIMIT 1  [ RunTime:0.0005s ]
+
+[ 2018-11-21T13:31:04+08:00 ] ::1 /Fun1/Admin/Banner/addBanner.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001500s ]
+SQL: SHOW COLUMNS FROM `fun_banner` [ RunTime:0.0070s ]
+NOTIC: [2] Missing argument 1 for Think\Model::where(), called in D:\myphp_www\PHPTutorial\WWW\Fun1\Application\Admin\Controller\BannerController.class.php on line 32 and defined D:\myphp_www\PHPTutorial\WWW\Fun1\ThinkPHP\Library\Think\Model.class.php 第 1797 行.
+NOTIC: [8] Undefined variable: where D:\myphp_www\PHPTutorial\WWW\Fun1\ThinkPHP\Library\Think\Model.class.php 第 1805 行.
+NOTIC: [8] Undefined variable: where D:\myphp_www\PHPTutorial\WWW\Fun1\ThinkPHP\Library\Think\Model.class.php 第 1808 行.
+NOTIC: [8] Undefined variable: where D:\myphp_www\PHPTutorial\WWW\Fun1\ThinkPHP\Library\Think\Model.class.php 第 1816 行.
+SQL: INSERT INTO `fun_banner` (`articleId`,`bannerTitle`,`bannerImage`,`bannerStatus`) VALUES ('3','33333','http://localhost/Fun1/Public/upload/temp/2018-11/21//article86491010b3cff8e9473ef6d20662ced58359931.jpg','1') [ RunTime:0.0000s ]
+
+[ 2018-11-21T13:45:10+08:00 ] ::1 /Fun1/Admin/Banner/setStatus.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000500s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001501s ]
+SQL: SHOW COLUMNS FROM `fun_banner` [ RunTime:0.0035s ]
+SQL: UPDATE `fun_banner` SET `bannerStatus`='0' WHERE `bannerId` = 4 LIMIT 1  [ RunTime:0.0000s ]
+
+[ 2018-11-21T13:45:21+08:00 ] ::1 /Fun1/Admin/Banner/setStatus.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001501s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002001s ]
+SQL: SHOW COLUMNS FROM `fun_banner` [ RunTime:0.0105s ]
+SQL: UPDATE `fun_banner` SET `bannerStatus`='1' WHERE `bannerId` = 4 LIMIT 1  [ RunTime:0.0005s ]
+
+[ 2018-11-21T13:45:25+08:00 ] ::1 /Fun1/Admin/Banner/setStatus.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001500s ]
+SQL: SHOW COLUMNS FROM `fun_banner` [ RunTime:0.0065s ]
+SQL: UPDATE `fun_banner` SET `bannerStatus`='0' WHERE `bannerId` = 4 LIMIT 1  [ RunTime:0.0005s ]
+
+[ 2018-11-21T14:01:34+08:00 ] ::1 /Fun1/Admin/Banner/addBanner.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002500s ]
+SQL: SHOW COLUMNS FROM `fun_banner` [ RunTime:0.0070s ]
+SQL: UPDATE `fun_banner` SET `articleId`='31',`bannerTitle`='333331',`bannerImage`='http://localhost/Fun1/Public/upload/temp/2018-11/21//articlec57c45e23099ae55bf355c809c62965b8919617.jpg',`bannerStatus`='1' WHERE `bannerId` = 4 LIMIT 1  [ RunTime:0.0000s ]
+
+[ 2018-11-21T14:01:59+08:00 ] ::1 /Fun1/Admin/Banner/addBanner.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001501s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002001s ]
+SQL: SHOW COLUMNS FROM `fun_banner` [ RunTime:0.0075s ]
+SQL: UPDATE `fun_banner` SET `articleId`='3',`bannerTitle`='33333',`bannerImage`='http://localhost/Fun1/Public/upload/temp/2018-11/21//article4e5712dd443834c4c07cf9bb27879efb1333413.jpg',`bannerStatus`='1' WHERE `bannerId` = 4 LIMIT 1  [ RunTime:0.0005s ]
+
+[ 2018-11-21T14:02:04+08:00 ] ::1 /Fun1/Admin/Banner/setStatus.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002501s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003501s ]
+SQL: SHOW COLUMNS FROM `fun_banner` [ RunTime:0.0075s ]
+SQL: UPDATE `fun_banner` SET `bannerStatus`='0' WHERE `bannerId` = 4 LIMIT 1  [ RunTime:0.0000s ]
+
+[ 2018-11-21T14:03:07+08:00 ] ::1 /Fun1/Admin/Banner/addBanner.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001500s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002500s ]
+SQL: SHOW COLUMNS FROM `fun_banner` [ RunTime:0.0045s ]
+SQL: UPDATE `fun_banner` SET `articleId`='1',`bannerTitle`='测试1',`bannerImage`='https://p.d1xz.net/2015/4/27/161221472147.jpg',`bannerStatus`='1' WHERE `bannerId` = 1 LIMIT 1  [ RunTime:0.0005s ]
+
+[ 2018-11-21T14:03:13+08:00 ] ::1 /Fun1/Admin/Banner/addBanner.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001500s ]
+SQL: SHOW COLUMNS FROM `fun_banner` [ RunTime:0.0065s ]
+SQL: UPDATE `fun_banner` SET `articleId`='2',`bannerTitle`='测试2',`bannerImage`='https://p.d1xz.net/2015/5/29/11590277277.jpg',`bannerStatus`='1' WHERE `bannerId` = 2 LIMIT 1  [ RunTime:0.0005s ]
+
+[ 2018-11-21T14:03:19+08:00 ] ::1 /Fun1/Admin/Banner/addBanner.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000500s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `fun_banner` [ RunTime:0.0055s ]
+SQL: UPDATE `fun_banner` SET `articleId`='2',`bannerTitle`='测试3',`bannerImage`='https://img.d1xz.net/d/2018/10/5bc9345e2fb14.jpg',`bannerStatus`='1' WHERE `bannerId` = 3 LIMIT 1  [ RunTime:0.0005s ]
+
+[ 2018-11-21T14:04:43+08:00 ] ::1 /Fun1/Admin/Banner/addBanner.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001500s ]
+SQL: SHOW COLUMNS FROM `fun_banner` [ RunTime:0.0060s ]
+SQL: UPDATE `fun_banner` SET `articleId`='1',`bannerTitle`='测试12',`bannerImage`='https://p.d1xz.net/2015/4/27/161221472147.jpg',`bannerStatus`='1' WHERE `bannerId` = 1 LIMIT 1  [ RunTime:0.0005s ]
+
+[ 2018-11-21T14:06:13+08:00 ] ::1 /Fun1/Admin/Banner/addBanner.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001500s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `fun_banner` [ RunTime:0.0075s ]
+SQL: UPDATE `fun_banner` SET `articleId`='1',`bannerTitle`='测试1',`bannerImage`='https://p.d1xz.net/2015/4/27/161221472147.jpg',`bannerStatus`='1' WHERE `bannerId` = 1 LIMIT 1  [ RunTime:0.0005s ]
+
+[ 2018-11-21T21:14:17+08:00 ] ::1 /Fun1/Admin/Question/add-management.html
+ERR: 非法操作:add-management
+

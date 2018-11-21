@@ -22,12 +22,12 @@
 <title>导航轮播图列表</title>
 </head>
 <body>
-<nav class="breadcrumb"><i class="Hui-iconfont">&#xe67f;</i> 首页 <span class="c-gray en">&gt;</span> 轮播图表 <span class="c-gray en">&gt;</span> fun_admin <a class="btn btn-success radius r" style="line-height:1.6em;margin-top:3px" href="javascript:location.replace(location.href);" title="刷新" ><i class="Hui-iconfont">&#xe68f;</i></a></nav>
+<nav class="breadcrumb"><i class="Hui-iconfont">&#xe67f;</i> 首页 <span class="c-gray en">&gt;</span> 轮播图管理 <span class="c-gray en">&gt;</span> 轮播图列表 <a class="btn btn-success radius r" style="line-height:1.6em;margin-top:3px" href="javascript:location.replace(location.href);" title="刷新" ><i class="Hui-iconfont">&#xe68f;</i></a></nav>
 <div class="page-container">
 
 	<div class="cl pd-5 bg-1 bk-gray mt-20"> 
 		<span class="l">
-		<a class="btn btn-primary radius" onclick="admin_add('添加文章','add-management.html','800','500')" href="javascript:;"><i class="Hui-iconfont"></i> 添加轮播图</a>
+		<a class="btn btn-primary radius" onclick="banner_add('添加轮播图','add-banner.html')" href="javascript:;"><i class="Hui-iconfont"></i> 添加轮播图</a>
 		
 		</span> 
 		<span class="r">共有数据：<strong>{$count}</strong> 条</span> 
@@ -37,9 +37,10 @@
 		<table class="table table-border table-bordered table-bg table-hover table-sort table-responsive">
 			<thead>
 				<tr class="text-c">
-					<th width="60">articleID</th>
 					<th width="60">bannerID</th>
-					<th>标题</th>
+					<th width="60">articleID</th>
+					<th>创建时间</th>
+					<th>标题</th>					
 					<th>轮播图</th>
 					<th>是否发布</th>
 					<th>操作</th>
@@ -48,36 +49,82 @@
 			<tbody>
 				<volist name="info" id="v">
 					<tr class="text-c">
-						<td>{$v.articleid}</td>
-						<td class="text-1">{$v.bannerid}</td>
-						<td>{$v.bannertitle}</td>
+						<td>{$v.bannerid}</td>
+						<td class="text-1">{$v.articleid}</td>
+						<td>{$v.bannercreatetime}</td>
+						<td>{$v.bannertitle}</td>						
 						<td><a href="{$v.bannerimage}" target="_blank"><img style="width: 200px;max-height: 100px;" src="{$v.bannerimage}"/></a></td>
 						<td> 
 							<if condition="$v.bannerstatus eq 1"><p style="color:green">已发布</p></if>
-							<if condition="$v.bannerstatus eq 0"><p>未发布</p></if>
+							<if condition="$v.bannerstatus eq 0"><p style="color:red">未发布</p></if>
 						</td>
 						
-						<td class="f-14 td-manage"><a style="text-decoration:none" onClick="article_stop(this,'10001')" href="javascript:;" title="下架"><i class="Hui-iconfont">&#xe6de;</i></a> <a style="text-decoration:none" class="ml-5" onClick="article_edit('资讯编辑','article-add.html','10001')" href="javascript:;" title="编辑"><i class="Hui-iconfont">&#xe6df;</i></a> <a style="text-decoration:none" class="ml-5" onClick="article_del(this,'10001')" href="javascript:;" title="删除"><i class="Hui-iconfont">&#xe6e2;</i></a></td>
+						<td class="f-14 td-manage">
+							<a class="btn btn-success radius edit" data-bannerid="{$v.bannerid}" data-articleid="{$v.articleid}" data-bannertitle="{$v.bannertitle}" data-bannerimage="{$v.bannerimage}" data-bannerstatus="{$v.bannerstatus}" id="edit" href="javascript:void(0);" data-toggle="modal" data-target="#modify">修改</a>
+							<if condition="$v.bannerstatus eq 1">
+							<a class="btn btn-default radius" data-bannerid="{$v.bannerid}" onclick="setStatus('0','{$v.bannerid}')" href="javascript:;">不发布</a></if>
+							<if condition="$v.bannerstatus eq 0">
+							<a style="color: white;" class="btn btn-blue radius" data-bannerid="{$v.bannerid}" onclick="setStatus('1','{$v.bannerid}')" href="javascript:;">发&nbsp;&nbsp;&nbsp;布</a></if>
+						</td>
 					</tr>
 				</volist>
 
-				<!-- <tr class="text-c">
-					<td>10001</td>
-					<td class="text-l"><u style="cursor:pointer" class="text-primary" onClick="article_edit('查看','article-zhang.html','10001')" title="查看">资讯标题</u></td>
-					<td>21212</td>
-					<td class="td-status"><span class="label label-success radius">已发布</span></td>
-					<td class="f-14 td-manage"><a style="text-decoration:none" onClick="article_stop(this,'10001')" href="javascript:;" title="下架"><i class="Hui-iconfont">&#xe6de;</i></a> <a style="text-decoration:none" class="ml-5" onClick="article_edit('资讯编辑','article-add.html','10001')" href="javascript:;" title="编辑"><i class="Hui-iconfont">&#xe6df;</i></a> <a style="text-decoration:none" class="ml-5" onClick="article_del(this,'10001')" href="javascript:;" title="删除"><i class="Hui-iconfont">&#xe6e2;</i></a></td>
-				</tr>
-				<tr class="text-c">
-					<td>10002</td>
-					<td class="text-l"><u style="cursor:pointer" class="text-primary" onClick="article_edit('查看','article-zhang.html','10002')" title="查看">资讯标题</u></td>
-					<td>行业动态</td>
-					<td class="td-status"><span class="label label-success radius">草稿</span></td>
-					<td class="f-14 td-manage"><a style="text-decoration:none" onClick="article_shenhe(this,'10001')" href="javascript:;" title="审核">审核</a> <a style="text-decoration:none" class="ml-5" onClick="article_edit('资讯编辑','article-add.html','10001')" href="javascript:;" title="编辑"><i class="Hui-iconfont">&#xe6df;</i></a> <a style="text-decoration:none" class="ml-5" onClick="article_del(this,'10001')" href="javascript:;" title="删除"><i class="Hui-iconfont">&#xe6e2;</i></a></td>
-				</tr> -->
 			</tbody>
 		</table>
 	</div>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="modify" tabindex="-1" role="dialog" aria-labelledby="modifyLabel" aria-hidden="true" style="display: none">
+    <div class="modal-dialog" role="document" style="width: 900px;">
+        <div class="modal-content" style="width: 900px;">
+            <div class="modal-header">
+                <h5 class="modal-title" id="modLabel">轮播图列表 > 更改轮播图信息</h5>
+            </div>
+            <div class="modal-body">
+                <form class="form form-horizontal" id="form-admin-add">
+	<div class="row cl">
+		<input type="text" hidden="true" id="bannerId" name="bannerId">
+		<label class="form-label col-xs-4 col-sm-3"><span class="c-red">*</span>文章ID：</label>
+		<div class="formControls col-xs-8 col-sm-9">
+			<input type="text" class="input-text" placeholder="" id="articleId" name="articleId">
+		</div>
+	</div>
+
+	<div class="row cl">
+		<label class="form-label col-xs-4 col-sm-3">标题：</label>
+		<div class="formControls col-xs-8 col-sm-9">
+			<input type="text" class="input-text" placeholder="" id="bannerTitle" name="bannerTitle">
+		</div>
+	</div>
+
+	<div class="row cl">
+		<label class="form-label col-xs-4 col-sm-3">轮播图：</label>
+		<div class="formControls col-xs-8 col-sm-9">
+			<button type="button" class="btn btn-secondary radius" onclick="uploadImg();">更换图片</button>
+			<a target="_blank" id="set_img"><img src="" id="img" width="400px" height="200px"/></a>
+		</div>
+	</div>
+
+	<div class="row cl">
+		<label class="form-label col-xs-4 col-sm-3">是否发布：</label>
+		<div class="formControls col-xs-8 col-sm-9"> <span class="select-box" style="width:150px;">
+			<select id="bannerStatus" class="select" name="state" size="1">
+				<option value="0">不发布</option>
+				<option value="1">发布</option>
+			</select>
+			</span> 
+		</div>
+	</div>
+
+	</form>
+            </div>
+            <div class="modal-footer">
+           		<button type="button" class="btn btn-primary save">保存</button>
+                <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>               
+            </div>
+        </div>
+    </div>
 </div>
 <!--_footer 作为公共模版分离出去-->
  <script type="text/javascript" src="__PUBLIC__/lib/jquery/1.9.1/jquery.min.js"></script> 
@@ -88,25 +135,119 @@
 
 <!--请在下方写此页面业务相关的脚本-->
 <script type="text/javascript" src="__PUBLIC__/lib/My97DatePicker/4.8/WdatePicker.js"></script> 
-<!-- <script type="text/javascript" src="__PUBLIC__/lib/datatables/1.10.0/jquery.dataTables.min.js"></script>  -->
+<script type="text/javascript" src="__PUBLIC__/lib/datatables/1.10.0/jquery.dataTables.min.js"></script> 
 <script type="text/javascript" src="__PUBLIC__/lib/laypage/1.2/laypage.js"></script>
+<script src="__PUBLIC__/lib/jquery/jquery.upload.js"></script>
 <script type="text/javascript">
 
 $('.table-sort').dataTable({
-	"aaSorting": [[ 1, "desc" ]],//默认第几个排序
-	"bStateSave": true,//状态保存
+	"aaSorting": [[ 2, "desc" ]],
+	//"bStateSave": true,//状态保存
 	"pading":false,
 	"aoColumnDefs": [
-	  //{"bVisible": false, "aTargets": [ 3 ]} //控制列的隐藏显示
-	  {"orderable":false,"aTargets":[0,8]}// 不参与排序的列
+	  {"orderable":false,"aTargets":[3,4,5,6]}// 不参与排序的列
 	]
 });
-/*管理员-增加*/
-function admin_add(title,url,w,h){
-	layer_show(title,url,w,h);
+/*轮播图-增加*/
+function banner_add(title,url,w,h){
+	var index = layer.open({
+		type: 2,
+		title: title,
+		content: url
+	});
+	layer.full(index);
 }
 
+/*轮播图-修改*/
+$('.edit').click(function(){
+	var bannerid = $(this).data('bannerid');
+	var articleid = $(this).data('articleid');
+	var bannertitle = $(this).data('bannertitle');
+	var bannerimage = $(this).data('bannerimage');
+	var bannerstatus = $(this).data('bannerstatus');
 
+	$('#bannerId').val(bannerid);
+	$('#articleId').val(articleid);
+	$('#bannerTitle').val(bannertitle);
+	$('#bannerStatus').val(bannerstatus);
+	$("#img").attr('src', bannerimage);
+	$("#set_img").prop("href",bannerimage);
+	
+});
+
+// 文件上传（JQUERY异步上传插件）
+function uploadImg(file) {
+    $.upload({
+            url: "{:U('FileTools/uploadImg')}",
+            type : 'post',
+            fileName: 'upload',
+            params: {file: file,source:'article'},
+            //data: {source:'article'},
+            dataType: 'json',
+            onSend: function() {
+                return true;
+            },
+            onComplate: function(e) {
+            	console.log(e);
+                $("#img").attr('src', e);
+                $("#set_img").prop("hidden",false);
+                $("#set_img").prop("href",e);
+            }
+    });
+}
+
+/*轮播图-保存修改*/
+$('.save').click(function(){
+	var bannerid = $("#bannerId").val();
+	var articleid = $("#articleId").val();
+	var title = $("#bannerTitle").val();
+	var img = $("#set_img").attr('href');
+	var status = $("#bannerStatus option:selected").val();
+
+	$.ajax({
+		url : "{:U('Banner/addBanner')}",
+		type : 'post',
+		//dataType : 'json',
+		data : {
+			bannerid:bannerid,
+			articleid:articleid,
+			title:title,
+			img:img,
+			status:status,
+		},
+		success : function(e){
+			alert('操作成功！');
+			location.reload();
+		},
+		error : function(e){
+			console.log(e);
+			//layer.msg('error!',{icon:1,time:1000});
+			alert('网络错误');
+		}
+	});
+});
+
+// 修改是否发布
+function setStatus(status,id) {
+    $.ajax({
+        url: "{:U('Banner/setStatus')}",
+        type : 'post',
+        data : {
+			id:id,
+			status:status,
+		},
+		success : function(e){
+			//console.log(e);
+			//alert('操作成功！');
+			location.reload();
+		},
+		error : function(e){
+			console.log(e);
+			//layer.msg('error!',{icon:1,time:1000});
+			alert('网络错误');
+		}
+    });
+}
 </script> 
 </body>
 </html>

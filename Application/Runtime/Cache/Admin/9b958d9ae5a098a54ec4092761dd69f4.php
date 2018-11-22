@@ -6,19 +6,12 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
 <meta http-equiv="Cache-Control" content="no-siteapp" />
-<!--[if lt IE 9]>
-<script type="text/javascript" src="lib/html5shiv.js"></script>
-<script type="text/javascript" src="lib/respond.min.js"></script>
-<![endif]-->
+
 <link rel="stylesheet" type="text/css" href="/Fun1/Public/static/h-ui/css/H-ui.min.css" />
 <link rel="stylesheet" type="text/css" href="/Fun1/Public/static/h-ui.admin/css/H-ui.admin.css" />
 <link rel="stylesheet" type="text/css" href="/Fun1/Public/lib/Hui-iconfont/1.0.8/iconfont.css" />
 <link rel="stylesheet" type="text/css" href="/Fun1/Public/static/h-ui.admin/skin/default/skin.css" id="skin" />
 <link rel="stylesheet" type="text/css" href="/Fun1/Public/static/h-ui.admin/css/style.css" />
-<!--[if IE 6]>
-<script type="text/javascript" src="lib/DD_belatedPNG_0.0.8a-min.js" ></script>
-<script>DD_belatedPNG.fix('*');</script>
-<![endif]-->
 <title>测试列表</title>
 </head>
 <body>
@@ -27,7 +20,7 @@
 
 	<div class="cl pd-5 bg-1 bk-gray mt-20"> 
 		<span class="l">
-		<a class="btn btn-primary radius" onclick="admin_add('添加问卷','add-management.html','800','500')" href="javascript:;"><i class="Hui-iconfont"></i> 添加问卷</a>
+		<a class="btn btn-primary radius" onclick="test_add('添加问卷','add-test.html')" href="javascript:;"><i class="Hui-iconfont"></i> 添加问卷</a>
 		
 		</span> 
 		<span class="r">共有数据：<strong><?php echo ($count); ?></strong> 条</span> 
@@ -67,52 +60,45 @@
 						<td><?php echo ($v["dtitle"]); ?></td>
 						<td><?php echo ($v["dscore"]); ?></td>			
 						
-						<td class="f-14 td-manage"><a style="text-decoration:none" onClick="article_stop(this,'10001')" href="javascript:;" title="下架"><i class="Hui-iconfont">&#xe6de;</i></a> <a style="text-decoration:none" class="ml-5" onClick="article_edit('资讯编辑','article-add.html','10001')" href="javascript:;" title="编辑"><i class="Hui-iconfont">&#xe6df;</i></a> <a style="text-decoration:none" class="ml-5" onClick="article_del(this,'10001')" href="javascript:;" title="删除"><i class="Hui-iconfont">&#xe6e2;</i></a></td>
+						<td class="f-14 td-manage">
+							<a style="text-decoration:none" onClick="article_stop(this,'10001')" href="javascript:;" title="下架"><i class="Hui-iconfont">&#xe6de;</i></a> <a style="text-decoration:none" class="ml-5" onClick="article_edit('资讯编辑','article-add.html','10001')" href="javascript:;" title="编辑"><i class="Hui-iconfont">&#xe6df;</i></a> <a style="text-decoration:none" class="ml-5" onClick="article_del(this,'10001')" href="javascript:;" title="删除"><i class="Hui-iconfont">&#xe6e2;</i></a>
+						</td>
 					</tr><?php endforeach; endif; else: echo "" ;endif; ?>
 
-				<!-- <tr class="text-c">
-					<td>10001</td>
-					<td class="text-l"><u style="cursor:pointer" class="text-primary" onClick="article_edit('查看','article-zhang.html','10001')" title="查看">资讯标题</u></td>
-					<td>21212</td>
-					<td class="td-status"><span class="label label-success radius">已发布</span></td>
-					<td class="f-14 td-manage"><a style="text-decoration:none" onClick="article_stop(this,'10001')" href="javascript:;" title="下架"><i class="Hui-iconfont">&#xe6de;</i></a> <a style="text-decoration:none" class="ml-5" onClick="article_edit('资讯编辑','article-add.html','10001')" href="javascript:;" title="编辑"><i class="Hui-iconfont">&#xe6df;</i></a> <a style="text-decoration:none" class="ml-5" onClick="article_del(this,'10001')" href="javascript:;" title="删除"><i class="Hui-iconfont">&#xe6e2;</i></a></td>
-				</tr>
-				<tr class="text-c">
-					<td>10002</td>
-					<td class="text-l"><u style="cursor:pointer" class="text-primary" onClick="article_edit('查看','article-zhang.html','10002')" title="查看">资讯标题</u></td>
-					<td>行业动态</td>
-					<td class="td-status"><span class="label label-success radius">草稿</span></td>
-					<td class="f-14 td-manage"><a style="text-decoration:none" onClick="article_shenhe(this,'10001')" href="javascript:;" title="审核">审核</a> <a style="text-decoration:none" class="ml-5" onClick="article_edit('资讯编辑','article-add.html','10001')" href="javascript:;" title="编辑"><i class="Hui-iconfont">&#xe6df;</i></a> <a style="text-decoration:none" class="ml-5" onClick="article_del(this,'10001')" href="javascript:;" title="删除"><i class="Hui-iconfont">&#xe6e2;</i></a></td>
-				</tr> -->
 			</tbody>
 		</table>
 	</div>
 </div>
 <!--_footer 作为公共模版分离出去-->
- <script type="text/javascript" src="/Fun1/Public/lib/jquery/1.9.1/jquery.min.js"></script> 
+<script type="text/javascript" src="/Fun1/Public/lib/jquery/1.9.1/jquery.min.js"></script> 
 <script type="text/javascript" src="/Fun1/Public/lib/layer/2.4/layer.js"></script>
 <!-- <script type="text/javascript" src="/Fun1/Public/li<!-- b/layer/2.4/layer.js"></script> -->
 <script type="text/javascript" src="/Fun1/Public/static/h-ui/js/H-ui.min.js"></script> 
-<script type="text/javascript" src="/Fun1/Public/static/h-ui.admin/js/H-ui.admin.js"></script> <!--/_footer 作为公共模版分离出去
+<script type="text/javascript" src="/Fun1/Public/static/h-ui.admin/js/H-ui.admin.js"></script> 
 
-<!--请在下方写此页面业务相关的脚本-->
 <script type="text/javascript" src="/Fun1/Public/lib/My97DatePicker/4.8/WdatePicker.js"></script> 
-<!-- <script type="text/javascript" src="/Fun1/Public/lib/datatables/1.10.0/jquery.dataTables.min.js"></script>  -->
+<script type="text/javascript" src="/Fun1/Public/lib/datatables/1.10.0/jquery.dataTables.min.js"></script> 
 <script type="text/javascript" src="/Fun1/Public/lib/laypage/1.2/laypage.js"></script>
+<script src="/Fun1/Public/lib/jquery/jquery.upload.js"></script>
 <script type="text/javascript">
 
 $('.table-sort').dataTable({
-	"aaSorting": [[ 1, "desc" ]],//默认第几个排序
-	"bStateSave": true,//状态保存
+	"aaSorting": [[ 0, "desc" ]],
+	//"bStateSave": true,//状态保存
 	"pading":false,
 	"aoColumnDefs": [
-	  //{"bVisible": false, "aTargets": [ 3 ]} //控制列的隐藏显示
-	  {"orderable":false,"aTargets":[0,8]}// 不参与排序的列
+	  {"orderable":false,"aTargets":[2,3,4,5,6,7,8,9,10,11,12]}// 不参与排序的列
 	]
 });
-/*管理员-增加*/
-function admin_add(title,url,w,h){
-	layer_show(title,url,w,h);
+
+/*测试-增加*/
+function test_add(title,url){
+	var index = layer.open({
+		type: 2,
+		title: title,
+		content: url
+	});
+	layer.full(index);
 }
 
 

@@ -19,8 +19,17 @@
 <script type="text/javascript" src="lib/DD_belatedPNG_0.0.8a-min.js" ></script>
 <script>DD_belatedPNG.fix('*');</script>
 <![endif]-->
-<title>轮播图管理 - 添加轮播图</title>
-
+<title>问卷管理 - 添加问卷</title>
+<link href="__PUBLIC__/ueditor/themes/default/css/umeditor.min.css" rel="stylesheet" />
+<script src="__PUBLIC__/ueditor/third-party/jquery.min.js"></script>
+<script src="__PUBLIC__/ueditor/umeditor.config.js"></script>
+<script src="__PUBLIC__/ueditor/umeditor.min.js"></script>
+<script src="__PUBLIC__/ueditor/lang/zh-cn/zh-cn.js"></script>
+<script>
+    $(function () {
+        UM.getEditor('myEditor');
+    });
+</script>
 <meta name="keywords" content="">
 <meta name="description" content="">
 </head>
@@ -28,34 +37,62 @@
 <article class="page-container" display="none">
 	<form class="form form-horizontal" id="form-admin-add" display="none">
 	<div class="row cl">
-		<label class="form-label col-xs-4 col-sm-3"><span class="c-red">*</span>文章Id：</label>
-		<div class="formControls col-xs-8 col-sm-9">
-			<input type="text" class="input-text" placeholder="" id="articleid" name="articleid">
-		</div>
-	</div>
-	<div class="row cl">
-		<label class="form-label col-xs-4 col-sm-3"><span class="c-red">*</span>标题：</label>
+		<label class="form-label col-xs-4 col-sm-3"><span class="c-red">*</span>问卷标题：</label>
 		<div class="formControls col-xs-8 col-sm-9">
 			<input type="text" class="input-text" placeholder="" id="title" name="title">
 		</div>
 	</div>
 	<div class="row cl">
-		<label class="form-label col-xs-4 col-sm-3"><span class="c-red">*</span>轮播图上传：</label>
+		<label class="form-label col-xs-4 col-sm-3"><span class="c-red">*</span>封面上传：</label>
 		<div class="formControls col-xs-8 col-sm-9">
 			<button type="button" class="btn btn-secondary radius" onclick="uploadImg();">上传图片</button>
-			<a hidden="ture" target="_blank" id="set_img"><img src="" id="img" width="400px" height="200px"/></a>
+			<a hidden="ture" target="_blank" id="set_img"><img src="" id="img" width="200px" height="200px"/></a>
 			<!-- <input style="width: 60px;height: 25px;" hidden="ture" id="delect" type="button" onclick="delectImg();" value="删除"/> -->
 		</div>
 	</div>
 
 	<div class="row cl">
-		<label class="form-label col-xs-4 col-sm-3"><span class="c-red">*</span>是否发布：</label>
+		<label class="form-label col-xs-4 col-sm-3">描述：</label>
+		<div class="formControls col-xs-8 col-sm-9">
+			<input type="text" class="input-text" placeholder="" id="description" name="description">
+		</div>
+	</div>
+
+	<div class="row cl">
+		<label class="form-label col-xs-4 col-sm-3"><span class="c-red">*</span>类型：</label>
 		<div class="formControls col-xs-8 col-sm-9"> <span class="select-box" style="width:150px;">
-			<select id="status" class="select" name="status" size="1">
-				<option value="0">不发布</option>
-				<option value="1">发布</option>
+			<select id="type" class="select" name="type" size="1">
+				<option value="1">情感</option>
+				<option value="2">性格</option>
+				<option value="3">趣味</option>
+				<option value="10">综合</option>				
 			</select>
 			</span> 
+		</div>
+	</div>
+
+	<div class="row cl">
+		<label class="form-label col-xs-4 col-sm-3"><span class="c-red">*</span>是否付费：</label>
+		<div class="formControls col-xs-8 col-sm-9"> <span class="select-box" style="width:150px;">
+			<select id="state" class="select" name="state" size="1">
+				<option value="0">不付费</option>
+				<option value="1">付费</option>
+			</select>
+			</span> 
+		</div>
+	</div>
+
+	<div class="row cl">
+		<label class="form-label col-xs-4 col-sm-3">原价（单位：元）：</label>
+		<div class="formControls col-xs-8 col-sm-9">
+			<input type="text" class="input-text" placeholder="请填价格" id="preMoney" name="preMoney">
+		</div>
+	</div>
+
+	<div class="row cl">
+		<label class="form-label col-xs-4 col-sm-3">现价（单位：元）：</label>
+		<div class="formControls col-xs-8 col-sm-9">
+			<input style="color: red" type="text" class="input-text" placeholder="请填价格" id="nowMoney" name="nowMoney">
 		</div>
 	</div>
 
@@ -88,19 +125,26 @@
 	});
 	
 	$("#submit").click(function(){
-		var articleid = $("#articleid").val();
 		var title = $("#title").val();
 		var img = $("#set_img").attr('href');
-		var status = $("#status option:selected").val();
+		var description = $("#description").val();
+		var type = $("#type option:selected").val();
+		var state = $("#state option:selected").val();
+		var premoney = $("#preMoney").val();
+		var nowmoney = $("#nowMoney").val();
+
 		$.ajax({
-			url : "{:U('Banner/addBanner')}",
+			url : "{:U('Question/addQuestionnaire')}",
 			type : 'post',
 			//dataType : 'json',
 			data : {
-				articleid:articleid,
 				title:title,
 				img:img,
-				status:status,
+				description:description,
+				state:state,
+				type:type,
+				premoney:premoney,
+				nowmoney:nowmoney,
 			},
 			success : function(e){
 				console.log(e);
@@ -121,22 +165,22 @@
 	// 文件上传（JQUERY异步上传插件）
     function uploadImg(file) {
         $.upload({
-                url: "{:U('FileTools/uploadImg')}",
-                type : 'post',
-                fileName: 'upload',
-                params: {file: file,source:'banner'},
-                //data: {source:'article'},
-                dataType: 'json',
-                onSend: function() {
-                    return true;
-                },
-                onComplate: function(e) {
-                	console.log(e);
-                    $("#img").attr('src', e);
-                    $("#set_img").prop("hidden",false);
-                    $("#delect").prop("hidden",false);
-                    $("#set_img").prop("href",e);
-                }
+            url: "{:U('FileTools/uploadImg')}",
+            type : 'post',
+            fileName: 'upload',
+            params: {file: file,source:'questionaire'},
+            //data: {source:'article'},
+            dataType: 'json',
+            onSend: function() {
+                return true;
+            },
+            onComplate: function(e) {
+            	console.log(e);
+                $("#img").attr('src', e);
+                $("#set_img").prop("hidden",false);
+                $("#delect").prop("hidden",false);
+                $("#set_img").prop("href",e);
+            }
         });
     }
 

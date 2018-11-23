@@ -33,14 +33,14 @@
 	<div class="row cl">
 		<label class="form-label col-xs-4 col-sm-3"><span class="c-red">*</span>questionId：</label>
 		<div class="formControls col-xs-8 col-sm-9">
-			<input type="text" class="input-text" placeholder="" id="title" name="title">
+			<input type="text" class="input-text" placeholder="" id="qid" name="qid">
 		</div>
 	</div>
 
 	<div class="row cl">
 		<label class="form-label col-xs-4 col-sm-3"><span class="c-red">*</span>题号：</label>
 		<div class="formControls col-xs-8 col-sm-9">
-			<input type="text" class="input-text" placeholder="" id="title" name="title">
+			<input type="text" class="input-text" placeholder="" id="num" name="num">
 		</div>
 	</div>
 
@@ -54,9 +54,10 @@
 	<div class="row cl">
 		<label class="form-label col-xs-4 col-sm-3">标题图片：</label>
 		<div class="formControls col-xs-8 col-sm-9">
-			<button type="button" class="btn btn-secondary radius" onclick="uploadImg();">上传图片</button>
-			<a hidden="ture" target="_blank" id="set_img"><img src="" id="img" width="200px" height="200px"/></a>
-			<input style="width: 60px;height: 25px;" hidden="ture" id="delect" type="button" onclick="delectImg();" value="删除"/>
+			<button type="button" value="titleimg" class="btn btn-secondary radius uploadImg">上传图片</button>
+			<a hidden="ture" target="_blank" id="set_titleimg"><img src="" id="titleimg" width="200px" height="150px"/></a>
+			<!-- <input class="btn btn-default radius"  hidden="ture" id="delect" onclick="delectImg();" value="删除"/> -->
+			<button style="display:none;" value="titleimg" type="button" class="btn btn-default radius titleimg delectImg">删除</button>
 		</div>
 	</div>
 
@@ -67,9 +68,9 @@
 			<br/><br/>
 			<input type="text" class="input-text" placeholder="分数" id="title" name="title">
 			<br/><br/>
-			<button type="button" class="btn btn-secondary radius" onclick="uploadImg();">上传图片A</button>
-			<a hidden="ture" target="_blank" id="set_img"><img src="" id="img" width="200px" height="200px"/></a>
-			<input style="width: 60px;height: 25px;" hidden="ture" id="delect" type="button" onclick="delectImg();" value="删除"/>
+			<button type="button" value="aimg" class="btn btn-secondary radius uploadImg">上传图片A</button>
+			<a hidden="ture" target="_blank" id="set_aimg"><img src="" id="aimg" width="200px" height="150px"/></a>
+			<button style="display:none;" value="aimg" type="button" class="btn btn-default radius aimg delectImg">删除A</button>
 		</div>
 	</div>
 
@@ -80,9 +81,9 @@
 			<br/><br/>
 			<input type="text" class="input-text" placeholder="分数" id="title" name="title">
 			<br/><br/>
-			<button type="button" class="btn btn-secondary radius" onclick="uploadImg();">上传图片B</button>
-			<a hidden="ture" target="_blank" id="set_img"><img src="" id="img" width="200px" height="200px"/></a>
-			<input style="width: 60px;height: 25px;" hidden="ture" id="delect" type="button" onclick="delectImg();" value="删除"/>
+			<button type="button" value="bimg" class="btn btn-secondary radius uploadImg">上传图片B</button>
+			<a hidden="ture" target="_blank" id="set_bimg"><img src="" id="bimg" width="200px" height="150px"/></a>
+			<button style="display:none;" value="bimg" type="button" class="btn btn-default radius bimg delectImg">删除B</button>
 		</div>
 	</div>
 
@@ -93,9 +94,9 @@
 			<br/><br/>
 			<input type="text" class="input-text" placeholder="分数" id="title" name="title">
 			<br/><br/>
-			<button type="button" class="btn btn-secondary radius" onclick="uploadImg();">上传图片C</button>
-			<a hidden="ture" target="_blank" id="set_img"><img src="" id="img" width="200px" height="200px"/></a>
-			<input style="width: 60px;height: 25px;" hidden="ture" id="delect" type="button" onclick="delectImg();" value="删除"/>
+			<button type="button" value="cimg" class="btn btn-secondary radius uploadImg">上传图片C</button>
+			<a hidden="ture" target="_blank" id="set_cimg"><img src="" id="cimg" width="200px" height="150px"/></a>
+			<button style="display:none;" value="cimg" type="button" class="btn btn-default radius cimg delectImg">删除C</button>
 		</div>
 	</div>
 
@@ -106,54 +107,9 @@
 			<br/><br/>
 			<input type="text" class="input-text" placeholder="分数" id="title" name="title">
 			<br/><br/>
-			<button type="button" class="btn btn-secondary radius" onclick="uploadImg();">上传图片D</button>
-			<a hidden="ture" target="_blank" id="set_img"><img src="" id="img" width="200px" height="200px"/></a>
-			<input style="width: 60px;height: 25px;" hidden="ture" id="delect" type="button" onclick="delectImg();" value="删除"/>
-		</div>
-	</div>
-
-	<div class="row cl">
-		<label class="form-label col-xs-4 col-sm-3"><span class="c-red">*</span>D分数：</label>
-		<div class="formControls col-xs-8 col-sm-9">
-			<input type="text" class="input-text" placeholder="" id="title" name="title">
-		</div>
-	</div>
-
-	<div class="row cl">
-		<label class="form-label col-xs-4 col-sm-3"><span class="c-red">*</span>类型：</label>
-		<div class="formControls col-xs-8 col-sm-9"> <span class="select-box" style="width:150px;">
-			<select id="type" class="select" name="type" size="1">
-				<option value="1">情感</option>
-				<option value="2">性格</option>
-				<option value="3">趣味</option>
-				<option value="10">综合</option>				
-			</select>
-			</span> 
-		</div>
-	</div>
-
-	<div class="row cl">
-		<label class="form-label col-xs-4 col-sm-3"><span class="c-red">*</span>是否付费：</label>
-		<div class="formControls col-xs-8 col-sm-9"> <span class="select-box" style="width:150px;">
-			<select id="state" class="select" name="state" size="1">
-				<option value="0">不付费</option>
-				<option value="1">付费</option>
-			</select>
-			</span> 
-		</div>
-	</div>
-
-	<div class="row cl">
-		<label class="form-label col-xs-4 col-sm-3">原价（单位：元）：</label>
-		<div class="formControls col-xs-8 col-sm-9">
-			<input type="text" class="input-text" placeholder="请填价格" id="preMoney" name="preMoney">
-		</div>
-	</div>
-
-	<div class="row cl">
-		<label class="form-label col-xs-4 col-sm-3">现价（单位：元）：</label>
-		<div class="formControls col-xs-8 col-sm-9">
-			<input style="color: red" type="text" class="input-text" placeholder="请填价格" id="nowMoney" name="nowMoney">
+			<button type="button" value="dimg" class="btn btn-secondary radius uploadImg">上传图片D</button>
+			<a hidden="ture" target="_blank" id="set_dimg"><img src="" id="dimg" width="200px" height="150px"/></a>
+			<button style="display:none;" value="dimg" type="button" class="btn btn-default radius dimg delectImg">删除D</button>
 		</div>
 	</div>
 
@@ -222,14 +178,15 @@
 		});
 		
 	});
-	
+
 	// 文件上传（JQUERY异步上传插件）
-    function uploadImg(file) {
+	$('.uploadImg').bind('click',function(file){
+		var abcd = $(this).attr('value');
         $.upload({
             url: "{:U('FileTools/uploadImg')}",
             type : 'post',
             fileName: 'upload',
-            params: {file: file,source:'test'},
+            params: {file: file, source: abcd + 'test'},
             //data: {source:'article'},
             dataType: 'json',
             onSend: function() {
@@ -237,13 +194,23 @@
             },
             onComplate: function(e) {
             	console.log(e);
-                $("#img").attr('src', e);
-                $("#set_img").prop("hidden",false);
-                $("#delect").prop("hidden",false);
-                $("#set_img").prop("href",e);
+                $("#" + abcd).attr('src', e);
+                $("#set_" + abcd).prop("hidden",false);
+                $("#set_" + abcd).prop("href",e);
+                $("." + abcd).css('display','block');
             }
         });
-    }
+	})
+
+	// 图片删除
+	$('.delectImg').bind('click',function(){
+		var abcd = $(this).attr('value');
+		$("#" + abcd).attr('src', '');
+        $("#set_" + abcd).prop("hidden",true);
+        $("#set_" + abcd).prop("href",'');
+		$("." + abcd).css('display','none');
+
+	})
 
 </script> 
 

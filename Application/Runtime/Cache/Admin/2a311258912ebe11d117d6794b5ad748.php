@@ -124,7 +124,7 @@
                 url: "<?php echo U('FileTools/uploadImg');?>",
                 type : 'post',
                 fileName: 'upload',
-                params: {file: file,source:'article'},
+                params: {file: file,source:'banner'},
                 //data: {source:'article'},
                 dataType: 'json',
                 onSend: function() {

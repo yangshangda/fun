@@ -1,3 +1,17 @@
 [ 2018-11-23T09:51:11+08:00 ] ::1 /Fun1/Admin/Question/test
 ERR: XML标签语法错误 : condition="{$v.testimg}"/
 
+[ 2018-11-23T21:21:45+08:00 ] ::1 /Fun1/Admin/Banner/setStatus.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001501s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002501s ]
+SQL: SHOW COLUMNS FROM `fun_banner` [ RunTime:0.0110s ]
+SQL: UPDATE `fun_banner` SET `bannerStatus`='0' WHERE `bannerId` = 3 LIMIT 1  [ RunTime:0.0165s ]
+
+[ 2018-11-23T21:21:49+08:00 ] ::1 /Fun1/Admin/Banner/setStatus.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000500s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `fun_banner` [ RunTime:0.0075s ]
+SQL: UPDATE `fun_banner` SET `bannerStatus`='1' WHERE `bannerId` = 3 LIMIT 1  [ RunTime:0.0005s ]
+

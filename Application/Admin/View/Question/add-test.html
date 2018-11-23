@@ -31,24 +31,91 @@
 <article class="page-container" display="none">
 	<form class="form form-horizontal" id="form-admin-add" display="none">
 	<div class="row cl">
-		<label class="form-label col-xs-4 col-sm-3"><span class="c-red">*</span>问卷标题：</label>
+		<label class="form-label col-xs-4 col-sm-3"><span class="c-red">*</span>questionId：</label>
 		<div class="formControls col-xs-8 col-sm-9">
 			<input type="text" class="input-text" placeholder="" id="title" name="title">
 		</div>
 	</div>
+
 	<div class="row cl">
-		<label class="form-label col-xs-4 col-sm-3"><span class="c-red">*</span>封面上传：</label>
+		<label class="form-label col-xs-4 col-sm-3"><span class="c-red">*</span>题号：</label>
 		<div class="formControls col-xs-8 col-sm-9">
-			<button type="button" class="btn btn-secondary radius" onclick="uploadImg();">上传图片</button>
-			<a hidden="ture" target="_blank" id="set_img"><img src="" id="img" width="200px" height="200px"/></a>
-			<!-- <input style="width: 60px;height: 25px;" hidden="ture" id="delect" type="button" onclick="delectImg();" value="删除"/> -->
+			<input type="text" class="input-text" placeholder="" id="title" name="title">
 		</div>
 	</div>
 
 	<div class="row cl">
-		<label class="form-label col-xs-4 col-sm-3">描述：</label>
+		<label class="form-label col-xs-4 col-sm-3"><span class="c-red">*</span>标题：</label>
 		<div class="formControls col-xs-8 col-sm-9">
-			<input type="text" class="input-text" placeholder="" id="description" name="description">
+			<input type="text" class="input-text" placeholder="文本和图片可共存" id="title" name="title">
+		</div>
+	</div>
+
+	<div class="row cl">
+		<label class="form-label col-xs-4 col-sm-3">标题图片：</label>
+		<div class="formControls col-xs-8 col-sm-9">
+			<button type="button" class="btn btn-secondary radius" onclick="uploadImg();">上传图片</button>
+			<a hidden="ture" target="_blank" id="set_img"><img src="" id="img" width="200px" height="200px"/></a>
+			<input style="width: 60px;height: 25px;" hidden="ture" id="delect" type="button" onclick="delectImg();" value="删除"/>
+		</div>
+	</div>
+
+	<div class="row cl">
+		<label class="form-label col-xs-4 col-sm-3">A：</label>
+		<div class="formControls col-xs-8 col-sm-9">
+			<input type="text" class="input-text" placeholder="内容：文本和图片二选一" id="title" name="title">
+			<br/><br/>
+			<input type="text" class="input-text" placeholder="分数" id="title" name="title">
+			<br/><br/>
+			<button type="button" class="btn btn-secondary radius" onclick="uploadImg();">上传图片A</button>
+			<a hidden="ture" target="_blank" id="set_img"><img src="" id="img" width="200px" height="200px"/></a>
+			<input style="width: 60px;height: 25px;" hidden="ture" id="delect" type="button" onclick="delectImg();" value="删除"/>
+		</div>
+	</div>
+
+	<div class="row cl">
+		<label class="form-label col-xs-4 col-sm-3">B：</label>
+		<div class="formControls col-xs-8 col-sm-9">
+			<input type="text" class="input-text" placeholder="内容：文本和图片二选一" id="title" name="title">
+			<br/><br/>
+			<input type="text" class="input-text" placeholder="分数" id="title" name="title">
+			<br/><br/>
+			<button type="button" class="btn btn-secondary radius" onclick="uploadImg();">上传图片B</button>
+			<a hidden="ture" target="_blank" id="set_img"><img src="" id="img" width="200px" height="200px"/></a>
+			<input style="width: 60px;height: 25px;" hidden="ture" id="delect" type="button" onclick="delectImg();" value="删除"/>
+		</div>
+	</div>
+
+	<div class="row cl">
+		<label class="form-label col-xs-4 col-sm-3">C：</label>
+		<div class="formControls col-xs-8 col-sm-9">
+			<input type="text" class="input-text" placeholder="内容：文本和图片二选一" id="title" name="title">
+			<br/><br/>
+			<input type="text" class="input-text" placeholder="分数" id="title" name="title">
+			<br/><br/>
+			<button type="button" class="btn btn-secondary radius" onclick="uploadImg();">上传图片C</button>
+			<a hidden="ture" target="_blank" id="set_img"><img src="" id="img" width="200px" height="200px"/></a>
+			<input style="width: 60px;height: 25px;" hidden="ture" id="delect" type="button" onclick="delectImg();" value="删除"/>
+		</div>
+	</div>
+
+	<div class="row cl">
+		<label class="form-label col-xs-4 col-sm-3">D：</label>
+		<div class="formControls col-xs-8 col-sm-9">
+			<input type="text" class="input-text" placeholder="内容：文本和图片二选一" id="title" name="title">
+			<br/><br/>
+			<input type="text" class="input-text" placeholder="分数" id="title" name="title">
+			<br/><br/>
+			<button type="button" class="btn btn-secondary radius" onclick="uploadImg();">上传图片D</button>
+			<a hidden="ture" target="_blank" id="set_img"><img src="" id="img" width="200px" height="200px"/></a>
+			<input style="width: 60px;height: 25px;" hidden="ture" id="delect" type="button" onclick="delectImg();" value="删除"/>
+		</div>
+	</div>
+
+	<div class="row cl">
+		<label class="form-label col-xs-4 col-sm-3"><span class="c-red">*</span>D分数：</label>
+		<div class="formControls col-xs-8 col-sm-9">
+			<input type="text" class="input-text" placeholder="" id="title" name="title">
 		</div>
 	</div>
 
@@ -162,7 +229,7 @@
             url: "{:U('FileTools/uploadImg')}",
             type : 'post',
             fileName: 'upload',
-            params: {file: file,source:'questionaire'},
+            params: {file: file,source:'test'},
             //data: {source:'article'},
             dataType: 'json',
             onSend: function() {

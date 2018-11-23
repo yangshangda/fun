@@ -34,6 +34,7 @@
 					<th width="70">testID</th>
 					<th>题号</th>
 					<th>标题</th>
+					<th>标题图片</th>
 					<th>a内容</th>
 					<th>a分数</th>
 					<th>b内容</th>
@@ -51,13 +52,29 @@
 						<td><?php echo ($v["testid"]); ?></td>						
 						<td><?php echo ($v["testnumber"]); ?></td>
 						<td><?php echo ($v["testtitle"]); ?></td>
-						<td><?php echo ($v["atitle"]); ?></td>
+						<td>
+							<?php if($v["testimg"] != null): ?><a href="<?php echo ($v["testimg"]); ?>" target="_blank"><img style="max-width: 80px;max-height: 80px;" src="<?php echo ($v["testimg"]); ?>"/></a>
+								<?php else: ?>无<?php endif; ?>
+						</td>
+						<td>
+							<if condition="$v.atitle neq null"/><?php echo ($v["atitle"]); ?>
+							<if condition="$v.aimg"/><a href="<?php echo ($v["aimg"]); ?>" target="_blank"><img style="max-width: 80px;max-height: 80px;" src="<?php echo ($v["aimg"]); ?>"/></a>
+						</td>
 						<td><?php echo ($v["ascore"]); ?></td>
-						<td><?php echo ($v["btitle"]); ?></td>
+						<td>
+							<if condition="$v.btitle neq null"/><?php echo ($v["btitle"]); ?>
+							<if condition="$v.bimg neq null"/><a href="<?php echo ($v["bimg"]); ?>" target="_blank"><img style="max-width: 80px;max-height: 80px;" src="<?php echo ($v["bimg"]); ?>"/></a>
+						</td>
 						<td><?php echo ($v["bscore"]); ?></td>
-						<td><?php echo ($v["ctitle"]); ?></td>
+						<td>
+							<if condition="$v.ctitle neq null"/><?php echo ($v["ctitle"]); ?>
+							<if condition="$v.cimg neq null"/><a href="<?php echo ($v["cimg"]); ?>" target="_blank"><img style="max-width: 80px;max-height: 80px;" src="<?php echo ($v["cimg"]); ?>"/></a>
+						</td>
 						<td><?php echo ($v["cscore"]); ?></td>
-						<td><?php echo ($v["dtitle"]); ?></td>
+						<td>
+							<if condition="$v.dtitle neq null"/><?php echo ($v["dtitle"]); ?>
+							<if condition="$v.dimg neq null"/><a href="<?php echo ($v["dimg"]); ?>" target="_blank"><img style="max-width: 80px;max-height: 80px;" src="<?php echo ($v["dimg"]); ?>"/></a>
+						</td>
 						<td><?php echo ($v["dscore"]); ?></td>			
 						
 						<td class="f-14 td-manage">

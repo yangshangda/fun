@@ -57,5 +57,37 @@ class QuestionController extends CommonController {
 		$questionnaire_set_paystate = $questionnaire_table->limit(1)->where($where)->save($data);die;
 	}
 
+	//添加测试
+	public function addTest(){
+		//$data = I('post.');
+		$testid = I('testid');
+		$data['questionId'] = I('qid');
+		$data['testNumber'] = I('num');
+		$data['testTitle'] = I('title');
+		$data['testImg'] = I('set_titleimg');
+		$data['aTitle'] = I('atitle');
+		$data['aScore'] = I('ascore');
+		$data['aImg'] = I('set_aimg');
+		$data['bTitle'] = I('btitle');
+		$data['bScore'] = I('bscore');
+		$data['bImg'] = I('set_bimg');
+		$data['cTitle'] = I('ctitle');
+		$data['cScore'] = I('cscore');
+		$data['cImg'] = I('set_cimg');
+		$data['dTitle'] = I('dtitle');
+		$data['dScore'] = I('dscore');
+		$data['dImg'] = I('set_dimg');
+       
+		$test_table = M('fun_test');
+
+		if(!empty($testid)) {
+			$where['testId'] = (int)$testid;
+			$test_update = $test_table->limit(1)->where($where)->save($data);die;
+		}else{
+			//$data['testCreateTime'] = date("Y-m-d h:i:s");
+			$test_add = $test_table->limit(1)->where()->add($data);die;
+		}
+	}
+
 
 }

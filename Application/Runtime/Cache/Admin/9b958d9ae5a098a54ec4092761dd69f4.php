@@ -20,7 +20,7 @@
 
 	<div class="cl pd-5 bg-1 bk-gray mt-20"> 
 		<span class="l">
-		<a class="btn btn-primary radius" onclick="test_add('添加问卷','add-test.html')" href="javascript:;"><i class="Hui-iconfont"></i> 添加问卷</a>
+		<a class="btn btn-primary radius" onclick="test_add('添加测试题','add-test.html')" href="javascript:;"><i class="Hui-iconfont"></i> 添加测试题</a>
 		
 		</span> 
 		<span class="r">共有数据：<strong><?php echo ($count); ?></strong> 条</span> 

@@ -33,7 +33,7 @@
 	<div class="row cl">
 		<label class="form-label col-xs-4 col-sm-3"><span class="c-red">*</span>questionId：</label>
 		<div class="formControls col-xs-8 col-sm-9">
-			<input type="text" class="input-text" placeholder="" id="qid" name="qid">
+			<input type="text" class="input-text" placeholder="关联问卷ID" id="qid" name="qid">
 		</div>
 	</div>
 
@@ -56,7 +56,6 @@
 		<div class="formControls col-xs-8 col-sm-9">
 			<button type="button" value="titleimg" class="btn btn-secondary radius uploadImg">上传图片</button>
 			<a hidden="ture" target="_blank" id="set_titleimg"><img src="" id="titleimg" width="200px" height="150px"/></a>
-			<!-- <input class="btn btn-default radius"  hidden="ture" id="delect" onclick="delectImg();" value="删除"/> -->
 			<button style="display:none;" value="titleimg" type="button" class="btn btn-default radius titleimg delectImg">删除</button>
 		</div>
 	</div>
@@ -64,9 +63,9 @@
 	<div class="row cl">
 		<label class="form-label col-xs-4 col-sm-3">A：</label>
 		<div class="formControls col-xs-8 col-sm-9">
-			<input type="text" class="input-text" placeholder="内容：文本和图片二选一" id="title" name="title">
+			<input type="text" class="input-text aimgtext" placeholder="内容：文本和图片二选一" id="atitle" name="atitle">
 			<br/><br/>
-			<input type="text" class="input-text" placeholder="分数" id="title" name="title">
+			<input type="text" class="input-text" placeholder="分数" id="ascore" name="ascore">
 			<br/><br/>
 			<button type="button" value="aimg" class="btn btn-secondary radius uploadImg">上传图片A</button>
 			<a hidden="ture" target="_blank" id="set_aimg"><img src="" id="aimg" width="200px" height="150px"/></a>
@@ -77,9 +76,9 @@
 	<div class="row cl">
 		<label class="form-label col-xs-4 col-sm-3">B：</label>
 		<div class="formControls col-xs-8 col-sm-9">
-			<input type="text" class="input-text" placeholder="内容：文本和图片二选一" id="title" name="title">
+			<input type="text" class="input-text bimgtext" placeholder="内容：文本和图片二选一" id="btitle" name="btitle">
 			<br/><br/>
-			<input type="text" class="input-text" placeholder="分数" id="title" name="title">
+			<input type="text" class="input-text" placeholder="分数" id="bscore" name="bscore">
 			<br/><br/>
 			<button type="button" value="bimg" class="btn btn-secondary radius uploadImg">上传图片B</button>
 			<a hidden="ture" target="_blank" id="set_bimg"><img src="" id="bimg" width="200px" height="150px"/></a>
@@ -90,9 +89,9 @@
 	<div class="row cl">
 		<label class="form-label col-xs-4 col-sm-3">C：</label>
 		<div class="formControls col-xs-8 col-sm-9">
-			<input type="text" class="input-text" placeholder="内容：文本和图片二选一" id="title" name="title">
+			<input type="text" class="input-text cimgtext" placeholder="内容：文本和图片二选一" id="ctitle" name="ctitle">
 			<br/><br/>
-			<input type="text" class="input-text" placeholder="分数" id="title" name="title">
+			<input type="text" class="input-text" placeholder="分数" id="cscore" name="cscore">
 			<br/><br/>
 			<button type="button" value="cimg" class="btn btn-secondary radius uploadImg">上传图片C</button>
 			<a hidden="ture" target="_blank" id="set_cimg"><img src="" id="cimg" width="200px" height="150px"/></a>
@@ -103,9 +102,9 @@
 	<div class="row cl">
 		<label class="form-label col-xs-4 col-sm-3">D：</label>
 		<div class="formControls col-xs-8 col-sm-9">
-			<input type="text" class="input-text" placeholder="内容：文本和图片二选一" id="title" name="title">
+			<input type="text" class="input-text dimgtext" placeholder="内容：文本和图片二选一" id="dtitle" name="dtitle">
 			<br/><br/>
-			<input type="text" class="input-text" placeholder="分数" id="title" name="title">
+			<input type="text" class="input-text" placeholder="分数" id="dscore" name="dscore">
 			<br/><br/>
 			<button type="button" value="dimg" class="btn btn-secondary radius uploadImg">上传图片D</button>
 			<a hidden="ture" target="_blank" id="set_dimg"><img src="" id="dimg" width="200px" height="150px"/></a>
@@ -142,26 +141,49 @@
 	});
 	
 	$("#submit").click(function(){
+		var qid = $("#qid").val();
+		var num = $("#num").val();
 		var title = $("#title").val();
-		var img = $("#set_img").attr('href');
-		var description = $("#description").val();
-		var type = $("#type option:selected").val();
-		var state = $("#state option:selected").val();
-		var premoney = $("#preMoney").val();
-		var nowmoney = $("#nowMoney").val();
+		var set_titleimg = $("#set_titleimg").attr('href');
+		var atitle = $("#atitle").val();
+		var ascore = $("#ascore").val();
+		var set_aimg = $("#set_aimg").attr('href');
+		var btitle = $("#btitle").val();
+		var bscore = $("#bscore").val();
+		var set_bimg = $("#set_bimg").attr('href');
+		var ctitle = $("#ctitle").val();
+		var cscore = $("#cscore").val();
+		var set_cimg = $("#set_cimg").attr('href');
+		var dtitle = $("#dtitle").val();
+		var dscore = $("#dscore").val();
+		var set_dimg = $("#set_dimg").attr('href');
+
+		if((atitle && set_aimg) || (btitle && set_bimg) || (ctitle && set_cimg) || (dtitle && set_dimg)) {
+			alert('文本和图片只能二选一！！！');
+			return false;
+		}
 
 		$.ajax({
-			url : "<?php echo U('Question/addQuestionnaire');?>",
+			url : "<?php echo U('Question/addTest');?>",
 			type : 'post',
 			//dataType : 'json',
 			data : {
+				qid:qid,
+				num:num,
 				title:title,
-				img:img,
-				description:description,
-				state:state,
-				type:type,
-				premoney:premoney,
-				nowmoney:nowmoney,
+				set_titleimg:set_titleimg,
+				atitle:atitle,
+				ascore:ascore,
+				set_aimg:set_aimg,
+				btitle:btitle,
+				bscore:bscore,
+				set_bimg:set_bimg,
+				ctitle:ctitle,
+				cscore:cscore,
+				set_cimg:set_cimg,
+				dtitle:dtitle,
+				dscore:dscore,
+				set_dimg:set_dimg,
 			},
 			success : function(e){
 				console.log(e);
@@ -182,6 +204,10 @@
 	// 文件上传（JQUERY异步上传插件）
 	$('.uploadImg').bind('click',function(file){
 		var abcd = $(this).attr('value');
+		if($("." + abcd + "text").val()) {
+        	alert('文本和图片只能二选一！！！');
+			return false;
+        }
         $.upload({
             url: "<?php echo U('FileTools/uploadImg');?>",
             type : 'post',
@@ -198,6 +224,7 @@
                 $("#set_" + abcd).prop("hidden",false);
                 $("#set_" + abcd).prop("href",e);
                 $("." + abcd).css('display','block');
+				$("." + abcd + "text").attr("disabled","disabled");                              
             }
         });
 	})
@@ -206,13 +233,14 @@
 	$('.delectImg').bind('click',function(){
 		var abcd = $(this).attr('value');
 		$("#" + abcd).attr('src', '');
+		$("#set_" + abcd).prop("href",'');
         $("#set_" + abcd).prop("hidden",true);
-        $("#set_" + abcd).prop("href",'');
 		$("." + abcd).css('display','none');
+        $("." + abcd + "text").removeAttr("disabled");
 
 	})
 
-</script> 
+</script>
 
 </body>
 </html>

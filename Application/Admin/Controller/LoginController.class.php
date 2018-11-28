@@ -16,10 +16,12 @@ class LoginController extends Controller {
 			$where['adminName'] = I('post.admin_name');
 			$pwd = $admin_table->where($where)->getField('adminPassword');
 			$state = $admin_table->where($where)->getField('adminState');
+			$id = $admin_table->where($where)->getField('adminId');
 
 			if(md5(I('post.admin_pwd')) == $pwd){
 				session('admin_name',I('post.admin_name'));
 				session('state',$state);
+				session('id',$id);
 				$this->success('登录成功，请稍等', U('Index/index'));
 			}else{
 				$this->error('登录失败，用户名或密码错误');

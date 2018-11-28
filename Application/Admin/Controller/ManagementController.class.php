@@ -61,4 +61,17 @@ class ManagementController extends CommonController {
 		$admin_password_reset = $admin_table->where($where)->limit(1)->save($data);die;
 	}
 
+//修改密码
+	public function alterPassword(){
+		$admin_table = M('fun_admin');
+		$where['adminId'] = I('adminId');
+		$data = md5(I('oldPwd'));
+		$oldPwd = $admin_table->where($where)->limit(1)->getField('adminPassword');
+		if(!($data == $oldPwd)) {
+			echo '-1';die;
+		}
+		$data1['adminPassword'] = md5(I('newPwd'));
+		$admin_password_alter = $admin_table->where($where)->limit(1)->save($data1);die;
+	}
+
 }

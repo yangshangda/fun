@@ -97,8 +97,8 @@
 
 
 	<div class="row cl">
-		<label class="form-label col-xs-4 col-sm-3">角色：</label>
-		<div class="formControls col-xs-8 col-sm-9"> <span class="select-box" style="width:150px;">
+		<label class="form-label col-xs-4 col-sm-3"><span class="c-red">*</span>角色：</label>
+		<div class="formControls col-xs-8 col-sm-9"><span class="select-box" style="width:150px;">
 			<select id="state" class="select" name="state" size="1">
 				<option value="0">普通管理员</option>
 				<option value="1">超级管理员</option>

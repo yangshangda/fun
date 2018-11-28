@@ -60,7 +60,7 @@ class QuestionController extends CommonController {
 	//添加测试
 	public function addTest(){
 		//$data = I('post.');
-		$testid = I('testid');
+		$testid = I('tid');
 		$data['questionId'] = I('qid');
 		$data['testNumber'] = I('num');
 		$data['testTitle'] = I('title');

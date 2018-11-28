@@ -81,7 +81,7 @@
 						<td>{$v.dscore}</td>			
 						
 						<td class="f-14 td-manage">
-							<a style="text-decoration:none" onClick="article_stop(this,'10001')" href="javascript:;" title="下架"><i class="Hui-iconfont">&#xe6de;</i></a> <a style="text-decoration:none" class="ml-5" onClick="article_edit('资讯编辑','article-add.html','10001')" href="javascript:;" title="编辑"><i class="Hui-iconfont">&#xe6df;</i></a> <a style="text-decoration:none" class="ml-5" onClick="article_del(this,'10001')" href="javascript:;" title="删除"><i class="Hui-iconfont">&#xe6e2;</i></a>
+							<a class="btn btn-success radius edit" data-testid="{$v.testid}" data-questionid="{$v.questionid}" data-testnumber="{$v.testnumber}" data-testtitle="{$v.testtitle}" data-testimg="{$v.testimg}" data-atitle="{$v.atitle}" data-aimg="{$v.aimg}" data-ascore="{$v.ascore}" data-btitle="{$v.btitle}" data-bimg="{$v.bimg}" data-bscore="{$v.bscore}" data-ctitle="{$v.ctitle}" data-cimg="{$v.cimg}" data-cscore="{$v.cscore}" data-dtitle="{$v.dtitle}" data-dimg="{$v.dimg}" data-dscore="{$v.dscore}" id="edit" href="javascript:void(0);" data-toggle="modal" data-target="#modify">修改</a>
 						</td>
 					</tr>
 				</volist>
@@ -89,6 +89,108 @@
 			</tbody>
 		</table>
 	</div>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="modify" tabindex="-1" role="dialog" aria-labelledby="modifyLabel" aria-hidden="true" style="display: none">
+    <div class="modal-dialog" role="document" style="width: 900px;">
+        <div class="modal-content" style="width: 900px;">
+            <div class="modal-header">
+                <h5 class="modal-title" id="modLabel">测试列表 > 更改测试题信息</h5>
+            </div>
+            <div class="modal-body">
+                <form class="form form-horizontal" id="form-admin-add">
+	<div class="row cl">
+		<input type="text" hidden="true" id="testId" name="testId">
+		<label class="form-label col-xs-4 col-sm-3"><span class="c-red">*</span>questionId：</label>
+		<div class="formControls col-xs-8 col-sm-9">
+			<input type="text" class="input-text" placeholder="" id="questionId" name="questionId">
+		</div>
+	</div>
+
+	<div class="row cl">
+		<label class="form-label col-xs-4 col-sm-3">题号：</label>
+		<div class="formControls col-xs-8 col-sm-9">
+			<input type="text" class="input-text" placeholder="" id="num" name="num">
+		</div>
+	</div>
+
+	<div class="row cl">
+		<label class="form-label col-xs-4 col-sm-3">标题：</label>
+		<div class="formControls col-xs-8 col-sm-9">
+			<input type="text" class="input-text" placeholder="" id="title" name="title">
+		</div>
+	</div>
+
+	<div class="row cl">
+		<label class="form-label col-xs-4 col-sm-3">标题图片：</label>
+		<div class="formControls col-xs-8 col-sm-9">
+			<button type="button" value="titleimg" class="btn btn-secondary radius uploadImg">上传图片</button>
+			<a target="_blank" id="set_titleimg"><img src="" id="titleimg" width="200px" height="150px"/></a>
+			<button style="display:none;" value="titleimg" type="button" class="btn btn-default radius titleimg delectImg">删除</button>
+		</div>
+	</div>
+
+	<div class="row cl">
+		<label class="form-label col-xs-4 col-sm-3">A：</label>
+		<div class="formControls col-xs-8 col-sm-9">
+			<input type="text" class="input-text aimgtext" placeholder="内容：文本和图片二选一" id="atitle" name="atitle">
+			<br/><br/>
+			<input type="text" class="input-text" placeholder="分数" id="ascore" name="ascore">
+			<br/><br/>
+			<button type="button" value="aimg" class="btn btn-secondary radius uploadImg">上传图片A</button>
+			<a hidden="ture" target="_blank" id="set_aimg"><img src="" id="aimg" width="200px" height="150px"/></a>
+			<button style="display:none;" value="aimg" type="button" class="btn btn-default radius aimg delectImg">删除A</button>
+		</div>
+	</div>
+
+	<div class="row cl">
+		<label class="form-label col-xs-4 col-sm-3">B：</label>
+		<div class="formControls col-xs-8 col-sm-9">
+			<input type="text" class="input-text bimgtext" placeholder="内容：文本和图片二选一" id="btitle" name="btitle">
+			<br/><br/>
+			<input type="text" class="input-text" placeholder="分数" id="bscore" name="bscore">
+			<br/><br/>
+			<button type="button" value="bimg" class="btn btn-secondary radius uploadImg">上传图片B</button>
+			<a hidden="ture" target="_blank" id="set_bimg"><img src="" id="bimg" width="200px" height="150px"/></a>
+			<button style="display:none;" value="bimg" type="button" class="btn btn-default radius bimg delectImg">删除B</button>
+		</div>
+	</div>
+
+	<div class="row cl">
+		<label class="form-label col-xs-4 col-sm-3">C：</label>
+		<div class="formControls col-xs-8 col-sm-9">
+			<input type="text" class="input-text cimgtext" placeholder="内容：文本和图片二选一" id="ctitle" name="ctitle">
+			<br/><br/>
+			<input type="text" class="input-text" placeholder="分数" id="cscore" name="cscore">
+			<br/><br/>
+			<button type="button" value="cimg" class="btn btn-secondary radius uploadImg">上传图片C</button>
+			<a hidden="ture" target="_blank" id="set_cimg"><img src="" id="cimg" width="200px" height="150px"/></a>
+			<button style="display:none;" value="cimg" type="button" class="btn btn-default radius cimg delectImg">删除C</button>
+		</div>
+	</div>
+
+	<div class="row cl">
+		<label class="form-label col-xs-4 col-sm-3">D：</label>
+		<div class="formControls col-xs-8 col-sm-9">
+			<input type="text" class="input-text dimgtext" placeholder="内容：文本和图片二选一" id="dtitle" name="dtitle">
+			<br/><br/>
+			<input type="text" class="input-text" placeholder="分数" id="dscore" name="dscore">
+			<br/><br/>
+			<button type="button" value="dimg" class="btn btn-secondary radius uploadImg">上传图片D</button>
+			<a hidden="ture" target="_blank" id="set_dimg"><img src="" id="dimg" width="200px" height="150px"/></a>
+			<button style="display:none;" value="dimg" type="button" class="btn btn-default radius dimg delectImg">删除D</button>
+		</div>
+	</div>
+
+	</form>
+            </div>
+            <div class="modal-footer">
+           		<button type="button" class="btn btn-primary save">保存</button>
+                <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>               
+            </div>
+        </div>
+    </div>
 </div>
 <!--_footer 作为公共模版分离出去-->
 <script type="text/javascript" src="__PUBLIC__/lib/jquery/1.9.1/jquery.min.js"></script> 
@@ -122,6 +224,207 @@ function test_add(title,url){
 	layer.full(index);
 }
 
+/*测试-修改*/
+$('.edit').click(function(){
+	var testid = $(this).data('testid');
+	var questionid = $(this).data('questionid');
+	var testnumber = $(this).data('testnumber');
+	var testtitle = $(this).data('testtitle');
+	var testimg = $(this).data('testimg');
+	var atitle = $(this).data('atitle');
+	var aimg = $(this).data('aimg');
+	var ascore = $(this).data('ascore');
+	var btitle = $(this).data('btitle');
+	var bscore = $(this).data('bscore');
+	var bimg = $(this).data('bimg');
+	var ctitle = $(this).data('ctitle');
+	var cscore = $(this).data('cscore');
+	var cimg = $(this).data('cimg');
+	var dtitle = $(this).data('dtitle');
+	var dscore = $(this).data('dscore');
+	var dimg = $(this).data('dimg');
+	console.log(testimg);
+
+	$('#testId').val(testid);
+	$('#questionId').val(questionid);
+	$('#num').val(testnumber);
+	$('#title').val(testtitle);
+	if(testimg) {
+		$("#titleimg").attr('src', testimg);
+		$("#set_titleimg").prop("href",testimg);
+		$("#set_titleimg").prop("hidden",false);
+		$(".titleimg").css('display','block');
+	}else {
+		$("#titleimg").removeAttr('src');
+		$("#set_titleimg").prop("href",'');
+		$("#set_titleimg").prop("hidden",true);
+		$(".titleimg").css('display','none');
+	}
+
+	$('#atitle').val(atitle);
+	if(aimg) {
+		$("#aimg").attr('src', aimg);
+		$("#set_aimg").prop("href",aimg);
+		$("#set_aimg").prop("hidden",false);
+		$(".aimg").css('display','block');
+		$(".aimgtext").attr("disabled","disabled");
+	}else {
+		$("#aimg").removeAttr('src');
+		$("#set_aimg").prop("href",'');
+		$("#set_aimg").prop("hidden",true);
+		$(".aimg").css('display','none');
+		$(".aimgtext").removeAttr("disabled");
+	}
+	$('#ascore').val(ascore);
+
+	$('#btitle').val(btitle);
+	if(bimg) {
+		$("#bimg").attr('src', bimg);
+		$("#set_bimg").prop("href",bimg);
+		$("#set_bimg").prop("hidden",false);
+		$(".bimg").css('display','block');
+		$(".bimgtext").attr("disabled","disabled");
+	}else {
+		$("#bimg").removeAttr('src');
+		$("#set_bimg").prop("href",'');
+		$("#set_bimg").prop("hidden",true);
+		$(".bimg").css('display','none');
+		$(".bimgtext").removeAttr("disabled");
+	}
+	$('#bscore').val(bscore);
+
+	$('#ctitle').val(ctitle);
+	if(cimg) {
+		$("#cimg").attr('src', cimg);
+		$("#set_cimg").prop("href",cimg);
+		$("#set_cimg").prop("hidden",false);
+		$(".cimg").css('display','block');
+		$(".cimgtext").attr("disabled","disabled");
+	}else {
+		$("#cimg").removeAttr('src');
+		$("#set_cimg").prop("href",'');
+		$("#set_cimg").prop("hidden",true);
+		$(".cimg").css('display','none');
+		$(".cimgtext").removeAttr("disabled");
+	}
+	$('#cscore').val(cscore);
+
+	$('#dtitle').val(dtitle);
+	if(dimg) {
+		$("#dimg").attr('src', dimg);
+		$("#set_dimg").prop("href",dimg);
+		$("#set_dimg").prop("hidden",false);
+		$(".dimg").css('display','block');
+		$(".dimgtext").attr("disabled","disabled");
+	}else {
+		$("#dimg").removeAttr('src');
+		$("#set_dimg").prop("href",'');
+		$("#set_dimg").prop("hidden",true);
+		$(".dimg").css('display','none');
+		$(".dimgtext").removeAttr("disabled");
+	}
+	$('#dscore').val(dscore);
+	
+});
+
+// 文件上传（JQUERY异步上传插件）
+$('.uploadImg').bind('click',function(file){
+	var abcd = $(this).attr('value');
+	if($("." + abcd + "text").val()) {
+    	alert('文本和图片只能二选一！！！');
+		return false;
+    }
+    $.upload({
+        url: "{:U('FileTools/uploadImg')}",
+        type : 'post',
+        fileName: 'upload',
+        params: {file: file, source: abcd + 'test'},
+        //data: {source:'article'},
+        dataType: 'json',
+        onSend: function() {
+            return true;
+        },
+        onComplate: function(e) {
+        	console.log(e);
+            $("#" + abcd).attr('src', e);
+            $("#set_" + abcd).prop("hidden",false);
+            $("#set_" + abcd).prop("href",e);
+            $("." + abcd).css('display','block');
+			$("." + abcd + "text").attr("disabled","disabled");                              
+        }
+    });
+})
+
+// 图片删除
+$('.delectImg').bind('click',function(){
+	var abcd = $(this).attr('value');
+	$("#" + abcd).attr('src', '');
+	$("#set_" + abcd).prop("href",'');
+    $("#set_" + abcd).prop("hidden",true);
+	$("." + abcd).css('display','none');
+    $("." + abcd + "text").removeAttr("disabled");
+
+})
+
+/*测试-保存修改*/
+$('.save').click(function(){
+	var tid = $("#testId").val();
+	var qid = $("#questionId").val();
+	var num = $("#num").val();
+	var title = $("#title").val();
+	var set_titleimg = $("#set_titleimg").attr('href');
+	var atitle = $("#atitle").val();
+	var ascore = $("#ascore").val();
+	var set_aimg = $("#set_aimg").attr('href');
+	var btitle = $("#btitle").val();
+	var bscore = $("#bscore").val();
+	var set_bimg = $("#set_bimg").attr('href');
+	var ctitle = $("#ctitle").val();
+	var cscore = $("#cscore").val();
+	var set_cimg = $("#set_cimg").attr('href');
+	var dtitle = $("#dtitle").val();
+	var dscore = $("#dscore").val();
+	var set_dimg = $("#set_dimg").attr('href');
+
+	if((atitle && set_aimg) || (btitle && set_bimg) || (ctitle && set_cimg) || (dtitle && set_dimg)) {
+		alert('文本和图片只能二选一！！！');
+		return false;
+	}
+
+	$.ajax({
+		url : "{:U('Question/addTest')}",
+		type : 'post',
+		//dataType : 'json',
+		data : {
+			tid:tid,
+			qid:qid,
+			num:num,
+			title:title,
+			set_titleimg:set_titleimg,
+			atitle:atitle,
+			ascore:ascore,
+			set_aimg:set_aimg,
+			btitle:btitle,
+			bscore:bscore,
+			set_bimg:set_bimg,
+			ctitle:ctitle,
+			cscore:cscore,
+			set_cimg:set_cimg,
+			dtitle:dtitle,
+			dscore:dscore,
+			set_dimg:set_dimg,
+		},
+		success : function(e){
+			alert('操作成功！');
+			location.reload();
+		},
+		error : function(e){
+			console.log(e);
+			//layer.msg('error!',{icon:1,time:1000});
+			alert('网络错误');
+		}
+	});
+});
 
 </script> 
 </body>

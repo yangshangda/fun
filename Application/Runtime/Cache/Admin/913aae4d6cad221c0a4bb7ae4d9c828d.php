@@ -49,7 +49,7 @@
 					<th>邮箱</th>
 					<th>角色</th>
 					<th>描述</th>
-					<?php if($_SESSION['state']== 1): ?><th>操作</th><?php endif; ?>
+					<th>操作</th>
 				</tr>
 			</thead>
 			<tbody>
@@ -72,27 +72,16 @@
 							<?php if($v["adminstate"] == 0): ?>普通管理员<?php endif; ?>
 						</td>
 						<td><?php echo ($v["admindescription"]); ?></td>
-						<?php if($_SESSION['state']== 1): ?><td class="f-14 td-manage">							
-							<a class="btn btn-success radius edit" data-adminid="<?php echo ($v["adminid"]); ?>" data-adminname="<?php echo ($v["adminname"]); ?>" data-adminsex="<?php echo ($v["adminsex"]); ?>" data-adminphone="<?php echo ($v["adminphone"]); ?>" data-adminaddress="<?php echo ($v["adminaddress"]); ?>" data-admindepartment="<?php echo ($v["admindepartment"]); ?>" data-adminqq="<?php echo ($v["adminqq"]); ?>" data-adminwechat="<?php echo ($v["adminwechat"]); ?>" data-adminemail="<?php echo ($v["adminemail"]); ?>" data-adminstate="<?php echo ($v["adminstate"]); ?>" data-admindescription="<?php echo ($v["admindescription"]); ?>" id="edit" href="javascript:void(0);" data-toggle="modal" data-target="#modify">修改</a>						
-							<a class="btn btn-warning radius reset" data-adminid="<?php echo ($v["adminid"]); ?>" onclick="" href="javascript:;">重置密码</a>						
-							<!-- <a class="btn btn-secondary radius"  href="javascript:;">重置密码</a> -->
-						</td><?php endif; ?>
+						<td class="f-14 td-manage">
+							<?php if($_SESSION['state']== 1): ?><a class="btn btn-success radius edit" data-adminid="<?php echo ($v["adminid"]); ?>" data-adminname="<?php echo ($v["adminname"]); ?>" data-adminsex="<?php echo ($v["adminsex"]); ?>" data-adminphone="<?php echo ($v["adminphone"]); ?>" data-adminaddress="<?php echo ($v["adminaddress"]); ?>" data-admindepartment="<?php echo ($v["admindepartment"]); ?>" data-adminqq="<?php echo ($v["adminqq"]); ?>" data-adminwechat="<?php echo ($v["adminwechat"]); ?>" data-adminemail="<?php echo ($v["adminemail"]); ?>" data-adminstate="<?php echo ($v["adminstate"]); ?>" data-admindescription="<?php echo ($v["admindescription"]); ?>" id="edit" href="javascript:void(0);" data-toggle="modal" data-target="#modify">修改</a>						
+								<a class="btn btn-warning radius reset" data-adminid="<?php echo ($v["adminid"]); ?>" onclick="" href="javascript:;">重置密码</a>						
+								<!-- <a class="btn btn-secondary radius"  href="javascript:;">重置密码</a> -->
+							<?php elseif($_SESSION['id']== $v[adminid]): ?>													
+								<a class="btn btn-success radius edit" data-adminid="<?php echo ($v["adminid"]); ?>" data-adminname="<?php echo ($v["adminname"]); ?>" data-adminsex="<?php echo ($v["adminsex"]); ?>" data-adminphone="<?php echo ($v["adminphone"]); ?>" data-adminaddress="<?php echo ($v["adminaddress"]); ?>" data-admindepartment="<?php echo ($v["admindepartment"]); ?>" data-adminqq="<?php echo ($v["adminqq"]); ?>" data-adminwechat="<?php echo ($v["adminwechat"]); ?>" data-adminemail="<?php echo ($v["adminemail"]); ?>" data-adminstate="<?php echo ($v["adminstate"]); ?>" data-admindescription="<?php echo ($v["admindescription"]); ?>" id="edit" href="javascript:void(0);" data-toggle="modal" data-target="#modify">修改</a>				
+								<a class="btn btn-warning radius edit2" data-adminid="<?php echo ($v["adminid"]); ?>" onclick="" href="javascript:;" data-toggle="modal" data-target="#modify2">修改密码</a><?php endif; ?>
+						</td>																										
 					</tr><?php endforeach; endif; else: echo "" ;endif; ?>
 
-				<!-- <tr class="text-c">
-					<td>10001</td>
-					<td class="text-l"><u style="cursor:pointer" class="text-primary" onClick="article_edit('查看','article-zhang.html','10001')" title="查看">资讯标题</u></td>
-					<td>21212</td>
-					<td class="td-status"><span class="label label-success radius">已发布</span></td>
-					<td class="f-14 td-manage"><a style="text-decoration:none" onClick="article_stop(this,'10001')" href="javascript:;" title="下架"><i class="Hui-iconfont">&#xe6de;</i></a> <a style="text-decoration:none" class="ml-5" onClick="article_edit('资讯编辑','article-add.html','10001')" href="javascript:;" title="编辑"><i class="Hui-iconfont">&#xe6df;</i></a> <a style="text-decoration:none" class="ml-5" onClick="article_del(this,'10001')" href="javascript:;" title="删除"><i class="Hui-iconfont">&#xe6e2;</i></a></td>
-				</tr>
-				<tr class="text-c">
-					<td>10002</td>
-					<td class="text-l"><u style="cursor:pointer" class="text-primary" onClick="article_edit('查看','article-zhang.html','10002')" title="查看">资讯标题</u></td>
-					<td>行业动态</td>
-					<td class="td-status"><span class="label label-success radius">草稿</span></td>
-					<td class="f-14 td-manage"><a style="text-decoration:none" onClick="article_shenhe(this,'10001')" href="javascript:;" title="审核">审核</a> <a style="text-decoration:none" class="ml-5" onClick="article_edit('资讯编辑','article-add.html','10001')" href="javascript:;" title="编辑"><i class="Hui-iconfont">&#xe6df;</i></a> <a style="text-decoration:none" class="ml-5" onClick="article_del(this,'10001')" href="javascript:;" title="删除"><i class="Hui-iconfont">&#xe6e2;</i></a></td>
-				</tr> -->
 			</tbody>
 		</table>
 	</div>
@@ -103,7 +92,7 @@
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="modLabel">视频桌面 > 更改视频信息</h5>
+                <h5 class="modal-title" id="modLabel">管理员表 > 更改个人信息</h5>
             </div>
             <div class="modal-body">
                 <form class="form form-horizontal" id="form-admin-add">
@@ -171,7 +160,6 @@
 		</div>
 	</div>
 
-
 	<div class="row cl">
 		<label class="form-label col-xs-4 col-sm-3">角色：</label>
 		<div class="formControls col-xs-8 col-sm-9"> <span class="select-box" style="width:150px;">
@@ -179,7 +167,7 @@
 				<option value="0">普通管理员</option>
 				<option value="1">超级管理员</option>
 			</select>
-			</span> 
+			</span>
 		</div>
 	</div>
 	<div class="row cl">
@@ -192,7 +180,47 @@
             </div>
             <div class="modal-footer">
            		<button type="button" class="btn btn-primary save">保存</button>
-                <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>               
+                <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>             
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="modify2" tabindex="-1" role="dialog" aria-labelledby="modifyLabel" aria-hidden="true" style="display: none">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="modLabel">管理员表 > 修改密码</h5>
+            </div>
+            <div class="modal-body">
+                <form class="form form-horizontal" id="form-admin-add">
+	<div class="row cl">
+		<input type="text" hidden="true" id="adminId2" name="adminId2">
+		<label class="form-label col-xs-4 col-sm-3">原密码：</label>
+		<div class="formControls col-xs-8 col-sm-9">
+			<input type="password" class="input-text" placeholder="" id="oldPwd" name="oldPwd">
+		</div>
+	</div>
+
+	<div class="row cl">
+		<label class="form-label col-xs-4 col-sm-3">新密码：</label>
+		<div class="formControls col-xs-8 col-sm-9">
+			<input type="password" class="input-text" placeholder="" name="newPwd" id="newPwd">
+		</div>
+	</div>
+
+	<div class="row cl">
+		<label class="form-label col-xs-4 col-sm-3">确认密码：</label>
+		<div class="formControls col-xs-8 col-sm-9">
+			<input type="password" class="input-text" placeholder="" name="surePwd" id="surePwd">
+		</div>
+	</div>
+	</form>
+            </div>
+            <div class="modal-footer">
+           		<button type="button" class="btn btn-primary save2">保存</button>
+                <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>             
             </div>
         </div>
     </div>
@@ -216,7 +244,7 @@ $('.table-sort').dataTable({
 	"pading":false,
 	"aoColumnDefs": [
 	  //{"bVisible": false, "aTargets": [ 3 ]} //控制列的隐藏显示
-	  {"orderable":false,"aTargets":[0,2,3,4,5,6,7,8,9,11]}// 不参与排序的列
+	  {"orderable":false,"aTargets":[0,2,3,4,5,6,7,8,9,11,12]}// 不参与排序的列
 	]
 });
 /*管理员-增加*/
@@ -308,31 +336,68 @@ $('.save').click(function(){
 	});
 });
 
-/*管理员-重置密码*/
-$('.reset').click(function(){
+/*管理员-更改密码*/
+$('.edit2').click(function(){
 	var adminid = $(this).data('adminid');
-
-	if(confirm("确定重置该员工密码?")){
-	 　　$.ajax({
-			url : "<?php echo U('Management/resetPassword');?>",
-			type : 'post',
-			//dataType : 'json',
-			data : {
-				adminId:adminid,
-			},
-			success : function(e){
-				alert('操作成功！');
-				//location.reload();
-			},
-			error : function(e){
-				console.log(e);
-				//layer.msg('error!',{icon:1,time:1000});
-				alert('网络错误');
-
-			}
-		});
+	$('#adminId2').val(adminid);
+});
+/*管理员-保存更改密码*/
+$('.save2').click(function(){
+	var adminid = $('#adminId2').val();
+	var oldPwd = $('#oldPwd').val();
+	var newPwd = $('#newPwd').val();
+	var surePwd = $('#surePwd').val();
+	if(!oldPwd) {
+		alert('请输入原密码！');
+		return false;
 	}
-	
+	if(!newPwd) {
+		alert('请输入新密码！');
+		return false;
+	}
+	if(!surePwd) {
+		alert('请再次输入新密码！');
+		return false;
+	}
+	if(newPwd != surePwd) {
+		alert('两次输入的新密码不一致！');
+		return false;
+	}
+
+	$.ajax({
+		url : "<?php echo U('Management/alterPassword');?>",
+		type : 'post',
+		//dataType : 'json',
+		data : {
+			adminId:adminid,
+			oldPwd:oldPwd,
+			newPwd:newPwd,
+		},
+		success : function(e){
+			console.log(e);
+			if (e == "-1") {
+				alert('原密码不正确！');
+			}else {
+				alert('修改成功,请重新登录！');
+				$.ajax({
+					url : '/Fun1/Admin/Login/logout',
+					type : 'post',
+					//dataType : 'json',
+					data : {},
+					success : function(e){
+						parent.location.reload();
+					},
+					error : function(e){}
+					});
+			}			
+			//location.reload();
+		},
+		error : function(e){
+			console.log(e);
+			//layer.msg('error!',{icon:1,time:1000});
+			alert('网络错误');
+		}
+	});
 });
 
 

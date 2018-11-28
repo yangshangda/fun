@@ -1,0 +1,91 @@
+[ 2018-11-28T09:11:21+08:00 ] ::1 /Fun1/Admin/Article/setRecommend.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `fun_article` [ RunTime:0.0110s ]
+SQL: UPDATE `fun_article` SET `articleRecommend`='0' WHERE `articleId` = 9 LIMIT 1  [ RunTime:0.0010s ]
+
+[ 2018-11-28T09:11:25+08:00 ] ::1 /Fun1/Admin/Article/setRecommend.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `fun_article` [ RunTime:0.0040s ]
+SQL: UPDATE `fun_article` SET `articleRecommend`='1' WHERE `articleId` = 9 LIMIT 1  [ RunTime:0.0000s ]
+
+[ 2018-11-28T09:11:51+08:00 ] ::1 /Fun1/Admin/Article/addArticle.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `fun_article` [ RunTime:0.0090s ]
+SQL: UPDATE `fun_article` SET `articleTitle`='情感类66666',`articleCover`='http://img4.imgtn.bdimg.com/it/u=1878770333,4043213811&amp;fm=26&amp;gp=0.jpg',`articleDescription`='你离婚后，666666？',`articleContent`='&lt;p&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;我们遇到那些跋扈自恣的人往往会表现出反感，这类人通常是不懂得该如何尊重别人的，他们&lt;/p&gt;',`articleType`='1',`articleRecommend`='0' WHERE `articleId` = 8 LIMIT 1  [ RunTime:0.0000s ]
+
+[ 2018-11-28T09:13:51+08:00 ] ::1 /Fun1/Admin/Index/charts-1.html
+ERR: 非法操作:charts-1
+
+[ 2018-11-28T09:13:52+08:00 ] ::1 /Fun1/Admin/Index/charts-3.html
+ERR: 非法操作:charts-3
+
+[ 2018-11-28T09:13:52+08:00 ] ::1 /Fun1/Admin/Index/charts-6.html
+ERR: 非法操作:charts-6
+
+[ 2018-11-28T09:13:53+08:00 ] ::1 /Fun1/Admin/Index/charts-7.html
+ERR: 非法操作:charts-7
+
+[ 2018-11-28T09:13:54+08:00 ] ::1 /Fun1/Admin/Index/charts-6.html
+ERR: 非法操作:charts-6
+
+[ 2018-11-28T09:13:54+08:00 ] ::1 /Fun1/Admin/Index/charts-5.html
+ERR: 非法操作:charts-5
+
+[ 2018-11-28T09:13:55+08:00 ] ::1 /Fun1/Admin/Index/charts-4.html
+ERR: 非法操作:charts-4
+
+[ 2018-11-28T09:13:55+08:00 ] ::1 /Fun1/Admin/Index/charts-3.html
+ERR: 非法操作:charts-3
+
+[ 2018-11-28T09:15:50+08:00 ] ::1 /Fun1/Admin/Index/article-add.html
+ERR: 非法操作:article-add
+
+[ 2018-11-28T09:15:58+08:00 ] ::1 /Fun1/Admin/Index/member-add.html
+ERR: 非法操作:member-add
+
+[ 2018-11-28T09:16:02+08:00 ] ::1 /Fun1/Admin/Index/product-add.html
+ERR: 非法操作:product-add
+
+[ 2018-11-28T09:16:07+08:00 ] ::1 /Fun1/Admin/Index/member-add.html
+ERR: 非法操作:member-add
+
+[ 2018-11-28T09:27:34+08:00 ] ::1 /Fun1/Admin/Management/resetPassword.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `fun_admin` [ RunTime:0.0130s ]
+SQL: UPDATE `fun_admin` SET `adminPassword`='e10adc3949ba59abbe56e057f20f883e' WHERE `adminId` = 1 LIMIT 1  [ RunTime:0.0000s ]
+
+[ 2018-11-28T09:28:14+08:00 ] ::1 /Fun1/Admin/Management/alterPassword.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `fun_admin` [ RunTime:0.0110s ]
+SQL: SELECT `adminPassword` FROM `fun_admin` WHERE `adminId` = 4 LIMIT 1   [ RunTime:0.0000s ]
+
+[ 2018-11-28T09:28:22+08:00 ] ::1 /Fun1/Admin/Management/alterPassword.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `fun_admin` [ RunTime:0.0040s ]
+SQL: SELECT `adminPassword` FROM `fun_admin` WHERE `adminId` = 4 LIMIT 1   [ RunTime:0.0000s ]
+SQL: UPDATE `fun_admin` SET `adminPassword`='96e79218965eb72c92a549dd5a330112' WHERE `adminId` = 4 LIMIT 1  [ RunTime:0.0000s ]
+
+[ 2018-11-28T09:28:23+08:00 ] ::1 /Fun1/Admin/Login/logout
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-11-28T09:28:55+08:00 ] ::1 /Fun1/Admin/Management/resetPassword.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `fun_admin` [ RunTime:0.0070s ]
+SQL: UPDATE `fun_admin` SET `adminPassword`='e10adc3949ba59abbe56e057f20f883e' WHERE `adminId` = 4 LIMIT 1  [ RunTime:0.0000s ]
+

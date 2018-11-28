@@ -342,6 +342,31 @@ $('.save').click(function(){
 	});
 });
 
+/*管理员-重置密码*/
+$('.reset').click(function(){
+	var adminid = $(this).data('adminid');
+	if(confirm("确定重置该员工密码?")){
+	 　　$.ajax({
+			url : "{:U('Management/resetPassword')}",
+			type : 'post',
+			//dataType : 'json',
+			data : {
+				adminId:adminid,
+			},
+			success : function(e){
+				alert('操作成功！');
+				//location.reload();
+			},
+			error : function(e){
+				console.log(e);
+				//layer.msg('error!',{icon:1,time:1000});
+				alert('网络错误');
+
+			}
+		});
+	}
+});
+
 /*管理员-更改密码*/
 $('.edit2').click(function(){
 	var adminid = $(this).data('adminid');

@@ -18,6 +18,14 @@ class ArticleController extends CommonController {
 		exit(json_encode($articleList));
 	}
 
+	//指定文章详情
+	public function articleDetail() {
+		$fun_article_table = M('fun_article');
+		$where['articleId'] = I('articleId');
+		$articleDetail = $fun_article_table->where($where)->limit(1)->select();
+		exit(json_encode($articleDetail));
+	}
+
 	//分类文章列表
 	public function sortArticleList() {
 		$fun_article_table = M('fun_article');

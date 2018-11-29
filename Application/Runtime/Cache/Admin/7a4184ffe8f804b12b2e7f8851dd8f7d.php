@@ -29,6 +29,8 @@
 	});
 });
 </script>
+
+
 </head>
 <body>
 <nav class="breadcrumb"><i class="Hui-iconfont">&#xe67f;</i> 首页 <span class="c-gray en">&gt;</span> 文章管理 <span class="c-gray en">&gt;</span> 文章列表 <a class="btn btn-success radius r" style="line-height:1.6em;margin-top:3px" href="javascript:location.replace(location.href);" title="刷新" ><i class="Hui-iconfont">&#xe68f;</i></a></nav>
@@ -65,7 +67,8 @@
 						<td><?php echo ($v["articletitle"]); ?></td>
 						<td><a href="<?php echo ($v["articlecover"]); ?>" target="_blank"><img style="max-width: 80px;max-height: 80px;" src="<?php echo ($v["articlecover"]); ?>"/></a></td>
 						<td><?php echo ($v["articledescription"]); ?></td>
-						<td><?php echo (mb_substr($v["articlecontent"],0,20,'utf-8')); ?>......</td>				
+						
+						<td><?php echo (mb_substr($v["articlecontent"],0,30,'utf-8')); ?>……</td>				
 						<td>
 							<?php if($v["articletype"] == 10): ?><p>综合</p><?php endif; ?>
 							<?php if($v["articletype"] == 1): ?><p>情感</p><?php endif; ?>
@@ -73,12 +76,12 @@
 							<?php if($v["articletype"] == 3): ?><p>趣味</p><?php endif; ?>
 						</td>
 						<td> 
-							<?php if($v["articlerecommend"] == 1): ?><p style="color:green">已推送</p><?php endif; ?>
+							<?php if($v["articlerecommend"] == 1): ?><p style="color:green"><b>已推送</b></p><?php endif; ?>
 							<?php if($v["articlerecommend"] == 0): ?><p>未推送</p><?php endif; ?>
 						</td>
 						
 						<td class="f-14 td-manage">
-							<a class="btn btn-success radius edit" data-articleid="<?php echo ($v["articleid"]); ?>" data-articletitle="<?php echo ($v["articletitle"]); ?>" data-articlecover="<?php echo ($v["articlecover"]); ?>" data-articledescription="<?php echo ($v["articledescription"]); ?>" data-articlecontent="<?php echo ($v["articlecontent"]); ?>" data-articletype="<?php echo ($v["articletype"]); ?>" data-articlerecommend="<?php echo ($v["articlerecommend"]); ?>" id="edit" href="javascript:void(0);" data-toggle="modal" data-target="#modify">修改</a>
+							<a class="btn btn-success radius edit"  data-articleid="<?php echo ($v["articleid"]); ?>" data-articletitle="<?php echo ($v["articletitle"]); ?>" data-articlecover="<?php echo ($v["articlecover"]); ?>" data-articledescription="<?php echo ($v["articledescription"]); ?>" data-articlecontent="<?php echo ($v["articlecontent"]); ?>" data-articletype="<?php echo ($v["articletype"]); ?>" data-articlerecommend="<?php echo ($v["articlerecommend"]); ?>" id="edit"  data-toggle="modal" data-target="#modify">修改</a>
 							<?php if($v["articlerecommend"] == 1): ?><a class="btn btn-default radius" data-articleid="<?php echo ($v["articleid"]); ?>" onclick="setRecommend('0','<?php echo ($v["articleid"]); ?>')" href="javascript:;">不推送</a><?php endif; ?>
 							<?php if($v["articlerecommend"] == 0): ?><a style="color: white;" class="btn btn-blue radius" data-articleid="<?php echo ($v["articleid"]); ?>" onclick="setRecommend('1','<?php echo ($v["articleid"]); ?>')" href="javascript:;">推&nbsp;&nbsp;&nbsp;送</a><?php endif; ?>
 						</td>
@@ -170,10 +173,15 @@
 
 <!--请在下方写此页面业务相关的脚本-->
 <script type="text/javascript" src="/Fun1/Public/lib/My97DatePicker/4.8/WdatePicker.js"></script> 
-<script type="text/javascript" src="/Fun1/Public/lib/datatables/1.10.0/jquery.dataTables.min.js"></script> 
+<script type="text/javascript" src="/Fun1/Public/lib/datatables/1.10.0/new.jquery.dataTables.min.js"></script> 
 <script type="text/javascript" src="/Fun1/Public/lib/laypage/1.2/laypage.js"></script>
 <script src="/Fun1/Public/lib/jquery/jquery.upload.js"></script>
+<!-- <script src="/Fun1/Public/lib/jquery/jquery-3.0.0.min.js"></script> -->
+<!-- <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script> -->
+<!-- <script type="text/javascript" src="https://code.jquery.com/jquery-3.0.0.min.js"></script> -->
+<!-- <script type="text/javascript" src="http://libs.baidu.com/jquery/2.1.4/jquery.min.js"></script> -->
 <script type="text/javascript">
+
 
 $('.table-sort').dataTable({
 	"aaSorting": [[ 1, "desc" ]],
@@ -196,6 +204,7 @@ function article_add(title,url){
 
 /*文章-修改*/
 $('.edit').click(function(){
+	
 	var articleid = $(this).data('articleid');
 	var articletitle = $(this).data('articletitle');
 	var articlecover = $(this).data('articlecover');
@@ -203,7 +212,8 @@ $('.edit').click(function(){
 	var articlecontent = $(this).data('articlecontent');
 	var articletype = $(this).data('articletype');
 	var articlerecommend = $(this).data('articlerecommend');
-
+    console.log($(this).data('articleid'));
+   
 	$('#articleId').val(articleid);
 	$('#articleTitle').val(articletitle);
 	$('#articleDescription').val(articledescription);
@@ -293,6 +303,11 @@ function setRecommend(recommend,id) {
 		}
     });
 }
+
+$(function () {
+ 	$('.select:first').trigger("click");;
+  });
 </script> 
+
 </body>
 </html>

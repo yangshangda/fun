@@ -256,6 +256,9 @@
 <!--请在下方写此页面业务相关的脚本-->
 <script type="text/javascript" src="/Fun1/Public/lib/jquery.contextmenu/jquery.contextmenu.r2.js"></script>
 <script type="text/javascript">
+ $(function () {
+ 	$('.select').val(10);
+  });
 
 /*管理员-更改密码*/
 $('.edit2').click(function(){

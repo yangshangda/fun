@@ -23,7 +23,9 @@ class ArticleController extends CommonController {
 		$fun_article_table = M('fun_article');
 		$where['articleId'] = I('articleId');
 		$articleDetail = $fun_article_table->where($where)->limit(1)->select();
-		exit(json_encode($articleDetail));
+		$content = htmlspecialchars_decode($articleDetail[0]['articlecontent']);
+		$content = str_replace(['&nbsp;','  ','	'],["\r\t\r","\r\t\r","\r\t\r"],$content);
+		exit(json_encode(array('articleDetail' => $articleDetail ,'content' => $content )));
 	}
 
 	//分类文章列表

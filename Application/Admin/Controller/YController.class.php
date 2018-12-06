@@ -3,10 +3,6 @@ namespace Admin\Controller;
 use Think\Controller;
 class YController extends Controller{
 
-	public function index(){
-		echo '123';die;
-	}
-
 	public function delete(){
 		$ydianyin_music = M('ydianyin_music');
 		$ydianyin_music->where(1==1)->delete();

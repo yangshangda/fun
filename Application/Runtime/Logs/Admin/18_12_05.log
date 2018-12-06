@@ -1,0 +1,14 @@
+[ 2018-12-05T15:33:13+08:00 ] ::1 /Fun1/Admin/Article/addArticle.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `fun_article` [ RunTime:0.0160s ]
+SQL: UPDATE `fun_article` SET `articleTitle`='171717',`articleCover`='http://localhost/Fun1/Public/upload/temp/2018-12/05//article084359aade3fb7c3303737e9c077a8e29491541.jpg',`articleDescription`='无',`articleContent`='&lt;p&gt;&lt;span style=&quot;font-family: &amp;quot;arial black&amp;quot;, &amp;quot;avant garde&amp;quot;;&quot;&gt;这是内容啦啦啦啦啦&lt;/span&gt;&lt;br/&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;font-family: &amp;quot;arial black&amp;quot;, &amp;quot;avant garde&amp;quot;;&quot;&gt;This is content.&lt;/span&gt;&lt;/p&gt;',`articleType`='10',`articleRecommend`='0' WHERE `articleId` = 17 LIMIT 1  [ RunTime:0.0010s ]
+
+[ 2018-12-05T15:33:32+08:00 ] ::1 /Fun1/Admin/Article/addArticle.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `fun_article` [ RunTime:0.0140s ]
+SQL: UPDATE `fun_article` SET `articleTitle`='171717',`articleCover`='http://localhost/Fun1/Public/upload/temp/2018-12/05//article084359aade3fb7c3303737e9c077a8e29491541.jpg',`articleDescription`='无',`articleContent`='&lt;p style=&quot;text-align: center;&quot;&gt;&lt;span style=&quot;font-family: &amp;quot;arial black&amp;quot;, &amp;quot;avant garde&amp;quot;;&quot;&gt;这是内容啦啦啦啦啦&lt;/span&gt;&lt;br/&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;font-family: &amp;quot;arial black&amp;quot;, &amp;quot;avant garde&amp;quot;;&quot;&gt;This is content.&lt;/span&gt;&lt;/p&gt;',`articleType`='10',`articleRecommend`='0' WHERE `articleId` = 17 LIMIT 1  [ RunTime:0.0010s ]
+

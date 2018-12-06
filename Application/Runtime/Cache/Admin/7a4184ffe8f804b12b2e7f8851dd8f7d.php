@@ -305,7 +305,7 @@ function setRecommend(recommend,id) {
 }
 
 $(function () {
- 	$('.select:first').trigger("click");;
+ 	$('.select:first').trigger("click");
   });
 </script> 
 

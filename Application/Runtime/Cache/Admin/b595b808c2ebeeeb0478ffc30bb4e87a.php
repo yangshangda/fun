@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit();?>﻿<!DOCTYPE HTML>
+<?php if (!defined('THINK_PATH')) exit();?><!DOCTYPE HTML>
 <html>
 <head>
 <meta charset="utf-8">
@@ -256,9 +256,7 @@
 <!--请在下方写此页面业务相关的脚本-->
 <script type="text/javascript" src="/Fun1/Public/lib/jquery.contextmenu/jquery.contextmenu.r2.js"></script>
 <script type="text/javascript">
- $(function () {
- 	$('.select').val(10);
-  });
+ 
 
 /*管理员-更改密码*/
 $('.edit2').click(function(){

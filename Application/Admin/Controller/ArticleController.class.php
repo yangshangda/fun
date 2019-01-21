@@ -6,12 +6,19 @@ class ArticleController extends CommonController {
 	//文章列表
 	public function index() {
 		$fun_article_table = M('fun_article');
-		$articleList = $fun_article_table->where()->order('articleCreateTime desc')->select();
-		$count=count($articleList);
+		
+		//$count=count($articleList);
+
+		$count      = $fun_article_table->where()->count();// 查询满足要求的总记录数
+		$Page       = new \Think\Page($count,10);// 实例化分页类 传入总记录数和每页显示的记录数
+		$show       = $Page->show();// 分页显示输出
+		$this->assign('page',$show);// 赋值分页输出
+
+		$articleList = $fun_article_table->where()->order('articleCreateTime desc')->limit($Page->firstRow.','.$Page->listRows)->select();
 		
 		$this->count = $count;
 		$this->info = $articleList;
-		$this->display();
+		$this->display('index');
 	}
 
 	//添加文章

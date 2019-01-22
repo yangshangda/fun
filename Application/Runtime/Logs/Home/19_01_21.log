@@ -31,3 +31,6 @@ ERR: 非法操作:materialDetail
 [ 2019-01-21T17:49:33+08:00 ] ::1 /Fun1/index.php
 ERR: 无法加载控制器:Index
 
+[ 2019-01-21T19:09:11+08:00 ] ::1 /Fun1/index.php
+ERR: 无法加载控制器:Index
+

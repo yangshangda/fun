@@ -89,8 +89,11 @@ class FileToolsController extends Controller
      * 图片上传
      * @return string 图片的地址
      */
-    public function uploadImg() {
-        $source = I('source');
+    public function uploadImg($source) {
+        if(empty($source)) {
+            $source = I('source');
+        }
+        
         //echo json_encode($source);die;
         $tempFile = $_FILES['upload']['tmp_name'];
         $targetFileName = $source.md5(mt_rand(1000000,9999999)).mt_rand(1000000,9999999).'.jpg';

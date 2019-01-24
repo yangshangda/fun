@@ -88,6 +88,17 @@
 
     }
 
+    function getBoxWidth($font_size,$font,$text){
+        $box = imagettfbbox($font_size, 0, $font, $text);
+        return $box[2] - $box[0];
+    }
+
+    function getBoxLeft($font_size, $font_family, $content) {
+    $box = imagettfbbox($font_size, 0, $font_family, $content);
+    $width = $box[2] - $box[0];
+    return $width;
+}
+
     
     // /**
     //  * 音频上传接口

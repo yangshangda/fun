@@ -13,8 +13,8 @@ class MaterialController extends CommonController {
 	//文章列表
 	public function materialList() {
 		$fun_material_table = M('fun_material');
-		//$where['articleType'] = I('articleType');
-		$materialList = $fun_material_table->where()->order('materialCreateTime desc')->select();
+		$where['materialRecommend'] = '1';
+		$materialList = $fun_material_table->where($where)->order('materialCreateTime desc')->select();
 		exit(json_encode($materialList));
 	}
 

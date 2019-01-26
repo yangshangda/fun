@@ -17,7 +17,10 @@ class LoginController extends Controller {
 			$pwd = $admin_table->where($where)->getField('adminPassword');
 			$state = $admin_table->where($where)->getField('adminState');
 			$id = $admin_table->where($where)->getField('adminId');
-
+			$recycle = $admin_table->where($where)->getField('adminRecycle');
+			if($recycle == '1') {
+				$this->error('该管理员已被拉黑！');
+			}
 			if(md5(I('post.admin_pwd')) == $pwd){
 				session('admin_name',I('post.admin_name'));
 				session('state',$state);

@@ -1,4 +1,4 @@
-﻿<!DOCTYPE HTML>
+<!DOCTYPE HTML>
 <html>
 <head>
 <meta charset="utf-8">
@@ -16,29 +16,20 @@
 <link rel="stylesheet" type="text/css" href="__PUBLIC__/static/h-ui.admin/skin/yellow/skin.css" id="skin" />
 <link rel="stylesheet" type="text/css" href="__PUBLIC__/static/h-ui.admin/css/style.css" />
 <title>文章列表</title>
-<link href="__PUBLIC__/ueditor/themes/default/css/umeditor.min.css" rel="stylesheet" />
+<!-- <link href="__PUBLIC__/ueditor/themes/default/css/umeditor.min.css" rel="stylesheet" />
 <script src="__PUBLIC__/ueditor/third-party/jquery.min.js"></script>
 <script src="__PUBLIC__/ueditor/umeditor.config.js"></script>
 <script src="__PUBLIC__/ueditor/umeditor.min.js"></script>
-<script src="__PUBLIC__/ueditor/lang/zh-cn/zh-cn.js"></script>
-<script>
-    $(function () {
-        UM.getEditor('myEditor', {
-		initialFrameWidth:"98%",
-		//initialFrameHeight:"100%"
-	});
-});
-</script>
-
+<script src="__PUBLIC__/ueditor/lang/zh-cn/zh-cn.js"></script> -->
 
 </head>
 <body>
-<nav class="breadcrumb"><i class="Hui-iconfont">&#xe67f;</i> 首页 <span class="c-gray en">&gt;</span> 文章管理 <span class="c-gray en">&gt;</span> 文章列表 <a class="btn btn-success radius r" style="line-height:1.6em;margin-top:3px" href="javascript:location.replace(location.href);" title="刷新" ><i class="Hui-iconfont">&#xe68f;</i></a></nav>
+<nav class="breadcrumb"><i class="Hui-iconfont">&#xe67f;</i> 首页 <span class="c-gray en">&gt;</span> 素材管理 <span class="c-gray en">&gt;</span> 素材列表 <a class="btn btn-success radius r" style="line-height:1.6em;margin-top:3px" href="javascript:location.replace(location.href);" title="刷新" ><i class="Hui-iconfont">&#xe68f;</i></a></nav>
 <div class="page-container">
 
 	<div class="cl pd-5 bg-1 bk-gray mt-20"> 
 		<span class="l">
-		<a class="btn btn-primary radius" onclick="article_add('添加文章','add-article.html')" href="javascript:;"><i class="Hui-iconfont"></i> 添加文章</a>
+		<a class="btn btn-primary radius" onclick="material_add('添加素材','add-material.html','800','500')" href="javascript:;"><i class="Hui-iconfont"></i> 添加素材</a>
 		
 		</span> 
 		<span class="r">共有数据：<strong>{$count}</strong> 条</span> 
@@ -49,44 +40,46 @@
 		<table class="table table-border table-bordered table-bg table-hover table-sort table-responsive">
 			<thead>
 				<tr class="text-c">
-					<th width="60">articleID</th>
+					<th width="60">素材Id</th>
 					<th width="120">创建时间</th>
-					<th>标题</th>
 					<th>封面</th>
-					<th>描述</th>
-					<th>内容</th>					
-					<th>类型</th>
-					<th>是否推送</th>
+					<th>标题</th>
+					<th>配置素材json</th>
+					<th>描述</th>				
+					<!-- <th>类型</th> -->
+					<th>是否上线</th>
 					<th>操作</th>
 				</tr>
 			</thead>
 			<tbody>
 				<volist name="info" id="v">
 					<tr class="text-c">
-						<td>{$v.articleid}</td>
-						<td class="text-1">{$v.articlecreatetime}</td>
-						<td>{$v.articletitle}</td>
-						<td><a href="{$v.articlecover}" target="_blank"><img style="max-width: 80px;max-height: 80px;" src="{$v.articlecover}"/></a></td>
-						<td>{$v.articledescription}</td>
-						
-						<td>{$v.articlecontent|mb_substr=0,30,'utf-8'}……</td>				
-						<td>
-							<if condition="$v.articletype eq 10"><p>综合</p></if>
+						<td>{$v.materialid}</td>
+						<td class="text-1">{$v.materialcreatetime}</td>
+						<td><a href="{$v.materialcover}" target="_blank"><img style="max-width: 80px;max-height: 80px;" src="{$v.materialcover}"/></a></td>
+						<td>{$v.materialtitle}</td>
+						<td>{$v.materialinput}</td>
+						<td>{$v.materialdescription}</td>				
+						<!-- <td>
+							<if condition="$v.articletype eq 11"><p>素材</p></if>
 							<if condition="$v.articletype eq 1"><p>情感</p></if>
 							<if condition="$v.articletype eq 2"><p>性格</p></if>
 							<if condition="$v.articletype eq 3"><p>趣味</p></if>
-						</td>
+						</td> -->
 						<td> 
-							<if condition="$v.articlerecommend eq 1"><p style="color:green"><b>已推送</b></p></if>
-							<if condition="$v.articlerecommend eq 0"><p>未推送</p></if>
+							<if condition="$v.materialrecommend eq 1"><p style="color:green"><b>已上线</b></p></if>
+							<if condition="$v.materialrecommend eq 0"><p>未上线</p></if>
 						</td>
 						
 						<td class="f-14 td-manage">
-							<a class="btn btn-success radius edit"  data-articleid="{$v.articleid}" data-articletitle="{$v.articletitle}" data-articlecover="{$v.articlecover}" data-articledescription="{$v.articledescription}" data-articlecontent="{$v.articlecontent}" data-articletype="{$v.articletype}" data-articlerecommend="{$v.articlerecommend}" id="edit"  data-toggle="modal" data-target="#modify">修改</a>
-							<if condition="$v.articlerecommend eq 1">
-							<a class="btn btn-default radius" data-articleid="{$v.articleid}" onclick="setRecommend('0','{$v.articleid}')" href="javascript:;">不推送</a></if>
-							<if condition="$v.articlerecommend eq 0">
-							<a style="color: white;" class="btn btn-blue radius" data-articleid="{$v.articleid}" onclick="setRecommend('1','{$v.articleid}')" href="javascript:;">推&nbsp;&nbsp;&nbsp;送</a></if>
+							<a class="btn btn-success radius edit" data-id="{$v.id}"  data-materialid="{$v.materialid}" data-materialtitle="{$v.materialtitle}" data-materialcover="{$v.materialcover}" data-materialinput="{$v.materialinput}" data-materialdescription="{$v.materialdescription}" data-materialrecommend="{$v.materialrecommend}" id="edit"  data-toggle="modal" data-target="#modify">修改</a>
+							<if condition="$v.materialrecommend eq 1">
+							<a class="btn btn-default radius" data-materialid="{$v.materialid}" onclick="setRecommend('0','{$v.materialid}')" href="javascript:;">下线</a></if>
+							<if condition="$v.materialrecommend eq 0">
+							<a style="color: white;" class="btn btn-blue radius" data-materialid="{$v.materialid}" onclick="setRecommend('1','{$v.materialid}')" href="javascript:;">上线</a></if>
+							<a style="color: white;" class="btn btn-yellow radius" onclick="setTop('{$v.materialid}')" href="javascript:;">置顶</a>
+							<a class="btn btn-warning radius" onclick="setDown('{$v.materialid}')" href="javascript:;">下置顶</a>
+							<a class="btn btn-danger radius" onclick="dele('{$v.materialid}')" href="javascript:;">删除</a>
 						</td>
 					</tr>
 				</volist>
@@ -100,22 +93,28 @@
 </div>
 
 
-
-
 <!-- Modal -->
 <div class="modal fade" id="modify" tabindex="-1" role="dialog" aria-labelledby="modifyLabel" aria-hidden="true" style="display: none">
     <div class="modal-dialog" role="document" style="width: 900px;">
         <div class="modal-content" style="width: 900px;">
             <div class="modal-header">
-                <h5 class="modal-title" id="modLabel">文章列表 > 更改文章信息</h5>
+                <h5 class="modal-title" id="modLabel">素材列表 > 更改素材信息</h5>
             </div>
             <div class="modal-body">
                 <form class="form form-horizontal" id="form-admin-add">
 	<div class="row cl">
-		<input type="text" hidden="true" id="articleId" name="articleId">
+		<input type="text" hidden="true" id="id" name="id">
+		<label class="form-label col-xs-4 col-sm-3"><span class="c-red">*</span>ID：</label>
+		<div class="formControls col-xs-8 col-sm-9">
+			<input type="text" class="input-text" placeholder="" id="materialid" name="materialid">
+		</div>
+	</div>
+
+	<div class="row cl">
+		<!-- <input type="text" hidden="true" id="articleId" name="articleId"> -->
 		<label class="form-label col-xs-4 col-sm-3"><span class="c-red">*</span>标题：</label>
 		<div class="formControls col-xs-8 col-sm-9">
-			<input type="text" class="input-text" placeholder="" id="articleTitle" name="articleTitle">
+			<input type="text" class="input-text" placeholder="" id="materialtitle" name="materialtitle">
 		</div>
 	</div>
 
@@ -128,13 +127,20 @@
 	</div>
 
 	<div class="row cl">
-		<label class="form-label col-xs-4 col-sm-3">描述：</label>
+		<label class="form-label col-xs-4 col-sm-3">配置素材json：</label>
 		<div class="formControls col-xs-8 col-sm-9">
-			<input type="text" class="input-text" placeholder="" id="articleDescription" name="articleDescription">
+			<input type="text" class="input-text" placeholder="" id="materialinput" name="materialinput">
 		</div>
 	</div>
 
 	<div class="row cl">
+		<label class="form-label col-xs-4 col-sm-3">描述：</label>
+		<div class="formControls col-xs-8 col-sm-9">
+			<input type="text" class="input-text" placeholder="" id="materialdescription" name="materialdescription">
+		</div>
+	</div>
+
+	<!-- <div class="row cl">
 		<label class="form-label col-xs-4 col-sm-3">内容：</label>
 		<div class="formControls col-xs-8 col-sm-9">
 			<script style="width: 50%;height: 200px;" type="text/plain" id="myEditor" name="articleContent"></script>
@@ -152,14 +158,14 @@
 			</select>
 			</span> 
 		</div>
-	</div>
+	</div> -->
 
 	<div class="row cl">
-		<label class="form-label col-xs-4 col-sm-3">是否推送：</label>
+		<label class="form-label col-xs-4 col-sm-3">是否上线：</label>
 		<div class="formControls col-xs-8 col-sm-9"> <span class="select-box" style="width:150px;">
-			<select id="articleRecommend" class="select" name="state" size="1">
-				<option value="0">不推送</option>
-				<option value="1">推送</option>
+			<select id="materialrecommend" class="select" name="state" size="1">
+				<option value="0">下线</option>
+				<option value="1">上线</option>
 			</select>
 			</span> 
 		</div>
@@ -184,8 +190,9 @@
 <!--请在下方写此页面业务相关的脚本-->
 <script type="text/javascript" src="__PUBLIC__/lib/My97DatePicker/4.8/WdatePicker.js"></script> 
 <!-- <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script> -->
+<!-- <script type="text/javascript" src="__PUBLIC__/lib/datatables/1.10.0/jquery.dataTables.min.js"></script>  -->
 <script type="text/javascript" src="__PUBLIC__/lib/datatables/1.10.0/new.jquery.dataTables.min.js"></script> 
-<!-- <script type="text/javascript" src="__PUBLIC__/lib/laypage/1.2/laypage.js"></script> -->
+<script type="text/javascript" src="__PUBLIC__/lib/laypage/1.2/laypage.js"></script>
 <script src="__PUBLIC__/lib/jquery/jquery.upload.js"></script>
 <!-- <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script> -->
 <!-- <script src="__PUBLIC__/lib/jquery/jquery-3.0.0.min.js"></script> -->
@@ -194,18 +201,17 @@
 <!-- <script type="text/javascript" src="http://libs.baidu.com/jquery/2.1.4/jquery.min.js"></script> -->
 <script type="text/javascript">
 
-
 $('.table-sort').dataTable({
 	"aaSorting": [[ 1, "desc" ]],
 	//"bStateSave": true,//状态保存
 	"pading":false,
 	"aoColumnDefs": [
-	  {"orderable":false,"aTargets":[0,2,3,4,5,6,7,8]}// 不参与排序的列
+	  {"orderable":false,"aTargets":[0,2,3,4,5,6,7]}// 不参与排序的列
 	]
 });
 
 /*文章-增加*/
-function article_add(title,url){
+function material_add(title,url){
 	var index = layer.open({
 		type: 2,
 		title: title,
@@ -213,28 +219,46 @@ function article_add(title,url){
 	});
 	layer.full(index);
 }
+</script>
 
+<script type="text/javascript">
 /*文章-修改*/
 $('.edit').click(function(){
 	
-	var articleid = $(this).data('articleid');
-	var articletitle = $(this).data('articletitle');
-	var articlecover = $(this).data('articlecover');
-	var articledescription = $(this).data('articledescription');
-	var articlecontent = $(this).data('articlecontent');
-	var articletype = $(this).data('articletype');
-	var articlerecommend = $(this).data('articlerecommend');
-    console.log($(this).data('articleid'));
+	var materialid = $(this).data('materialid');
+	var id = $(this).data('id');
+	var materialtitle = $(this).data('materialtitle');
+	var materialcover = $(this).data('materialcover');
+	var materialinput = $(this).data('materialinput');
+	var materialdescription = $(this).data('materialdescription');
+	var materialrecommend = $(this).data('materialrecommend');
+    console.log($(this).data('materialid'));
+
+    $.ajax({
+		url : "{:U('Material/inputJson')}",
+		type : 'post',
+		//dataType : 'json',
+		data : {
+			materialId:materialid,
+		},
+		success : function(e){
+			console.log(e);
+			$('#materialinput').val(e);
+		},
+		error : function(e){
+			console.log(e);
+			//layer.msg('error!',{icon:1,time:1000});
+			alert('网络错误');
+		}
+	});
    
-	$('#articleId').val(articleid);
-	$('#articleTitle').val(articletitle);
-	$('#articleDescription').val(articledescription);
-	//$('#articleContent').val(myEditor);
-	UM.getEditor('myEditor').setContent(articlecontent);
-	$('#articleType').val(articletype);
-	$('#articleRecommend').val(articlerecommend);
-	$("#img").attr('src', articlecover);
-	$("#set_img").prop("href",articlecover);
+	$('#id').val(id);
+	$('#materialid').val(materialid);
+	$('#materialtitle').val(materialtitle);
+	$('#materialdescription').val(materialdescription);
+	$('#materialrecommend').val(materialrecommend);
+	$("#img").attr('src', materialcover);
+	$("#set_img").prop("href",materialcover);
 	
 });
 
@@ -244,7 +268,7 @@ function uploadImg(file) {
             url: "{:U('FileTools/uploadImg')}",
             type : 'post',
             fileName: 'upload',
-            params: {file: file,source:'article'},
+            params: {file: file,source:'material'},
             //data: {source:'article'},
             dataType: 'json',
             onSend: function() {
@@ -261,30 +285,36 @@ function uploadImg(file) {
 
 /*文章-保存修改*/
 $('.save').click(function(){
-	var articleid = $("#articleId").val();
-	var title = $("#articleTitle").val();
+	var id = $("#id").val();
+	var materialid = $("#materialid").val();
+	var materialtitle = $("#materialtitle").val();
 	var img = $("#set_img").attr('href');
-	var description = $("#articleDescription").val();
-	var content = UM.getEditor('myEditor').getContent();
-	var type = $("#articleType option:selected").val();
-	var recommend = $("#articleRecommend option:selected").val();
+	var materialinput = $("#materialinput").val();
+	var materialdescription = $("#materialdescription").val();
+	var materialrecommend = $("#materialrecommend option:selected").val();
 
 	$.ajax({
-		url : "{:U('Article/addArticle')}",
+		url : "{:U('Material/addMaterial')}",
 		type : 'post',
 		//dataType : 'json',
 		data : {
-			articleid:articleid,
-			title:title,
+			id:id,
+			materialid:materialid,
+			materialtitle:materialtitle,
 			img:img,
-			description:description,
-			content:content,
-			type:type,
-			recommend:recommend,
+			materialinput:materialinput,
+			materialdescription:materialdescription,
+			materialrecommend:materialrecommend,
 		},
 		success : function(e){
-			alert('操作成功！');
-			location.reload();
+			console.log(e);
+			if(e == '-1') {
+				alert('素材ID重复！');
+			}else{
+				alert('操作成功！');
+				location.reload();
+			}
+			
 		},
 		error : function(e){
 			console.log(e);
@@ -294,18 +324,18 @@ $('.save').click(function(){
 	});
 });
 
-// 修改是否推送
+// 修改是否上线
 function setRecommend(recommend,id) {
     $.ajax({
-        url: "{:U('Article/setRecommend')}",
+        url: "{:U('Material/setRecommend')}",
         type : 'post',
         data : {
 			id:id,
-			articleRecommend:recommend,
+			materialRecommend:recommend,
 		},
 		success : function(e){
 			//console.log(e);
-			//alert('操作成功！');
+			alert('操作成功！');
 			location.reload();
 		},
 		error : function(e){
@@ -314,6 +344,75 @@ function setRecommend(recommend,id) {
 			alert('网络错误');
 		}
     });
+}
+
+// 置顶
+function setTop(id) {
+    if(confirm("确认置顶此素材吗？")){
+    	$.ajax({
+	        url: "{:U('Material/setTop')}",
+	        type : 'post',
+	        data : {
+				id:id,
+			},
+			success : function(e){
+				//console.log(e);
+				alert('操作成功！');
+				location.reload();
+			},
+			error : function(e){
+				console.log(e);
+				//layer.msg('error!',{icon:1,time:1000});
+				alert('网络错误');
+			}
+	    });
+    }
+}
+
+// 下置顶
+function setDown(id) {
+	if(confirm("确认下置顶此素材吗？")){
+		$.ajax({
+	        url: "{:U('Material/setDown')}",
+	        type : 'post',
+	        data : {
+				id:id,
+			},
+			success : function(e){
+				//console.log(e);
+				alert('操作成功！');
+				location.reload();
+			},
+			error : function(e){
+				console.log(e);
+				//layer.msg('error!',{icon:1,time:1000});
+				alert('网络错误');
+			}
+	    });
+	}
+}
+
+// 删除
+function dele(id) {
+	if(confirm("确认删除此素材吗？")){
+		$.ajax({
+	        url: "{:U('Material/dele')}",
+	        type : 'post',
+	        data : {
+				id:id,
+			},
+			success : function(e){
+				//console.log(e);
+				alert('操作成功！');
+				location.reload();
+			},
+			error : function(e){
+				console.log(e);
+				//layer.msg('error!',{icon:1,time:1000});
+				alert('网络错误');
+			}
+	    });
+	}
 }
 
 $(function () {

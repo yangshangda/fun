@@ -78,7 +78,8 @@
 						<td class="f-14 td-manage">
 							<if condition="$Think.session.state eq 1">													
 								<a class="btn btn-success radius edit" data-adminid="{$v.adminid}" data-adminname="{$v.adminname}" data-adminsex="{$v.adminsex}" data-adminphone="{$v.adminphone}" data-adminaddress="{$v.adminaddress}" data-admindepartment="{$v.admindepartment}" data-adminqq="{$v.adminqq}" data-adminwechat="{$v.adminwechat}" data-adminemail="{$v.adminemail}" data-adminstate="{$v.adminstate}" data-admindescription="{$v.admindescription}" id="edit" href="javascript:void(0);" data-toggle="modal" data-target="#modify">修改</a>						
-								<a class="btn btn-warning radius reset" data-adminid="{$v.adminid}" onclick="" href="javascript:;">重置密码</a>						
+								<a class="btn btn-warning radius reset" data-adminid="{$v.adminid}" onclick="" href="javascript:;">重置密码</a>	
+								<a class="btn btn-danger radius" data-adminid="{$v.adminid}" onclick="recycle('{$v.adminid}')" href="javascript:;">删除</a>					
 								<!-- <a class="btn btn-secondary radius"  href="javascript:;">重置密码</a> -->
 							<elseif condition="$Think.session.id eq $v[adminid]"/>													
 								<a class="btn btn-success radius edit" data-adminid="{$v.adminid}" data-adminname="{$v.adminname}" data-adminsex="{$v.adminsex}" data-adminphone="{$v.adminphone}" data-adminaddress="{$v.adminaddress}" data-admindepartment="{$v.admindepartment}" data-adminqq="{$v.adminqq}" data-adminwechat="{$v.adminwechat}" data-adminemail="{$v.adminemail}" data-adminstate="{$v.adminstate}" data-admindescription="{$v.admindescription}" id="edit" href="javascript:void(0);" data-toggle="modal" data-target="#modify">修改</a>				
@@ -430,6 +431,27 @@ $('.save2').click(function(){
 		}
 	});
 });
+
+// 删除-进入回收站
+function recycle(id) {
+	$.ajax({
+        url: "{:U('Management/recycle')}",
+        type : 'post',
+        data : {
+			id:id,
+		},
+		success : function(e){
+			//console.log(e);
+			alert('操作成功！');
+			location.reload();
+		},
+		error : function(e){
+			console.log(e);
+			//layer.msg('error!',{icon:1,time:1000});
+			alert('网络错误');
+		}
+    });
+}
 
 
 </script> 

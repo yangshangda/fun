@@ -1,0 +1,700 @@
+[ 2019-01-25T18:01:14+08:00 ] ::1 /Fun1/Admin/Material/setRecommend.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `fun_material` [ RunTime:0.0140s ]
+SQL: UPDATE `fun_material` SET `materialRecommend`='0' WHERE `materialId` = 'GDMZ' LIMIT 1  [ RunTime:0.0010s ]
+
+[ 2019-01-25T18:01:18+08:00 ] ::1 /Fun1/Admin/Material/setRecommend.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `fun_material` [ RunTime:0.0200s ]
+SQL: UPDATE `fun_material` SET `materialRecommend`='0' WHERE `materialId` = 'GDMZ' LIMIT 1  [ RunTime:0.0020s ]
+
+[ 2019-01-25T18:01:26+08:00 ] ::1 /Fun1/Admin/Material/setRecommend.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `fun_material` [ RunTime:0.0210s ]
+SQL: UPDATE `fun_material` SET `materialRecommend`='0' WHERE `materialId` = 'GDMZ' LIMIT 1  [ RunTime:0.0010s ]
+
+[ 2019-01-25T18:02:34+08:00 ] ::1 /Fun1/Admin/Material/setRecommend.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `fun_material` [ RunTime:0.0210s ]
+SQL: UPDATE `fun_material` SET `materialRecommend`='0' WHERE `materialId` = 'CYBB' LIMIT 1  [ RunTime:0.0020s ]
+
+[ 2019-01-25T18:05:55+08:00 ] ::1 /Fun1/Admin/Material/setRecommend.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `fun_material` [ RunTime:0.0170s ]
+SQL: UPDATE `fun_material` SET `materialRecommend`='0' WHERE `materialId` = 'GDMZ' LIMIT 1  [ RunTime:0.0010s ]
+
+[ 2019-01-25T18:06:21+08:00 ] ::1 /Fun1/Admin/Material/setRecommend.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003001s ]
+SQL: SHOW COLUMNS FROM `fun_material` [ RunTime:0.0210s ]
+SQL: UPDATE `fun_material` SET `materialRecommend`='0' WHERE `materialId` = 'XXWZLK' LIMIT 1  [ RunTime:0.0010s ]
+
+[ 2019-01-25T18:09:48+08:00 ] ::1 /Fun1/Admin/Material/setRecommend.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `fun_material` [ RunTime:0.0200s ]
+SQL: UPDATE `fun_material` SET `materialRecommend`='0' WHERE `materialId` = 'XXWZLK' LIMIT 1  [ RunTime:0.0020s ]
+
+[ 2019-01-25T18:11:19+08:00 ] ::1 /Fun1/Admin/Material/setRecommend.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `fun_material` [ RunTime:0.0210s ]
+SQL: UPDATE `fun_material` SET `materialRecommend`='1' WHERE `materialId` = 'XXWZLK' LIMIT 1  [ RunTime:0.0020s ]
+
+[ 2019-01-25T18:11:23+08:00 ] ::1 /Fun1/Admin/Material/setRecommend.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `fun_material` [ RunTime:0.0170s ]
+SQL: UPDATE `fun_material` SET `materialRecommend`='0' WHERE `materialId` = 'XXWZLK' LIMIT 1  [ RunTime:0.0010s ]
+
+[ 2019-01-25T18:11:28+08:00 ] ::1 /Fun1/Admin/Material/setRecommend.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004000s ]
+SQL: SHOW COLUMNS FROM `fun_material` [ RunTime:0.0200s ]
+SQL: UPDATE `fun_material` SET `materialRecommend`='1' WHERE `materialId` = 'XXWZLK' LIMIT 1  [ RunTime:0.0020s ]
+
+[ 2019-01-25T18:16:37+08:00 ] ::1 /Fun1/Admin/Material/setRecommend.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004000s ]
+SQL: SHOW COLUMNS FROM `fun_material` [ RunTime:0.0210s ]
+SQL: UPDATE `fun_material` SET `materialRecommend`='1' WHERE `materialId` = 'GDMZ' LIMIT 1  [ RunTime:0.0010s ]
+
+[ 2019-01-25T18:16:51+08:00 ] ::1 /Fun1/Admin/Material/setTop.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `fun_material` [ RunTime:0.0220s ]
+SQL: UPDATE `fun_material` SET `materialCreateTime`='2019-01-25 06:01:50' WHERE `materialId` = 'FXCS' LIMIT 1  [ RunTime:0.0020s ]
+
+[ 2019-01-25T18:17:07+08:00 ] ::1 /Fun1/Admin/Material/setTop.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `fun_material` [ RunTime:0.0170s ]
+SQL: UPDATE `fun_material` SET `materialCreateTime`='2019-01-25 06:01:06' WHERE `materialId` = 'GDMZ' LIMIT 1  [ RunTime:0.0010s ]
+
+[ 2019-01-25T18:17:23+08:00 ] ::1 /Fun1/Admin/Material/setTop.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003001s ]
+SQL: SHOW COLUMNS FROM `fun_material` [ RunTime:0.0210s ]
+SQL: UPDATE `fun_material` SET `materialCreateTime`='2019-01-25 06:01:22' WHERE `materialId` = 'GDMZ' LIMIT 1  [ RunTime:0.0010s ]
+
+[ 2019-01-25T18:18:24+08:00 ] ::1 /Fun1/Admin/Material/setTop.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `fun_material` [ RunTime:0.0210s ]
+SQL: UPDATE `fun_material` SET `materialCreateTime`='2019-01-25 06:18:23' WHERE `materialId` = 'GDMZ' LIMIT 1  [ RunTime:0.0010s ]
+
+[ 2019-01-25T18:18:34+08:00 ] ::1 /Fun1/Admin/Material/setTop.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `fun_material` [ RunTime:0.0200s ]
+SQL: UPDATE `fun_material` SET `materialCreateTime`='2019-01-25 06:18:33' WHERE `materialId` = 'XXWZLK' LIMIT 1  [ RunTime:0.0020s ]
+
+[ 2019-01-25T18:19:22+08:00 ] ::1 /Fun1/Admin/Material/setRecommend.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004000s ]
+SQL: SHOW COLUMNS FROM `fun_material` [ RunTime:0.0150s ]
+SQL: UPDATE `fun_material` SET `materialRecommend`='1' WHERE `materialId` = 'HCQZ' LIMIT 1  [ RunTime:0.0010s ]
+
+[ 2019-01-25T18:19:35+08:00 ] ::1 /Fun1/Admin/Material/setTop.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `fun_material` [ RunTime:0.0160s ]
+SQL: UPDATE `fun_material` SET `materialCreateTime`='2019-01-25 06:19:34' WHERE `materialId` = 'HCQZ' LIMIT 1  [ RunTime:0.0010s ]
+
+[ 2019-01-25T18:19:45+08:00 ] ::1 /Fun1/Admin/Material/setRecommend.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `fun_material` [ RunTime:0.0210s ]
+SQL: UPDATE `fun_material` SET `materialRecommend`='1' WHERE `materialId` = 'DAANZHISHU' LIMIT 1  [ RunTime:0.0010s ]
+
+[ 2019-01-25T18:19:50+08:00 ] ::1 /Fun1/Admin/Material/setTop.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `fun_material` [ RunTime:0.0050s ]
+SQL: UPDATE `fun_material` SET `materialCreateTime`='2019-01-25 06:19:49' WHERE `materialId` = 'DAANZHISHU' LIMIT 1  [ RunTime:0.0010s ]
+
+[ 2019-01-25T18:19:58+08:00 ] ::1 /Fun1/Admin/Material/setRecommend.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `fun_material` [ RunTime:0.0210s ]
+SQL: UPDATE `fun_material` SET `materialRecommend`='1' WHERE `materialId` = 'RENPINJIAZHI' LIMIT 1  [ RunTime:0.0020s ]
+
+[ 2019-01-25T18:20:09+08:00 ] ::1 /Fun1/Admin/Material/setRecommend.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `fun_material` [ RunTime:0.0090s ]
+SQL: UPDATE `fun_material` SET `materialRecommend`='1' WHERE `materialId` = 'ZITI' LIMIT 1  [ RunTime:0.0010s ]
+
+[ 2019-01-25T18:20:18+08:00 ] ::1 /Fun1/Admin/Material/setRecommend.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `fun_material` [ RunTime:0.0140s ]
+SQL: UPDATE `fun_material` SET `materialRecommend`='1' WHERE `materialId` = 'SHIYIGUANJINAZI' LIMIT 1  [ RunTime:0.0010s ]
+
+[ 2019-01-25T18:20:22+08:00 ] ::1 /Fun1/Admin/Material/setRecommend.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `fun_material` [ RunTime:0.0210s ]
+SQL: UPDATE `fun_material` SET `materialRecommend`='1' WHERE `materialId` = 'JRYSCS' LIMIT 1  [ RunTime:0.0000s ]
+
+[ 2019-01-25T18:20:27+08:00 ] ::1 /Fun1/Admin/Material/setTop.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `fun_material` [ RunTime:0.0190s ]
+SQL: UPDATE `fun_material` SET `materialCreateTime`='2019-01-25 06:20:26' WHERE `materialId` = 'JRYSCS' LIMIT 1  [ RunTime:0.0010s ]
+
+[ 2019-01-25T18:20:38+08:00 ] ::1 /Fun1/Admin/Material/setRecommend.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004000s ]
+SQL: SHOW COLUMNS FROM `fun_material` [ RunTime:0.0170s ]
+SQL: UPDATE `fun_material` SET `materialRecommend`='1' WHERE `materialId` = 'LYTXZS' LIMIT 1  [ RunTime:0.0010s ]
+
+[ 2019-01-25T18:20:42+08:00 ] ::1 /Fun1/Admin/Material/setRecommend.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `fun_material` [ RunTime:0.0120s ]
+SQL: UPDATE `fun_material` SET `materialRecommend`='1' WHERE `materialId` = 'DSCS' LIMIT 1  [ RunTime:0.0000s ]
+
+[ 2019-01-25T18:20:47+08:00 ] ::1 /Fun1/Admin/Material/setTop.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.004001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.006001s ]
+SQL: SHOW COLUMNS FROM `fun_material` [ RunTime:0.0130s ]
+SQL: UPDATE `fun_material` SET `materialCreateTime`='2019-01-25 06:20:46' WHERE `materialId` = 'DSCS' LIMIT 1  [ RunTime:0.0000s ]
+
+[ 2019-01-25T18:20:51+08:00 ] ::1 /Fun1/Admin/Material/setRecommend.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `fun_material` [ RunTime:0.0090s ]
+SQL: UPDATE `fun_material` SET `materialRecommend`='1' WHERE `materialId` = 'BEIANLIANJILV' LIMIT 1  [ RunTime:0.0010s ]
+
+[ 2019-01-25T18:20:56+08:00 ] ::1 /Fun1/Admin/Material/setRecommend.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `fun_material` [ RunTime:0.0210s ]
+SQL: UPDATE `fun_material` SET `materialRecommend`='1' WHERE `materialId` = 'DSYY' LIMIT 1  [ RunTime:0.0010s ]
+
+[ 2019-01-25T18:21:00+08:00 ] ::1 /Fun1/Admin/Material/setTop.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `fun_material` [ RunTime:0.0220s ]
+SQL: UPDATE `fun_material` SET `materialCreateTime`='2019-01-25 06:20:59' WHERE `materialId` = 'DSYY' LIMIT 1  [ RunTime:0.0010s ]
+
+[ 2019-01-25T18:21:07+08:00 ] ::1 /Fun1/Admin/Material/setRecommend.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `fun_material` [ RunTime:0.0150s ]
+SQL: UPDATE `fun_material` SET `materialRecommend`='1' WHERE `materialId` = 'NZRG' LIMIT 1  [ RunTime:0.0010s ]
+
+[ 2019-01-25T18:21:12+08:00 ] ::1 /Fun1/Admin/Material/setRecommend.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `fun_material` [ RunTime:0.0210s ]
+SQL: UPDATE `fun_material` SET `materialRecommend`='1' WHERE `materialId` = 'YOURHISTORY' LIMIT 1  [ RunTime:0.0010s ]
+
+[ 2019-01-25T18:21:17+08:00 ] ::1 /Fun1/Admin/Material/setRecommend.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.004000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005000s ]
+SQL: SHOW COLUMNS FROM `fun_material` [ RunTime:0.0050s ]
+SQL: UPDATE `fun_material` SET `materialRecommend`='1' WHERE `materialId` = 'QSSYFX' LIMIT 1  [ RunTime:0.0010s ]
+
+[ 2019-01-25T18:21:23+08:00 ] ::1 /Fun1/Admin/Material/setRecommend.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `fun_material` [ RunTime:0.0210s ]
+SQL: UPDATE `fun_material` SET `materialRecommend`='1' WHERE `materialId` = 'KSCF' LIMIT 1  [ RunTime:0.0000s ]
+
+[ 2019-01-25T18:21:29+08:00 ] ::1 /Fun1/Admin/Material/setRecommend.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `fun_material` [ RunTime:0.0070s ]
+SQL: UPDATE `fun_material` SET `materialRecommend`='1' WHERE `materialId` = 'SSYSJ' LIMIT 1  [ RunTime:0.0010s ]
+
+[ 2019-01-25T18:21:34+08:00 ] ::1 /Fun1/Admin/Material/setRecommend.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `fun_material` [ RunTime:0.0100s ]
+SQL: UPDATE `fun_material` SET `materialRecommend`='1' WHERE `materialId` = 'GONGSHI2' LIMIT 1  [ RunTime:0.0010s ]
+
+[ 2019-01-25T18:21:40+08:00 ] ::1 /Fun1/Admin/Material/setRecommend.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `fun_material` [ RunTime:0.0130s ]
+SQL: UPDATE `fun_material` SET `materialRecommend`='1' WHERE `materialId` = 'XGCFFX' LIMIT 1  [ RunTime:0.0010s ]
+
+[ 2019-01-25T18:21:45+08:00 ] ::1 /Fun1/Admin/Material/setRecommend.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003001s ]
+SQL: SHOW COLUMNS FROM `fun_material` [ RunTime:0.0070s ]
+SQL: UPDATE `fun_material` SET `materialRecommend`='1' WHERE `materialId` = 'SHENGCHUANGZAO' LIMIT 1  [ RunTime:0.0000s ]
+
+[ 2019-01-25T18:22:05+08:00 ] ::1 /Fun1/Admin/Material/setRecommend.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `fun_material` [ RunTime:0.0150s ]
+SQL: UPDATE `fun_material` SET `materialRecommend`='1' WHERE `materialId` = 'SHZNKLS' LIMIT 1  [ RunTime:0.0000s ]
+
+[ 2019-01-25T18:22:10+08:00 ] ::1 /Fun1/Admin/Material/setRecommend.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `fun_material` [ RunTime:0.0130s ]
+SQL: UPDATE `fun_material` SET `materialRecommend`='1' WHERE `materialId` = 'GQWJS' LIMIT 1  [ RunTime:0.0010s ]
+
+[ 2019-01-25T18:22:17+08:00 ] ::1 /Fun1/Admin/Material/setRecommend.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `fun_material` [ RunTime:0.0210s ]
+SQL: UPDATE `fun_material` SET `materialRecommend`='1' WHERE `materialId` = 'KLGBB' LIMIT 1  [ RunTime:0.0010s ]
+
+[ 2019-01-25T18:22:24+08:00 ] ::1 /Fun1/Admin/Material/setRecommend.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004001s ]
+SQL: SHOW COLUMNS FROM `fun_material` [ RunTime:0.0110s ]
+SQL: UPDATE `fun_material` SET `materialRecommend`='1' WHERE `materialId` = 'DAJIDALI3' LIMIT 1  [ RunTime:0.0010s ]
+
+[ 2019-01-25T19:50:22+08:00 ] ::1 /Fun1/Admin/Material/inputJson.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `fun_material` [ RunTime:0.0060s ]
+SQL: SELECT `materialInput` FROM `fun_material` WHERE `materialId` = 'DSYY' LIMIT 1   [ RunTime:0.0000s ]
+
+[ 2019-01-25T19:50:26+08:00 ] ::1 /Fun1/Admin/Material/inputJson.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `fun_material` [ RunTime:0.0220s ]
+SQL: SELECT `materialInput` FROM `fun_material` WHERE `materialId` = 'JRYSCS' LIMIT 1   [ RunTime:0.0000s ]
+
+[ 2019-01-25T19:50:36+08:00 ] ::1 /Fun1/Admin/Material/inputJson.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `fun_material` [ RunTime:0.0060s ]
+SQL: SELECT `materialInput` FROM `fun_material` WHERE `materialId` = 'DSYY' LIMIT 1   [ RunTime:0.0000s ]
+
+[ 2019-01-25T19:51:02+08:00 ] ::1 /Fun1/Admin/Material/inputJson.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `fun_material` [ RunTime:0.0090s ]
+SQL: SELECT `materialInput` FROM `fun_material` WHERE `materialId` = 'DSYY' LIMIT 1   [ RunTime:0.0000s ]
+
+[ 2019-01-25T19:51:53+08:00 ] ::1 /Fun1/Admin/Material/inputJson.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `fun_material` [ RunTime:0.0140s ]
+SQL: SELECT `materialInput` FROM `fun_material` WHERE `materialId` = 'DSYY' LIMIT 1   [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.005000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.005000s ]
+
+[ 2019-01-25T19:52:11+08:00 ] ::1 /Fun1/Admin/Material/inputJson.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `fun_material` [ RunTime:0.0210s ]
+SQL: SELECT `materialInput` FROM `fun_material` WHERE `materialId` = 'DSYY' LIMIT 1   [ RunTime:0.0000s ]
+
+[ 2019-01-25T19:52:33+08:00 ] ::1 /Fun1/Admin/Material/inputJson.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `fun_material` [ RunTime:0.0050s ]
+SQL: SELECT `materialInput` FROM `fun_material` WHERE `materialId` = 'DSYY' LIMIT 1   [ RunTime:0.0010s ]
+
+[ 2019-01-25T19:52:45+08:00 ] ::1 /Fun1/Admin/Material/inputJson.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003001s ]
+SQL: SHOW COLUMNS FROM `fun_material` [ RunTime:0.0100s ]
+SQL: SELECT `materialInput` FROM `fun_material` WHERE `materialId` = 'DSCS' LIMIT 1   [ RunTime:0.0000s ]
+
+[ 2019-01-25T19:52:48+08:00 ] ::1 /Fun1/Admin/Material/inputJson.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `fun_material` [ RunTime:0.0200s ]
+SQL: SELECT `materialInput` FROM `fun_material` WHERE `materialId` = 'DAANZHISHU' LIMIT 1   [ RunTime:0.0000s ]
+
+[ 2019-01-25T19:52:58+08:00 ] ::1 /Fun1/Admin/Material/inputJson.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `fun_material` [ RunTime:0.0220s ]
+SQL: SELECT `materialInput` FROM `fun_material` WHERE `materialId` = 'MYTX' LIMIT 1   [ RunTime:0.0000s ]
+
+[ 2019-01-25T20:10:24+08:00 ] ::1 /Fun1/Admin/Material/inputJson.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `fun_material` [ RunTime:0.0210s ]
+SQL: SELECT `materialInput` FROM `fun_material` WHERE `materialId` = 'DSYY' LIMIT 1   [ RunTime:0.0010s ]
+
+[ 2019-01-25T20:10:30+08:00 ] ::1 /Fun1/Admin/Material/addMaterial.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `fun_material` [ RunTime:0.0210s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `fun_material` WHERE `materialInput` = '[{&quot;id&quot;:&quot;name&quot;,&quot;printhit&quot;:&quot;请输入名字&quot;,&quot;label&quot;:&quot;名字&quot;,&quot;length&quot;:&quot;4&quot;}]' LIMIT 1   [ RunTime:0.0040s ]
+NOTIC: [2] Missing argument 1 for Think\Model::where(), called in D:\myphp_www\PHPTutorial\WWW\Fun1\Application\Admin\Controller\MaterialController.class.php on line 44 and defined D:\myphp_www\PHPTutorial\WWW\Fun1\ThinkPHP\Library\Think\Model.class.php 第 1797 行.
+NOTIC: [8] Undefined variable: where D:\myphp_www\PHPTutorial\WWW\Fun1\ThinkPHP\Library\Think\Model.class.php 第 1805 行.
+NOTIC: [8] Undefined variable: where D:\myphp_www\PHPTutorial\WWW\Fun1\ThinkPHP\Library\Think\Model.class.php 第 1808 行.
+NOTIC: [8] Undefined variable: where D:\myphp_www\PHPTutorial\WWW\Fun1\ThinkPHP\Library\Think\Model.class.php 第 1816 行.
+SQL: INSERT INTO `fun_material` (`materialId`,`materialCover`,`materialTitle`,`materialInput`,`materialDescription`,`materialRecommend`,`materialCreateTime`) VALUES ('DSYY1','http://m2.dwstatic.com/bi_material/201708/25/e8cf963ee85a7d49d3ef4c21819317ca1503666110220780610.jpg','你是哪种单身汪','[{&quot;id&quot;:&quot;name&quot;,&quot;printhit&quot;:&quot;请输入名字&quot;,&quot;label&quot;:&quot;名字&quot;,&quot;length&quot;:&quot;4&quot;}]','你是哪种单身汪','1','2019-01-25 08:10:30') [ RunTime:0.0000s ]
+
+[ 2019-01-25T20:10:38+08:00 ] ::1 /Fun1/Admin/Material/inputJson.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `fun_material` [ RunTime:0.0090s ]
+SQL: SELECT `materialInput` FROM `fun_material` WHERE `materialId` = 'DSYY1' LIMIT 1   [ RunTime:0.0010s ]
+
+[ 2019-01-25T20:10:57+08:00 ] ::1 /Fun1/Admin/Material/inputJson.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `fun_material` [ RunTime:0.0200s ]
+SQL: SELECT `materialInput` FROM `fun_material` WHERE `materialId` = 'DSYY1' LIMIT 1   [ RunTime:0.0000s ]
+
+[ 2019-01-25T20:11:01+08:00 ] ::1 /Fun1/Admin/Material/inputJson.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003001s ]
+SQL: SHOW COLUMNS FROM `fun_material` [ RunTime:0.0130s ]
+SQL: SELECT `materialInput` FROM `fun_material` WHERE `materialId` = 'DSYY' LIMIT 1   [ RunTime:0.0000s ]
+
+[ 2019-01-25T20:11:20+08:00 ] ::1 /Fun1/Admin/Material/inputJson.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003001s ]
+SQL: SHOW COLUMNS FROM `fun_material` [ RunTime:0.0200s ]
+SQL: SELECT `materialInput` FROM `fun_material` WHERE `materialId` = 'DSYY1' LIMIT 1   [ RunTime:0.0010s ]
+
+[ 2019-01-25T20:11:58+08:00 ] ::1 /Fun1/Admin/Material/inputJson.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `fun_material` [ RunTime:0.0180s ]
+SQL: SELECT `materialInput` FROM `fun_material` WHERE `materialId` = 'DSYY1' LIMIT 1   [ RunTime:0.0010s ]
+
+[ 2019-01-25T20:12:00+08:00 ] ::1 /Fun1/Admin/Material/inputJson.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004000s ]
+SQL: SHOW COLUMNS FROM `fun_material` [ RunTime:0.0160s ]
+SQL: SELECT `materialInput` FROM `fun_material` WHERE `materialId` = 'DSYY' LIMIT 1   [ RunTime:0.0000s ]
+
+[ 2019-01-25T20:15:31+08:00 ] ::1 /Fun1/Admin/Material/inputJson.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `fun_material` [ RunTime:0.0220s ]
+SQL: SELECT `materialInput` FROM `fun_material` WHERE `materialId` = 'DSYY1' LIMIT 1   [ RunTime:0.0010s ]
+
+[ 2019-01-25T20:15:37+08:00 ] ::1 /Fun1/Admin/Material/addMaterial.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003001s ]
+SQL: SHOW COLUMNS FROM `fun_material` [ RunTime:0.0210s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `fun_material` WHERE `materialInput` = '[{&amp;quot;id&amp;quot;:&amp;quot;name&amp;quot;,&amp;quot;printhit&amp;quot;:&amp;quot;请输入名字&amp;quot;,&amp;quot;label&amp;quot;:&amp;quot;名字&amp;quot;,&amp;quot;length&amp;quot;:&amp;quot;4&amp;quot;}]' LIMIT 1   [ RunTime:0.0010s ]
+SQL: UPDATE `fun_material` SET `materialId`='DSYY12',`materialCover`='http://m2.dwstatic.com/bi_material/201708/25/e8cf963ee85a7d49d3ef4c21819317ca1503666110220780610.jpg',`materialTitle`='你是哪种单身汪',`materialInput`='[{&amp;quot;id&amp;quot;:&amp;quot;name&amp;quot;,&amp;quot;printhit&amp;quot;:&amp;quot;请输入名字&amp;quot;,&amp;quot;label&amp;quot;:&amp;quot;名字&amp;quot;,&amp;quot;length&amp;quot;:&amp;quot;4&amp;quot;}]',`materialDescription`='你是哪种单身汪',`materialRecommend`='1' WHERE `id` = 67 LIMIT 1  [ RunTime:0.0010s ]
+
+[ 2019-01-25T20:15:51+08:00 ] ::1 /Fun1/Admin/Material/inputJson.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `fun_material` [ RunTime:0.0140s ]
+SQL: SELECT `materialInput` FROM `fun_material` WHERE `materialId` = 'DSYY12' LIMIT 1   [ RunTime:0.0000s ]
+
+[ 2019-01-25T20:15:53+08:00 ] ::1 /Fun1/Admin/Material/addMaterial.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `fun_material` [ RunTime:0.0210s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `fun_material` WHERE `materialInput` = '[{&amp;amp;quot;id&amp;amp;quot;:&amp;amp;quot;name&amp;amp;quot;,&amp;amp;quot;printhit&amp;amp;quot;:&amp;amp;quot;请输入名字&amp;amp;quot;,&amp;amp;quot;label&amp;amp;quot;:&amp;amp;quot;名字&amp;amp;quot;,&amp;amp;quot;length&amp;amp;quot;:&amp;amp;quot;4&amp;amp;quot;}]' LIMIT 1   [ RunTime:0.0000s ]
+SQL: UPDATE `fun_material` SET `materialId`='DSYY12',`materialCover`='http://m2.dwstatic.com/bi_material/201708/25/e8cf963ee85a7d49d3ef4c21819317ca1503666110220780610.jpg',`materialTitle`='你是哪种单身汪',`materialInput`='[{&amp;amp;quot;id&amp;amp;quot;:&amp;amp;quot;name&amp;amp;quot;,&amp;amp;quot;printhit&amp;amp;quot;:&amp;amp;quot;请输入名字&amp;amp;quot;,&amp;amp;quot;label&amp;amp;quot;:&amp;amp;quot;名字&amp;amp;quot;,&amp;amp;quot;length&amp;amp;quot;:&amp;amp;quot;4&amp;amp;quot;}]',`materialDescription`='你是哪种单身汪',`materialRecommend`='1' WHERE `id` = 67 LIMIT 1  [ RunTime:0.0010s ]
+
+[ 2019-01-25T20:16:20+08:00 ] ::1 /Fun1/Admin/Material/inputJson.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `fun_material` [ RunTime:0.0150s ]
+SQL: SELECT `materialInput` FROM `fun_material` WHERE `materialId` = 'DSYY12' LIMIT 1   [ RunTime:0.0010s ]
+
+[ 2019-01-25T20:16:24+08:00 ] ::1 /Fun1/Admin/Material/addMaterial.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003001s ]
+SQL: SHOW COLUMNS FROM `fun_material` [ RunTime:0.0140s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `fun_material` WHERE `materialInput` = '[{&amp;amp;amp;quot;id&amp;amp;amp;quot;:&amp;amp;amp;quot;name&amp;amp;amp;quot;,&amp;amp;amp;quot;printhit&amp;amp;amp;quot;:&amp;amp;amp;quot;请输入名字&amp;amp;amp;quot;,&amp;amp;amp;quot;label&amp;amp;amp;quot;:&amp;amp;amp;quot;名字&amp;amp;amp;quot;,&amp;amp;amp;quot;length&amp;amp;amp;quot;:&amp;amp;amp;quot;4&amp;am' LIMIT 1   [ RunTime:0.0000s ]
+SQL: UPDATE `fun_material` SET `materialId`='DSYY',`materialCover`='http://m2.dwstatic.com/bi_material/201708/25/e8cf963ee85a7d49d3ef4c21819317ca1503666110220780610.jpg',`materialTitle`='你是哪种单身汪',`materialInput`='[{&amp;amp;amp;quot;id&amp;amp;amp;quot;:&amp;amp;amp;quot;name&amp;amp;amp;quot;,&amp;amp;amp;quot;printhit&amp;amp;amp;quot;:&amp;amp;amp;quot;请输入名字&amp;amp;amp;quot;,&amp;amp;amp;quot;label&amp;amp;amp;quot;:&amp;amp;amp;quot;名字&amp;amp;amp;quot;,&amp;amp;amp;quot;length&amp;amp;amp;quot;:&amp;amp;amp;quot;4&amp;am',`materialDescription`='你是哪种单身汪',`materialRecommend`='1' WHERE `id` = 67 LIMIT 1  [ RunTime:0.0000s ]
+
+[ 2019-01-25T20:16:35+08:00 ] ::1 /Fun1/Admin/Material/inputJson.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `fun_material` [ RunTime:0.0220s ]
+SQL: SELECT `materialInput` FROM `fun_material` WHERE `materialId` = 'DSYY' LIMIT 1   [ RunTime:0.0010s ]
+
+[ 2019-01-25T20:16:43+08:00 ] ::1 /Fun1/Admin/Material/inputJson.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004000s ]
+SQL: SHOW COLUMNS FROM `fun_material` [ RunTime:0.0210s ]
+SQL: SELECT `materialInput` FROM `fun_material` WHERE `materialId` = 'DSYY' LIMIT 1   [ RunTime:0.0000s ]
+
+[ 2019-01-25T20:24:44+08:00 ] ::1 /Fun1/Admin/Material/inputJson.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `fun_material` [ RunTime:0.0140s ]
+SQL: SELECT `materialInput` FROM `fun_material` WHERE `materialId` = 'DSYY' LIMIT 1   [ RunTime:0.0010s ]
+
+[ 2019-01-25T20:24:46+08:00 ] ::1 /Fun1/Admin/Material/addMaterial.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `fun_material` [ RunTime:0.0080s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `fun_material` WHERE `materialInput` = '[{&quot;id&quot;:&quot;name&quot;,&quot;printhit&quot;:&quot;请输入名字&quot;,&quot;label&quot;:&quot;名字&quot;,&quot;length&quot;:&quot;4&quot;}]' LIMIT 1   [ RunTime:0.0000s ]
+SQL: UPDATE `fun_material` SET `materialId`='DSYY',`materialCover`='http://m2.dwstatic.com/bi_material/201708/25/e8cf963ee85a7d49d3ef4c21819317ca1503666110220780610.jpg',`materialTitle`='你是哪种单身汪',`materialInput`='[{&quot;id&quot;:&quot;name&quot;,&quot;printhit&quot;:&quot;请输入名字&quot;,&quot;label&quot;:&quot;名字&quot;,&quot;length&quot;:&quot;4&quot;}]',`materialDescription`='你是哪种单身汪',`materialRecommend`='1' WHERE `id` = 67 LIMIT 1  [ RunTime:0.0000s ]
+
+[ 2019-01-25T20:25:01+08:00 ] ::1 /Fun1/Admin/Material/inputJson.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `fun_material` [ RunTime:0.0120s ]
+SQL: SELECT `materialInput` FROM `fun_material` WHERE `materialId` = 'DSYY' LIMIT 1   [ RunTime:0.0000s ]
+
+[ 2019-01-25T20:25:09+08:00 ] ::1 /Fun1/Admin/Material/inputJson.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `fun_material` [ RunTime:0.0210s ]
+SQL: SELECT `materialInput` FROM `fun_material` WHERE `materialId` = 'DSYY' LIMIT 1   [ RunTime:0.0010s ]
+
+[ 2019-01-25T20:25:15+08:00 ] ::1 /Fun1/Admin/Material/inputJson.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `fun_material` [ RunTime:0.0160s ]
+SQL: SELECT `materialInput` FROM `fun_material` WHERE `materialId` = 'DSYY' LIMIT 1   [ RunTime:0.0000s ]
+
+[ 2019-01-25T20:25:19+08:00 ] ::1 /Fun1/Admin/Material/addMaterial.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `fun_material` [ RunTime:0.0210s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `fun_material` WHERE `materialInput` = '[{&quot;id&quot;:&quot;name&quot;,&quot;printhit&quot;:&quot;请输入名字&quot;,&quot;label&quot;:&quot;名字&quot;,&quot;length&quot;:&quot;4&quot;}]' LIMIT 1   [ RunTime:0.0010s ]
+SQL: UPDATE `fun_material` SET `materialId`='DSYY1',`materialCover`='http://m2.dwstatic.com/bi_material/201708/25/e8cf963ee85a7d49d3ef4c21819317ca1503666110220780610.jpg',`materialTitle`='你是哪种单身汪',`materialInput`='[{&quot;id&quot;:&quot;name&quot;,&quot;printhit&quot;:&quot;请输入名字&quot;,&quot;label&quot;:&quot;名字&quot;,&quot;length&quot;:&quot;4&quot;}]',`materialDescription`='你是哪种单身汪',`materialRecommend`='1' WHERE `id` = 67 LIMIT 1  [ RunTime:0.0000s ]
+
+[ 2019-01-25T20:25:24+08:00 ] ::1 /Fun1/Admin/Material/inputJson.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.004000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005000s ]
+SQL: SHOW COLUMNS FROM `fun_material` [ RunTime:0.0210s ]
+SQL: SELECT `materialInput` FROM `fun_material` WHERE `materialId` = 'DSYY1' LIMIT 1   [ RunTime:0.0000s ]
+
+[ 2019-01-25T20:25:33+08:00 ] ::1 /Fun1/Admin/Material/inputJson.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.004000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005000s ]
+SQL: SHOW COLUMNS FROM `fun_material` [ RunTime:0.0220s ]
+SQL: SELECT `materialInput` FROM `fun_material` WHERE `materialId` = 'DSYY1' LIMIT 1   [ RunTime:0.0000s ]
+
+[ 2019-01-25T20:26:49+08:00 ] ::1 /Fun1/Admin/Material/inputJson.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `fun_material` [ RunTime:0.0210s ]
+SQL: SELECT `materialInput` FROM `fun_material` WHERE `materialId` = 'DSYY1' LIMIT 1   [ RunTime:0.0010s ]
+
+[ 2019-01-25T20:26:51+08:00 ] ::1 /Fun1/Admin/Material/addMaterial.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `fun_material` [ RunTime:0.0220s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `fun_material` WHERE `materialId` = 'DSYY1' LIMIT 1   [ RunTime:0.0000s ]
+SQL: UPDATE `fun_material` SET `materialId`='DSYY1',`materialCover`='http://m2.dwstatic.com/bi_material/201708/25/e8cf963ee85a7d49d3ef4c21819317ca1503666110220780610.jpg',`materialTitle`='你是哪种单身汪',`materialInput`='[{&amp;quot;id&amp;quot;:&amp;quot;name&amp;quot;,&amp;quot;printhit&amp;quot;:&amp;quot;请输入名字&amp;quot;,&amp;quot;label&amp;quot;:&amp;quot;名字&amp;quot;,&amp;quot;length&amp;quot;:&amp;quot;4&amp;quot;}]',`materialDescription`='你是哪种单身汪',`materialRecommend`='1' WHERE `id` = 67 LIMIT 1  [ RunTime:0.0000s ]
+
+[ 2019-01-25T20:28:23+08:00 ] ::1 /Fun1/Admin/Material/inputJson.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `fun_material` [ RunTime:0.0210s ]
+SQL: SELECT `materialInput` FROM `fun_material` WHERE `materialId` = 'DSYY1' LIMIT 1   [ RunTime:0.0010s ]
+
+[ 2019-01-25T20:28:25+08:00 ] ::1 /Fun1/Admin/Material/addMaterial.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003001s ]
+SQL: SHOW COLUMNS FROM `fun_material` [ RunTime:0.0210s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `fun_material` WHERE `materialId` = 'DSYY1' LIMIT 1   [ RunTime:0.0010s ]
+
+[ 2019-01-25T20:28:47+08:00 ] ::1 /Fun1/Admin/Material/inputJson.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `fun_material` [ RunTime:0.0100s ]
+SQL: SELECT `materialInput` FROM `fun_material` WHERE `materialId` = 'DSYY1' LIMIT 1   [ RunTime:0.0000s ]
+
+[ 2019-01-25T20:28:51+08:00 ] ::1 /Fun1/Admin/Material/addMaterial.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `fun_material` [ RunTime:0.0210s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `fun_material` WHERE `materialId` = 'DSYY' LIMIT 1   [ RunTime:0.0010s ]
+
+[ 2019-01-25T20:29:55+08:00 ] ::1 /Fun1/Admin/Material/inputJson.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `fun_material` [ RunTime:0.0100s ]
+SQL: SELECT `materialInput` FROM `fun_material` WHERE `materialId` = 'DSYY1' LIMIT 1   [ RunTime:0.0000s ]
+
+[ 2019-01-25T20:29:58+08:00 ] ::1 /Fun1/Admin/Material/addMaterial.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `fun_material` [ RunTime:0.0210s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `fun_material` WHERE `materialId` = 'DSYY' LIMIT 1   [ RunTime:0.0010s ]
+
+[ 2019-01-25T20:30:04+08:00 ] ::1 /Fun1/Admin/Material/inputJson.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `fun_material` [ RunTime:0.0120s ]
+SQL: SELECT `materialInput` FROM `fun_material` WHERE `materialId` = 'DSYY1' LIMIT 1   [ RunTime:0.0000s ]
+
+[ 2019-01-25T20:30:06+08:00 ] ::1 /Fun1/Admin/Material/addMaterial.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `fun_material` [ RunTime:0.0210s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `fun_material` WHERE `materialId` = 'DSYY1' LIMIT 1   [ RunTime:0.0010s ]
+
+[ 2019-01-25T20:30:35+08:00 ] ::1 /Fun1/Admin/Material/inputJson.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `fun_material` [ RunTime:0.0210s ]
+SQL: SELECT `materialInput` FROM `fun_material` WHERE `materialId` = 'DSYY1' LIMIT 1   [ RunTime:0.0000s ]
+
+[ 2019-01-25T20:30:38+08:00 ] ::1 /Fun1/Admin/Material/addMaterial.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `fun_material` [ RunTime:0.0210s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `fun_material` WHERE `materialId` = 'DSYY' LIMIT 1   [ RunTime:0.0010s ]
+
+[ 2019-01-25T20:31:30+08:00 ] ::1 /Fun1/Admin/Material/inputJson.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `fun_material` [ RunTime:0.0080s ]
+SQL: SELECT `materialInput` FROM `fun_material` WHERE `materialId` = 'DSYY1' LIMIT 1   [ RunTime:0.0000s ]
+
+[ 2019-01-25T20:31:33+08:00 ] ::1 /Fun1/Admin/Material/addMaterial.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `fun_material` [ RunTime:0.0210s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `fun_material` WHERE `materialId` = 'DSYY1' LIMIT 1   [ RunTime:0.0000s ]
+
+[ 2019-01-25T20:31:50+08:00 ] ::1 /Fun1/Admin/Material/addMaterial.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `fun_material` [ RunTime:0.0170s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `fun_material` WHERE `materialId` = 'DSYY12' LIMIT 1   [ RunTime:0.0000s ]
+
+[ 2019-01-25T20:31:54+08:00 ] ::1 /Fun1/Admin/Material/inputJson.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004000s ]
+SQL: SHOW COLUMNS FROM `fun_material` [ RunTime:0.0210s ]
+SQL: SELECT `materialInput` FROM `fun_material` WHERE `materialId` = 'DSYY1' LIMIT 1   [ RunTime:0.0010s ]
+
+[ 2019-01-25T20:31:57+08:00 ] ::1 /Fun1/Admin/Material/addMaterial.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `fun_material` [ RunTime:0.0210s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `fun_material` WHERE `materialId` = 'DSYY12' LIMIT 1   [ RunTime:0.0010s ]
+
+[ 2019-01-25T20:32:09+08:00 ] ::1 /Fun1/Admin/Material/inputJson.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `fun_material` [ RunTime:0.0220s ]
+SQL: SELECT `materialInput` FROM `fun_material` WHERE `materialId` = 'DSYY1' LIMIT 1   [ RunTime:0.0000s ]
+
+[ 2019-01-25T20:32:11+08:00 ] ::1 /Fun1/Admin/Material/addMaterial.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `fun_material` [ RunTime:0.0190s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `fun_material` WHERE `materialId` = 'DSYY1' LIMIT 1   [ RunTime:0.0010s ]
+
+[ 2019-01-25T20:43:58+08:00 ] ::1 /Fun1/Admin/Material/inputJson.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `fun_material` [ RunTime:0.0210s ]
+SQL: SELECT `materialInput` FROM `fun_material` WHERE `materialId` = 'DSYY1' LIMIT 1   [ RunTime:0.0010s ]
+
+[ 2019-01-25T20:43:59+08:00 ] ::1 /Fun1/Admin/Material/addMaterial.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `fun_material` [ RunTime:0.0070s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `fun_material` WHERE `materialId` = 'DSYY1' LIMIT 1   [ RunTime:0.0000s ]
+

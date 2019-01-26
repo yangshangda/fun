@@ -1,0 +1,327 @@
+[ 2019-01-26T10:39:56+08:00 ] ::1 /Fun1/Admin/Material/inputJson.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `fun_material` [ RunTime:0.0380s ]
+SQL: SELECT `materialInput` FROM `fun_material` WHERE `materialId` = 'DSYY1' LIMIT 1   [ RunTime:0.0290s ]
+
+[ 2019-01-26T10:40:01+08:00 ] ::1 /Fun1/Admin/Material/addMaterial.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `fun_material` [ RunTime:0.0200s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `fun_material` WHERE `materialId` = 'DSYY' LIMIT 1   [ RunTime:0.0000s ]
+
+[ 2019-01-26T10:40:08+08:00 ] ::1 /Fun1/Admin/Material/addMaterial.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `fun_material` [ RunTime:0.0230s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `fun_material` WHERE `materialId` = 'DSYY1' LIMIT 1   [ RunTime:0.0000s ]
+
+[ 2019-01-26T10:41:44+08:00 ] ::1 /Fun1/Admin/Material/inputJson.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `fun_material` [ RunTime:0.0220s ]
+SQL: SELECT `materialInput` FROM `fun_material` WHERE `materialId` = 'DSYY1' LIMIT 1   [ RunTime:0.0010s ]
+
+[ 2019-01-26T10:41:48+08:00 ] ::1 /Fun1/Admin/Material/addMaterial.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `fun_material` [ RunTime:0.0190s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `fun_material` WHERE `materialId` = 'DSYY1' AND `id` NOT IN ('67') LIMIT 1   [ RunTime:0.0350s ]
+SQL: UPDATE `fun_material` SET `materialId`='DSYY1',`materialCover`='http://m2.dwstatic.com/bi_material/201708/25/e8cf963ee85a7d49d3ef4c21819317ca1503666110220780610.jpg',`materialTitle`='你是哪种单身汪',`materialInput`='[{&amp;amp;quot;id&amp;amp;quot;:&amp;amp;quot;name&amp;amp;quot;,&amp;amp;quot;printhit&amp;amp;quot;:&amp;amp;quot;请输入名字&amp;amp;quot;,&amp;amp;quot;label&amp;amp;quot;:&amp;amp;quot;名字&amp;amp;quot;,&amp;amp;quot;length&amp;amp;quot;:&amp;amp;quot;4&amp;amp;quot;}]',`materialDescription`='你是哪种单身汪1',`materialRecommend`='1' WHERE `id` = 67 LIMIT 1  [ RunTime:0.0020s ]
+
+[ 2019-01-26T10:41:53+08:00 ] ::1 /Fun1/Admin/Material/inputJson.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `fun_material` [ RunTime:0.0170s ]
+SQL: SELECT `materialInput` FROM `fun_material` WHERE `materialId` = 'DSYY1' LIMIT 1   [ RunTime:0.0000s ]
+
+[ 2019-01-26T10:41:58+08:00 ] ::1 /Fun1/Admin/Material/addMaterial.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `fun_material` [ RunTime:0.0120s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `fun_material` WHERE `materialId` = 'DSYY' AND `id` NOT IN ('67') LIMIT 1   [ RunTime:0.0010s ]
+
+[ 2019-01-26T10:42:10+08:00 ] ::1 /Fun1/Admin/Material/addMaterial.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `fun_material` [ RunTime:0.0130s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `fun_material` WHERE `materialId` = 'DSYY1' AND `id` NOT IN ('67') LIMIT 1   [ RunTime:0.0010s ]
+SQL: UPDATE `fun_material` SET `materialId`='DSYY1',`materialCover`='http://m2.dwstatic.com/bi_material/201708/25/e8cf963ee85a7d49d3ef4c21819317ca1503666110220780610.jpg',`materialTitle`='你是哪种单身汪',`materialInput`='[{&amp;amp;amp;quot;id&amp;amp;amp;quot;:&amp;amp;amp;quot;name&amp;amp;amp;quot;,&amp;amp;amp;quot;printhit&amp;amp;amp;quot;:&amp;amp;amp;quot;请输入名字&amp;amp;amp;quot;,&amp;amp;amp;quot;label&amp;amp;amp;quot;:&amp;amp;amp;quot;名字&amp;amp;amp;quot;,&amp;amp;amp;quot;length&amp;amp;amp;quot;:&amp;amp;amp;quot;4&amp;am',`materialDescription`='你是哪种单身汪1',`materialRecommend`='1' WHERE `id` = 67 LIMIT 1  [ RunTime:0.0000s ]
+
+[ 2019-01-26T10:42:42+08:00 ] ::1 /Fun1/Admin/Material/inputJson.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `fun_material` [ RunTime:0.0140s ]
+SQL: SELECT `materialInput` FROM `fun_material` WHERE `materialId` = 'DSYY1' LIMIT 1   [ RunTime:0.0010s ]
+
+[ 2019-01-26T10:42:50+08:00 ] ::1 /Fun1/Admin/Material/inputJson.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `fun_material` [ RunTime:0.0150s ]
+SQL: SELECT `materialInput` FROM `fun_material` WHERE `materialId` = 'DSCS' LIMIT 1   [ RunTime:0.0000s ]
+
+[ 2019-01-26T10:48:10+08:00 ] ::1 /Fun1/Admin/Material/inputJson.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `fun_material` [ RunTime:0.0100s ]
+SQL: SELECT `materialInput` FROM `fun_material` WHERE `materialId` = 'DSYY' LIMIT 1   [ RunTime:0.0000s ]
+
+[ 2019-01-26T10:48:14+08:00 ] ::1 /Fun1/Admin/Material/inputJson.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `fun_material` [ RunTime:0.0220s ]
+SQL: SELECT `materialInput` FROM `fun_material` WHERE `materialId` = 'DSYY1' LIMIT 1   [ RunTime:0.0000s ]
+
+[ 2019-01-26T10:48:19+08:00 ] ::1 /Fun1/Admin/Material/addMaterial.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `fun_material` [ RunTime:0.0170s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `fun_material` WHERE `materialId` = 'DSYY1' AND `id` NOT IN ('67') LIMIT 1   [ RunTime:0.0000s ]
+SQL: UPDATE `fun_material` SET `materialId`='DSYY1',`materialCover`='http://m2.dwstatic.com/bi_material/201708/25/e8cf963ee85a7d49d3ef4c21819317ca1503666110220780610.jpg',`materialTitle`='你是哪种单身汪',`materialInput`='[{\"id\":\"name\",\"printhit\":\"请输入名字\",\"label\":\"名字\",\"length\":\"4\"}]',`materialDescription`='你是哪种单身汪1',`materialRecommend`='1' WHERE `id` = 67 LIMIT 1  [ RunTime:0.0000s ]
+
+[ 2019-01-26T10:48:24+08:00 ] ::1 /Fun1/Admin/Material/inputJson.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `fun_material` [ RunTime:0.0130s ]
+SQL: SELECT `materialInput` FROM `fun_material` WHERE `materialId` = 'DSYY1' LIMIT 1   [ RunTime:0.0000s ]
+
+[ 2019-01-26T10:48:26+08:00 ] ::1 /Fun1/Admin/Material/addMaterial.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `fun_material` [ RunTime:0.0170s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `fun_material` WHERE `materialId` = 'DSYY1' AND `id` NOT IN ('67') LIMIT 1   [ RunTime:0.0010s ]
+SQL: UPDATE `fun_material` SET `materialId`='DSYY1',`materialCover`='http://m2.dwstatic.com/bi_material/201708/25/e8cf963ee85a7d49d3ef4c21819317ca1503666110220780610.jpg',`materialTitle`='你是哪种单身汪',`materialInput`='[{\"id\":\"name\",\"printhit\":\"请输入名字\",\"label\":\"名字\",\"length\":\"4\"}]',`materialDescription`='你是哪种单身汪1',`materialRecommend`='1' WHERE `id` = 67 LIMIT 1  [ RunTime:0.0000s ]
+
+[ 2019-01-26T10:48:30+08:00 ] ::1 /Fun1/Admin/Material/inputJson.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `fun_material` [ RunTime:0.0210s ]
+SQL: SELECT `materialInput` FROM `fun_material` WHERE `materialId` = 'DSYY1' LIMIT 1   [ RunTime:0.0000s ]
+
+[ 2019-01-26T10:58:10+08:00 ] ::1 /Fun1/Admin/Material/setDown.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `fun_material` [ RunTime:0.0060s ]
+SQL: SELECT `materialCreateTime` FROM `fun_material` WHERE `materialRecommend` = 1 ORDER BY materialCreateTime asc LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined variable: fun_material_table D:\myphp_www\PHPTutorial\WWW\Fun1\Application\Admin\Controller\MaterialController.class.php 第 96 行.
+
+[ 2019-01-26T10:58:25+08:00 ] ::1 /Fun1/Admin/Material/setTop.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `fun_material` [ RunTime:0.0080s ]
+SQL: UPDATE `fun_material` SET `materialCreateTime`='2019-01-26 10:58:24' WHERE `materialId` = 'DSYY1' LIMIT 1  [ RunTime:0.0010s ]
+
+[ 2019-01-26T11:02:04+08:00 ] ::1 /Fun1/Admin/Material/setDown.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002001s ]
+SQL: SHOW COLUMNS FROM `fun_material` [ RunTime:0.0220s ]
+SQL: SELECT `materialCreateTime` FROM `fun_material` WHERE `materialRecommend` = 1 ORDER BY materialCreateTime asc LIMIT 1   [ RunTime:0.0010s ]
+SQL: UPDATE `fun_material` SET `materialCreateTime`='2019-01-02 08:15:28' WHERE `materialId` = 'DSYY1' LIMIT 1  [ RunTime:0.0010s ]
+
+[ 2019-01-26T15:34:27+08:00 ] ::1 /Fun1/Admin/Article/addMaterial.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+ERR: 非法操作:addMaterial
+
+[ 2019-01-26T15:36:17+08:00 ] ::1 /Fun1/Admin/Article/addMaterial.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+ERR: 非法操作:addMaterial
+
+[ 2019-01-26T15:36:21+08:00 ] ::1 /Fun1/Admin/Article/addMaterial.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+ERR: 非法操作:addMaterial
+
+[ 2019-01-26T15:36:33+08:00 ] ::1 /Fun1/Admin/Article/addMaterial.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+ERR: 非法操作:addMaterial
+
+[ 2019-01-26T15:38:28+08:00 ] ::1 /Fun1/Admin/Article/addMaterial.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+ERR: 非法操作:addMaterial
+
+[ 2019-01-26T15:39:03+08:00 ] ::1 /Fun1/Admin/Article/addMaterial.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+ERR: 非法操作:addMaterial
+
+[ 2019-01-26T15:40:49+08:00 ] ::1 /Fun1/Admin/Article/addMaterial.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+ERR: 非法操作:addMaterial
+
+[ 2019-01-26T15:41:35+08:00 ] ::1 /Fun1/Admin/Material/addMaterial.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001001s ]
+SQL: SHOW COLUMNS FROM `fun_material` [ RunTime:0.0220s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `fun_material` WHERE `materialId` = 'fdf' LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [2] Missing argument 1 for Think\Model::where(), called in D:\myphp_www\PHPTutorial\WWW\Fun1\Application\Admin\Controller\MaterialController.class.php on line 52 and defined D:\myphp_www\PHPTutorial\WWW\Fun1\ThinkPHP\Library\Think\Model.class.php 第 1797 行.
+NOTIC: [8] Undefined variable: where D:\myphp_www\PHPTutorial\WWW\Fun1\ThinkPHP\Library\Think\Model.class.php 第 1805 行.
+NOTIC: [8] Undefined variable: where D:\myphp_www\PHPTutorial\WWW\Fun1\ThinkPHP\Library\Think\Model.class.php 第 1808 行.
+NOTIC: [8] Undefined variable: where D:\myphp_www\PHPTutorial\WWW\Fun1\ThinkPHP\Library\Think\Model.class.php 第 1816 行.
+SQL: INSERT INTO `fun_material` (`materialId`,`materialCover`,`materialTitle`,`materialInput`,`materialDescription`,`materialRecommend`,`materialCreateTime`) VALUES ('fdf','http://localhost/Fun1/Public/upload/temp/2019-01/26//article5cbd5ff9d36171782280ccafbc42c2852898722.jpg','测试一','[{\"id\":\"0\",\"type\":\"image\",\"path\":\"\\/res\\/3.png\",\"width\":\"544\",\"height\":\"960\",\"title\":\"图片：\",\"tips\":\"请选择图片\"},{\"id\":1,\"type\":\"music\",\"title\":\"正在使用默认音乐\",\"tips\":\"正在使用默认音乐\",\"path\":\"\\/res\\/music.mp3\",\"max_length\":10000}]','这是测试添加的东西一！！！','1','2019-01-26 03:41:35') [ RunTime:0.0010s ]
+
+[ 2019-01-26T15:41:42+08:00 ] ::1 /Fun1/Admin/Material/inputJson.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `fun_material` [ RunTime:0.0120s ]
+SQL: SELECT `materialInput` FROM `fun_material` WHERE `materialId` = 'fdf' LIMIT 1   [ RunTime:0.0000s ]
+
+[ 2019-01-26T15:43:14+08:00 ] ::1 /Fun1/Admin/Material/addMaterial.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `fun_material` [ RunTime:0.0210s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `fun_material` WHERE `materialId` = 'fdf' LIMIT 1   [ RunTime:0.0010s ]
+
+[ 2019-01-26T15:46:00+08:00 ] ::1 /Fun1/Admin/Material/addMaterial.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `fun_material` [ RunTime:0.0130s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `fun_material` WHERE `materialId` = 'fdf' LIMIT 1   [ RunTime:0.0010s ]
+
+[ 2019-01-26T15:46:10+08:00 ] ::1 /Fun1/Admin/Material/addMaterial.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `fun_material` [ RunTime:0.0070s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `fun_material` WHERE `materialId` = 'fdf' LIMIT 1   [ RunTime:0.0000s ]
+
+[ 2019-01-26T15:46:56+08:00 ] ::1 /Fun1/Admin/Material/addMaterial.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001001s ]
+SQL: SHOW COLUMNS FROM `fun_material` [ RunTime:0.0100s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `fun_material` WHERE `materialId` = 'fdfa' LIMIT 1   [ RunTime:0.0010s ]
+NOTIC: [2] Missing argument 1 for Think\Model::where(), called in D:\myphp_www\PHPTutorial\WWW\Fun1\Application\Admin\Controller\MaterialController.class.php on line 52 and defined D:\myphp_www\PHPTutorial\WWW\Fun1\ThinkPHP\Library\Think\Model.class.php 第 1797 行.
+NOTIC: [8] Undefined variable: where D:\myphp_www\PHPTutorial\WWW\Fun1\ThinkPHP\Library\Think\Model.class.php 第 1805 行.
+NOTIC: [8] Undefined variable: where D:\myphp_www\PHPTutorial\WWW\Fun1\ThinkPHP\Library\Think\Model.class.php 第 1808 行.
+NOTIC: [8] Undefined variable: where D:\myphp_www\PHPTutorial\WWW\Fun1\ThinkPHP\Library\Think\Model.class.php 第 1816 行.
+SQL: INSERT INTO `fun_material` (`materialId`,`materialCover`,`materialTitle`,`materialInput`,`materialDescription`,`materialRecommend`,`materialCreateTime`) VALUES ('fdfa','','','ds','','0','2019-01-26 03:46:56') [ RunTime:0.0000s ]
+
+[ 2019-01-26T15:47:15+08:00 ] ::1 /Fun1/Admin/Material/setRecommend.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `fun_material` [ RunTime:0.0050s ]
+SQL: UPDATE `fun_material` SET `materialRecommend`='0' WHERE `materialId` = 'fdf' LIMIT 1  [ RunTime:0.0000s ]
+
+[ 2019-01-26T15:47:56+08:00 ] ::1 /Fun1/Admin/Material/inputJson.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `fun_material` [ RunTime:0.0230s ]
+SQL: SELECT `materialInput` FROM `fun_material` WHERE `materialId` = 'fdf' LIMIT 1   [ RunTime:0.0000s ]
+
+[ 2019-01-26T15:48:01+08:00 ] ::1 /Fun1/Admin/Material/addMaterial.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `fun_material` [ RunTime:0.0210s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `fun_material` WHERE `materialId` = 'fdf' AND `id` NOT IN ('68') LIMIT 1   [ RunTime:0.0010s ]
+SQL: UPDATE `fun_material` SET `materialId`='fdf',`materialCover`='http://localhost/Fun1/Public/upload/temp/2019-01/26//article5cbd5ff9d36171782280ccafbc42c2852898722.jpg',`materialTitle`='测试一',`materialInput`='[{\"id\":\"name\",\"printhit\":\"请输入名字\",\"label\":\"名字\",\"length\":\"4\"}]',`materialDescription`='这是测试添加的东西一！！！',`materialRecommend`='0' WHERE `id` = 68 LIMIT 1  [ RunTime:0.0010s ]
+
+[ 2019-01-26T16:09:57+08:00 ] ::1 /Fun1/Admin/Material/dele.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `fun_material` [ RunTime:0.0200s ]
+NOTIC: [8] Undefined variable: data D:\myphp_www\PHPTutorial\WWW\Fun1\Application\Admin\Controller\MaterialController.class.php 第 105 行.
+
+[ 2019-01-26T16:10:13+08:00 ] ::1 /Fun1/Admin/Material/dele.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `fun_material` [ RunTime:0.0210s ]
+NOTIC: [8] Undefined variable: data D:\myphp_www\PHPTutorial\WWW\Fun1\Application\Admin\Controller\MaterialController.class.php 第 105 行.
+
+[ 2019-01-26T16:10:47+08:00 ] ::1 /Fun1/Admin/Material/dele.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `fun_material` [ RunTime:0.0050s ]
+SQL: DELETE FROM `fun_material` WHERE `materialId` = 'fdfa' LIMIT 1  [ RunTime:0.0000s ]
+
+[ 2019-01-26T17:17:57+08:00 ] ::1 /Fun1/Admin/Management/recycle.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `fun_admin` [ RunTime:0.0220s ]
+SQL: UPDATE `fun_admin` SET `adminRecycle`='1' WHERE `adminId` = 0 LIMIT 1  [ RunTime:0.0010s ]
+
+[ 2019-01-26T17:19:39+08:00 ] ::1 /Fun1/Admin/Management/recycle.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `fun_admin` [ RunTime:0.0230s ]
+SQL: UPDATE `fun_admin` SET `adminRecycle`='1' WHERE `adminId` = 9 LIMIT 1  [ RunTime:0.0000s ]
+
+[ 2019-01-26T17:21:31+08:00 ] ::1 /Fun1/Admin/Management/recycleList
+ERR: 模板不存在:./Application/Admin/View/Management/recycleList.html
+
+[ 2019-01-26T17:35:36+08:00 ] ::1 /Fun1/Admin/Material/recover.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+ERR: 非法操作:recover
+
+[ 2019-01-26T17:36:42+08:00 ] ::1 /Fun1/Admin/Management/recover.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `fun_admin` [ RunTime:0.0180s ]
+SQL: UPDATE `fun_admin` SET `adminRecycle`='0' WHERE `adminId` = 10 LIMIT 1  [ RunTime:0.0000s ]
+
+[ 2019-01-26T17:36:54+08:00 ] ::1 /Fun1/Admin/Management/recycle.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `fun_admin` [ RunTime:0.0210s ]
+SQL: UPDATE `fun_admin` SET `adminRecycle`='1' WHERE `adminId` = 10 LIMIT 1  [ RunTime:0.0000s ]
+
+[ 2019-01-26T17:37:03+08:00 ] ::1 /Fun1/Admin/Management/recover.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `fun_admin` [ RunTime:0.0210s ]
+SQL: UPDATE `fun_admin` SET `adminRecycle`='0' WHERE `adminId` = 9 LIMIT 1  [ RunTime:0.0010s ]
+
+[ 2019-01-26T17:37:11+08:00 ] ::1 /Fun1/Admin/Management/recycle.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `fun_admin` [ RunTime:0.0220s ]
+SQL: UPDATE `fun_admin` SET `adminRecycle`='1' WHERE `adminId` = 9 LIMIT 1  [ RunTime:0.0000s ]
+

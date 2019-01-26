@@ -1,0 +1,420 @@
+<?php if (!defined('THINK_PATH')) exit();?><!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="renderer" content="webkit|ie-comp|ie-stand">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+<!--[if lt IE 9]>
+<script type="text/javascript" src="lib/html5shiv.js"></script>
+<script type="text/javascript" src="lib/respond.min.js"></script>
+<![endif]-->
+<link rel="stylesheet" type="text/css" href="/Fun1/Public/static/h-ui/css/H-ui.min.css" />
+<link rel="stylesheet" type="text/css" href="/Fun1/Public/static/h-ui.admin/css/H-ui.admin.css" />
+<link rel="stylesheet" type="text/css" href="/Fun1/Public/lib/Hui-iconfont/1.0.8/iconfont.css" />
+<link rel="stylesheet" type="text/css" href="/Fun1/Public/static/h-ui.admin/skin/yellow/skin.css" id="skin" />
+<link rel="stylesheet" type="text/css" href="/Fun1/Public/static/h-ui.admin/css/style.css" />
+<title>文章列表</title>
+<!-- <link href="/Fun1/Public/ueditor/themes/default/css/umeditor.min.css" rel="stylesheet" />
+<script src="/Fun1/Public/ueditor/third-party/jquery.min.js"></script>
+<script src="/Fun1/Public/ueditor/umeditor.config.js"></script>
+<script src="/Fun1/Public/ueditor/umeditor.min.js"></script>
+<script src="/Fun1/Public/ueditor/lang/zh-cn/zh-cn.js"></script> -->
+
+</head>
+<body>
+<nav class="breadcrumb"><i class="Hui-iconfont">&#xe67f;</i> 首页 <span class="c-gray en">&gt;</span> 素材管理 <span class="c-gray en">&gt;</span> 素材列表 <a class="btn btn-success radius r" style="line-height:1.6em;margin-top:3px" href="javascript:location.replace(location.href);" title="刷新" ><i class="Hui-iconfont">&#xe68f;</i></a></nav>
+<div class="page-container">
+
+	<div class="cl pd-5 bg-1 bk-gray mt-20"> 
+		<span class="l">
+		<a class="btn btn-primary radius" onclick="material_add('添加素材','add-material.html','800','500')" href="javascript:;"><i class="Hui-iconfont"></i> 添加素材</a>
+		
+		</span> 
+		<span class="r">共有数据：<strong><?php echo ($count); ?></strong> 条</span> 
+	</div>
+	
+	
+	<div class="mt-20">
+		<table class="table table-border table-bordered table-bg table-hover table-sort table-responsive">
+			<thead>
+				<tr class="text-c">
+					<th width="60">素材Id</th>
+					<th width="120">创建时间</th>
+					<th>封面</th>
+					<th>标题</th>
+					<th>配置素材json</th>
+					<th>描述</th>				
+					<!-- <th>类型</th> -->
+					<th>是否上线</th>
+					<th>操作</th>
+				</tr>
+			</thead>
+			<tbody>
+				<?php if(is_array($info)): $i = 0; $__LIST__ = $info;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$v): $mod = ($i % 2 );++$i;?><tr class="text-c">
+						<td><?php echo ($v["materialid"]); ?></td>
+						<td class="text-1"><?php echo ($v["materialcreatetime"]); ?></td>
+						<td><a href="<?php echo ($v["materialcover"]); ?>" target="_blank"><img style="max-width: 80px;max-height: 80px;" src="<?php echo ($v["materialcover"]); ?>"/></a></td>
+						<td><?php echo ($v["materialtitle"]); ?></td>
+						<td><?php echo ($v["materialinput"]); ?></td>
+						<td><?php echo ($v["materialdescription"]); ?></td>				
+						<!-- <td>
+							<?php if($v["articletype"] == 11): ?><p>素材</p><?php endif; ?>
+							<?php if($v["articletype"] == 1): ?><p>情感</p><?php endif; ?>
+							<?php if($v["articletype"] == 2): ?><p>性格</p><?php endif; ?>
+							<?php if($v["articletype"] == 3): ?><p>趣味</p><?php endif; ?>
+						</td> -->
+						<td> 
+							<?php if($v["materialrecommend"] == 1): ?><p style="color:green"><b>已上线</b></p><?php endif; ?>
+							<?php if($v["materialrecommend"] == 0): ?><p>未上线</p><?php endif; ?>
+						</td>
+						
+						<td class="f-14 td-manage">
+							<a class="btn btn-success radius edit" data-id="<?php echo ($v["id"]); ?>"  data-materialid="<?php echo ($v["materialid"]); ?>" data-materialtitle="<?php echo ($v["materialtitle"]); ?>" data-materialcover="<?php echo ($v["materialcover"]); ?>" data-materialinput="<?php echo ($v["materialinput"]); ?>" data-materialdescription="<?php echo ($v["materialdescription"]); ?>" data-materialrecommend="<?php echo ($v["materialrecommend"]); ?>" id="edit"  data-toggle="modal" data-target="#modify">修改</a>
+							<?php if($v["materialrecommend"] == 1): ?><a class="btn btn-default radius" data-materialid="<?php echo ($v["materialid"]); ?>" onclick="setRecommend('0','<?php echo ($v["materialid"]); ?>')" href="javascript:;">下线</a><?php endif; ?>
+							<?php if($v["materialrecommend"] == 0): ?><a style="color: white;" class="btn btn-blue radius" data-materialid="<?php echo ($v["materialid"]); ?>" onclick="setRecommend('1','<?php echo ($v["materialid"]); ?>')" href="javascript:;">上线</a><?php endif; ?>
+							<a style="color: white;" class="btn btn-yellow radius" onclick="setTop('<?php echo ($v["materialid"]); ?>')" href="javascript:;">置顶</a>
+							<a class="btn btn-warning radius" onclick="setDown('<?php echo ($v["materialid"]); ?>')" href="javascript:;">下置顶</a>
+							<a class="btn btn-danger radius" onclick="dele('<?php echo ($v["materialid"]); ?>')" href="javascript:;">删除</a>
+						</td>
+					</tr><?php endforeach; endif; else: echo "" ;endif; ?>
+
+			</tbody>
+		</table>
+	</div>
+	<?php echo ($page); ?>
+
+	<div class="dataTables_paginate paging_simple_numbers" id="DataTables_Table_0_paginate"><span><a class="paginate_button current" aria-controls="DataTables_Table_0" data-dt-idx="0" tabindex="0"><?php echo ($page); ?></a></span></div>
+</div>
+
+
+<!-- Modal -->
+<div class="modal fade" id="modify" tabindex="-1" role="dialog" aria-labelledby="modifyLabel" aria-hidden="true" style="display: none">
+    <div class="modal-dialog" role="document" style="width: 900px;">
+        <div class="modal-content" style="width: 900px;">
+            <div class="modal-header">
+                <h5 class="modal-title" id="modLabel">素材列表 > 更改素材信息</h5>
+            </div>
+            <div class="modal-body">
+                <form class="form form-horizontal" id="form-admin-add">
+	<div class="row cl">
+		<input type="text" hidden="true" id="id" name="id">
+		<label class="form-label col-xs-4 col-sm-3"><span class="c-red">*</span>ID：</label>
+		<div class="formControls col-xs-8 col-sm-9">
+			<input type="text" class="input-text" placeholder="" id="materialid" name="materialid">
+		</div>
+	</div>
+
+	<div class="row cl">
+		<!-- <input type="text" hidden="true" id="articleId" name="articleId"> -->
+		<label class="form-label col-xs-4 col-sm-3"><span class="c-red">*</span>标题：</label>
+		<div class="formControls col-xs-8 col-sm-9">
+			<input type="text" class="input-text" placeholder="" id="materialtitle" name="materialtitle">
+		</div>
+	</div>
+
+	<div class="row cl">
+		<label class="form-label col-xs-4 col-sm-3">封面：</label>
+		<div class="formControls col-xs-8 col-sm-9">
+			<button type="button" class="btn btn-secondary radius" onclick="uploadImg();">更换图片</button>
+			<a target="_blank" id="set_img"><img src="" id="img" width="200px" height="200px"/></a>
+		</div>
+	</div>
+
+	<div class="row cl">
+		<label class="form-label col-xs-4 col-sm-3">配置素材json：</label>
+		<div class="formControls col-xs-8 col-sm-9">
+			<input type="text" class="input-text" placeholder="" id="materialinput" name="materialinput">
+		</div>
+	</div>
+
+	<div class="row cl">
+		<label class="form-label col-xs-4 col-sm-3">描述：</label>
+		<div class="formControls col-xs-8 col-sm-9">
+			<input type="text" class="input-text" placeholder="" id="materialdescription" name="materialdescription">
+		</div>
+	</div>
+
+	<!-- <div class="row cl">
+		<label class="form-label col-xs-4 col-sm-3">内容：</label>
+		<div class="formControls col-xs-8 col-sm-9">
+			<script style="width: 50%;height: 200px;" type="text/plain" id="myEditor" name="articleContent"></script>
+		</div>
+	</div>
+
+	<div class="row cl">
+		<label class="form-label col-xs-4 col-sm-3">类型：</label>
+		<div class="formControls col-xs-8 col-sm-9"> <span class="select-box" style="width:150px;">
+			<select id="articleType" class="select" name="state" size="1">
+				<option value="1">情感</option>
+				<option value="2">性格</option>
+				<option value="3">趣味</option>
+				<option value="10">综合</option>
+			</select>
+			</span> 
+		</div>
+	</div> -->
+
+	<div class="row cl">
+		<label class="form-label col-xs-4 col-sm-3">是否上线：</label>
+		<div class="formControls col-xs-8 col-sm-9"> <span class="select-box" style="width:150px;">
+			<select id="materialrecommend" class="select" name="state" size="1">
+				<option value="0">下线</option>
+				<option value="1">上线</option>
+			</select>
+			</span> 
+		</div>
+	</div>
+
+	</form>
+            </div>
+            <div class="modal-footer">
+           		<button type="button" class="btn btn-primary save">保存</button>
+                <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>               
+            </div>
+        </div>
+    </div>
+</div>
+<!--_footer 作为公共模版分离出去-->
+<script type="text/javascript" src="/Fun1/Public/lib/jquery/1.9.1/jquery.min.js"></script> 
+<script type="text/javascript" src="/Fun1/Public/lib/layer/2.4/layer.js"></script>
+<!-- <script type="text/javascript" src="/Fun1/Public/li<!-- b/layer/2.4/layer.js"></script> -->
+<script type="text/javascript" src="/Fun1/Public/static/h-ui/js/H-ui.min.js"></script> 
+<script type="text/javascript" src="/Fun1/Public/static/h-ui.admin/js/H-ui.admin.js"></script> <!--/_footer 作为公共模版分离出去
+
+<!--请在下方写此页面业务相关的脚本-->
+<script type="text/javascript" src="/Fun1/Public/lib/My97DatePicker/4.8/WdatePicker.js"></script> 
+<!-- <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script> -->
+<!-- <script type="text/javascript" src="/Fun1/Public/lib/datatables/1.10.0/jquery.dataTables.min.js"></script>  -->
+<script type="text/javascript" src="/Fun1/Public/lib/datatables/1.10.0/new.jquery.dataTables.min.js"></script> 
+<script type="text/javascript" src="/Fun1/Public/lib/laypage/1.2/laypage.js"></script>
+<script src="/Fun1/Public/lib/jquery/jquery.upload.js"></script>
+<!-- <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script> -->
+<!-- <script src="/Fun1/Public/lib/jquery/jquery-3.0.0.min.js"></script> -->
+<!-- <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script> -->
+<!-- <script type="text/javascript" src="https://code.jquery.com/jquery-3.0.0.min.js"></script> -->
+<!-- <script type="text/javascript" src="http://libs.baidu.com/jquery/2.1.4/jquery.min.js"></script> -->
+<script type="text/javascript">
+
+$('.table-sort').dataTable({
+	"aaSorting": [[ 1, "desc" ]],
+	//"bStateSave": true,//状态保存
+	"pading":false,
+	"aoColumnDefs": [
+	  {"orderable":false,"aTargets":[0,2,3,4,5,6,7]}// 不参与排序的列
+	]
+});
+
+/*文章-增加*/
+function material_add(title,url){
+	var index = layer.open({
+		type: 2,
+		title: title,
+		content: url
+	});
+	layer.full(index);
+}
+</script>
+
+<script type="text/javascript">
+/*文章-修改*/
+$('.edit').click(function(){
+	
+	var materialid = $(this).data('materialid');
+	var id = $(this).data('id');
+	var materialtitle = $(this).data('materialtitle');
+	var materialcover = $(this).data('materialcover');
+	var materialinput = $(this).data('materialinput');
+	var materialdescription = $(this).data('materialdescription');
+	var materialrecommend = $(this).data('materialrecommend');
+    console.log($(this).data('materialid'));
+
+    $.ajax({
+		url : "<?php echo U('Material/inputJson');?>",
+		type : 'post',
+		//dataType : 'json',
+		data : {
+			materialId:materialid,
+		},
+		success : function(e){
+			console.log(e);
+			$('#materialinput').val(e);
+		},
+		error : function(e){
+			console.log(e);
+			//layer.msg('error!',{icon:1,time:1000});
+			alert('网络错误');
+		}
+	});
+   
+	$('#id').val(id);
+	$('#materialid').val(materialid);
+	$('#materialtitle').val(materialtitle);
+	$('#materialdescription').val(materialdescription);
+	$('#materialrecommend').val(materialrecommend);
+	$("#img").attr('src', materialcover);
+	$("#set_img").prop("href",materialcover);
+	
+});
+
+// 文件上传（JQUERY异步上传插件）
+function uploadImg(file) {
+    $.upload({
+            url: "<?php echo U('FileTools/uploadImg');?>",
+            type : 'post',
+            fileName: 'upload',
+            params: {file: file,source:'material'},
+            //data: {source:'article'},
+            dataType: 'json',
+            onSend: function() {
+                return true;
+            },
+            onComplate: function(e) {
+            	console.log(e);
+                $("#img").attr('src', e);
+                $("#set_img").prop("hidden",false);
+                $("#set_img").prop("href",e);
+            }
+    });
+}
+
+/*文章-保存修改*/
+$('.save').click(function(){
+	var id = $("#id").val();
+	var materialid = $("#materialid").val();
+	var materialtitle = $("#materialtitle").val();
+	var img = $("#set_img").attr('href');
+	var materialinput = $("#materialinput").val();
+	var materialdescription = $("#materialdescription").val();
+	var materialrecommend = $("#materialrecommend option:selected").val();
+
+	$.ajax({
+		url : "<?php echo U('Material/addMaterial');?>",
+		type : 'post',
+		//dataType : 'json',
+		data : {
+			id:id,
+			materialid:materialid,
+			materialtitle:materialtitle,
+			img:img,
+			materialinput:materialinput,
+			materialdescription:materialdescription,
+			materialrecommend:materialrecommend,
+		},
+		success : function(e){
+			console.log(e);
+			if(e == '-1') {
+				alert('素材ID重复！');
+			}else{
+				alert('操作成功！');
+				location.reload();
+			}
+			
+		},
+		error : function(e){
+			console.log(e);
+			//layer.msg('error!',{icon:1,time:1000});
+			alert('网络错误');
+		}
+	});
+});
+
+// 修改是否上线
+function setRecommend(recommend,id) {
+    $.ajax({
+        url: "<?php echo U('Material/setRecommend');?>",
+        type : 'post',
+        data : {
+			id:id,
+			materialRecommend:recommend,
+		},
+		success : function(e){
+			//console.log(e);
+			alert('操作成功！');
+			location.reload();
+		},
+		error : function(e){
+			console.log(e);
+			//layer.msg('error!',{icon:1,time:1000});
+			alert('网络错误');
+		}
+    });
+}
+
+// 置顶
+function setTop(id) {
+    if(confirm("确认置顶此素材吗？")){
+    	$.ajax({
+	        url: "<?php echo U('Material/setTop');?>",
+	        type : 'post',
+	        data : {
+				id:id,
+			},
+			success : function(e){
+				//console.log(e);
+				alert('操作成功！');
+				location.reload();
+			},
+			error : function(e){
+				console.log(e);
+				//layer.msg('error!',{icon:1,time:1000});
+				alert('网络错误');
+			}
+	    });
+    }
+}
+
+// 下置顶
+function setDown(id) {
+	if(confirm("确认下置顶此素材吗？")){
+		$.ajax({
+	        url: "<?php echo U('Material/setDown');?>",
+	        type : 'post',
+	        data : {
+				id:id,
+			},
+			success : function(e){
+				//console.log(e);
+				alert('操作成功！');
+				location.reload();
+			},
+			error : function(e){
+				console.log(e);
+				//layer.msg('error!',{icon:1,time:1000});
+				alert('网络错误');
+			}
+	    });
+	}
+}
+
+// 删除
+function dele(id) {
+	if(confirm("确认删除此素材吗？")){
+		$.ajax({
+	        url: "<?php echo U('Material/dele');?>",
+	        type : 'post',
+	        data : {
+				id:id,
+			},
+			success : function(e){
+				//console.log(e);
+				alert('操作成功！');
+				location.reload();
+			},
+			error : function(e){
+				console.log(e);
+				//layer.msg('error!',{icon:1,time:1000});
+				alert('网络错误');
+			}
+	    });
+	}
+}
+
+$(function () {
+ 	$('.select:first').trigger("click");
+  });
+</script> 
+
+</body>
+</html>

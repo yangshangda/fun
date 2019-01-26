@@ -74,7 +74,8 @@
 						<td><?php echo ($v["admindescription"]); ?></td>
 						<td class="f-14 td-manage">
 							<?php if($_SESSION['state']== 1): ?><a class="btn btn-success radius edit" data-adminid="<?php echo ($v["adminid"]); ?>" data-adminname="<?php echo ($v["adminname"]); ?>" data-adminsex="<?php echo ($v["adminsex"]); ?>" data-adminphone="<?php echo ($v["adminphone"]); ?>" data-adminaddress="<?php echo ($v["adminaddress"]); ?>" data-admindepartment="<?php echo ($v["admindepartment"]); ?>" data-adminqq="<?php echo ($v["adminqq"]); ?>" data-adminwechat="<?php echo ($v["adminwechat"]); ?>" data-adminemail="<?php echo ($v["adminemail"]); ?>" data-adminstate="<?php echo ($v["adminstate"]); ?>" data-admindescription="<?php echo ($v["admindescription"]); ?>" id="edit" href="javascript:void(0);" data-toggle="modal" data-target="#modify">修改</a>						
-								<a class="btn btn-warning radius reset" data-adminid="<?php echo ($v["adminid"]); ?>" onclick="" href="javascript:;">重置密码</a>						
+								<a class="btn btn-warning radius reset" data-adminid="<?php echo ($v["adminid"]); ?>" onclick="" href="javascript:;">重置密码</a>	
+								<a class="btn btn-danger radius" data-adminid="<?php echo ($v["adminid"]); ?>" onclick="recycle('<?php echo ($v["adminid"]); ?>')" href="javascript:;">删除</a>					
 								<!-- <a class="btn btn-secondary radius"  href="javascript:;">重置密码</a> -->
 							<?php elseif($_SESSION['id']== $v[adminid]): ?>													
 								<a class="btn btn-success radius edit" data-adminid="<?php echo ($v["adminid"]); ?>" data-adminname="<?php echo ($v["adminname"]); ?>" data-adminsex="<?php echo ($v["adminsex"]); ?>" data-adminphone="<?php echo ($v["adminphone"]); ?>" data-adminaddress="<?php echo ($v["adminaddress"]); ?>" data-admindepartment="<?php echo ($v["admindepartment"]); ?>" data-adminqq="<?php echo ($v["adminqq"]); ?>" data-adminwechat="<?php echo ($v["adminwechat"]); ?>" data-adminemail="<?php echo ($v["adminemail"]); ?>" data-adminstate="<?php echo ($v["adminstate"]); ?>" data-admindescription="<?php echo ($v["admindescription"]); ?>" id="edit" href="javascript:void(0);" data-toggle="modal" data-target="#modify">修改</a>				
@@ -424,6 +425,27 @@ $('.save2').click(function(){
 		}
 	});
 });
+
+// 删除-进入回收站
+function recycle(id) {
+	$.ajax({
+        url: "<?php echo U('Management/recycle');?>",
+        type : 'post',
+        data : {
+			id:id,
+		},
+		success : function(e){
+			//console.log(e);
+			alert('操作成功！');
+			location.reload();
+		},
+		error : function(e){
+			console.log(e);
+			//layer.msg('error!',{icon:1,time:1000});
+			alert('网络错误');
+		}
+    });
+}
 
 
 </script> 

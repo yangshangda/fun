@@ -6,7 +6,8 @@ class ManagementController extends CommonController {
 	public function index(){
 
 		$admin_table = M('fun_admin');
-		$info = $admin_table->where()->select();
+		$where['adminRecycle'] = '0';
+		$info = $admin_table->where($where)->select();
 		$count = count($info);
 		
 		$this->info = $info;
@@ -72,6 +73,35 @@ class ManagementController extends CommonController {
 		}
 		$data1['adminPassword'] = md5(I('newPwd'));
 		$admin_password_alter = $admin_table->where($where)->limit(1)->save($data1);die;
+	}
+
+	//进入回收站
+	public function recycle(){
+		$where['adminId'] = I('id');
+		$data['adminRecycle'] = '1';
+		$admin_table = M('fun_admin');
+		$admin_password_reset = $admin_table->where($where)->limit(1)->save($data);die;
+	}
+
+	//还原
+	public function recover(){
+		$where['adminId'] = I('id');
+		$data['adminRecycle'] = '0';
+		$admin_table = M('fun_admin');
+		$admin_password_reset = $admin_table->where($where)->limit(1)->save($data);die;
+	}
+
+	public function recycleList(){
+
+		$admin_table = M('fun_admin');
+		$where['adminRecycle'] = '1';
+		$info = $admin_table->where($where)->select();
+		$count = count($info);
+		
+		$this->info = $info;
+		$this->count = $count;
+		$this->display();
+
 	}
 
 }

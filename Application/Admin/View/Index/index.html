@@ -78,6 +78,15 @@
 			</dd>
 		</dl>
 		<dl id="menu-article">
+			<dt><i class="Hui-iconfont">&#xe616;</i> 素材管理<i class="Hui-iconfont menu_dropdown-arrow">&#xe6d5;</i></dt>
+			<dd>
+				<ul>
+					<li><a data-href="__MODULE__/Material/index" data-title="素材列表" href="javascript:void(0)">素材列表</a></li>
+					<!-- <li><a data-href="__MODULE__/Question/test" data-title="测试列表" href="javascript:void(0)">测试列表</a></li> -->
+				</ul>
+			</dd>
+		</dl>
+		<dl id="menu-article">
 			<dt><i class="Hui-iconfont">&#xe616;</i> 用户管理<i class="Hui-iconfont menu_dropdown-arrow">&#xe6d5;</i></dt>
 			<dd>
 				<ul>
@@ -90,6 +99,7 @@
 			<dd>
 				<ul>
 					<li><a data-href="__MODULE__/Management/index" data-title="管理员列表" href="javascript:void(0)">管理员列表</a></li>
+					<if condition="$Think.session.state eq 1"><li><a data-href="__MODULE__/Management/recycleList" data-title="回收站" href="javascript:void(0)">管理员回收站</a></li></if>
 				</ul>
 			</dd>
 		</dl>

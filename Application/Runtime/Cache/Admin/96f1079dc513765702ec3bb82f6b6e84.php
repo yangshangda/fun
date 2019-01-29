@@ -15,6 +15,7 @@
 <link rel="stylesheet" type="text/css" href="/Fun1/Public/lib/Hui-iconfont/1.0.8/iconfont.css" />
 <link rel="stylesheet" type="text/css" href="/Fun1/Public/static/h-ui.admin/skin/default/skin.css" id="skin" />
 <link rel="stylesheet" type="text/css" href="/Fun1/Public/static/h-ui.admin/css/style.css" />
+<link rel="stylesheet" type="text/css" href="/Fun1/Public/lib/css/lhgcalendar.css" /><!--日历样式-->
 <!--[if IE 6]>
 <script type="text/javascript" src="lib/DD_belatedPNG_0.0.8a-min.js" ></script>
 <script>DD_belatedPNG.fix('*');</script>
@@ -68,6 +69,7 @@
 			</tbody>
 		</table>
 	</div>
+	<?php echo ($page); ?>
 </div>
 
 <!-- Modal -->
@@ -131,9 +133,39 @@
 
 <!--请在下方写此页面业务相关的脚本-->
 <script type="text/javascript" src="/Fun1/Public/lib/My97DatePicker/4.8/WdatePicker.js"></script> 
-<script type="text/javascript" src="/Fun1/Public/lib/datatables/1.10.0/jquery.dataTables.min.js"></script> 
+<script type="text/javascript" src="/Fun1/Public/lib/datatables/1.10.0/new.jquery.dataTables.min.js"></script> 
 <script type="text/javascript" src="/Fun1/Public/lib/laypage/1.2/laypage.js"></script>
 <script src="/Fun1/Public/lib/jquery/jquery.upload.js"></script>
+<script src="/Fun1/Public/lib/lhgcalendar.js"></script> <!--日历js-->
+<script type="text/javascript">
+	function showCalendarByOption(elem, hasSeconds, hasTime) {
+	console.log(elem);
+	if (elem == '.J_calendar') {
+	    var format = 'yyyy-MM-dd';
+	    // var format = 'yyyy-MM-dd HH:mm:ss';
+	} else {
+	    var format = 'yyyy-MM-dd';
+	}
+	$(elem).calendar({format: format});
+	}
+
+	$('.J_calendar').ready(function () {
+	showCalendarByOption('.J_calendar', false);
+	});
+	$('.J_calendar1').ready(function () {
+	showCalendarByOption('.J_calendar1', false);
+	});
+	$('#submit').click(function(){
+		var start_time = $('#start_time').val();
+		var start = new Date(start_time.replace("-", "/").replace("-", "/"));
+		var end_time = $('#end_time').val();
+		var end = new Date(end_time.replace("-", "/").replace("-", "/"));
+		if(end < start) {
+			alert('开始时间不能大于结束时间！');
+			return false;
+		}
+	})
+</script>
 <script type="text/javascript">
 
 $('.table-sort').dataTable({

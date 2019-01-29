@@ -325,3 +325,6 @@ INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
 SQL: SHOW COLUMNS FROM `fun_admin` [ RunTime:0.0220s ]
 SQL: UPDATE `fun_admin` SET `adminRecycle`='1' WHERE `adminId` = 9 LIMIT 1  [ RunTime:0.0000s ]
 
+[ 2019-01-26T18:52:25+08:00 ] ::1 /Fun1/Admin/Login/index.html
+ERR: Think\Controller:U方法不存在！
+

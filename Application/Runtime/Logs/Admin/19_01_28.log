@@ -1,0 +1,134 @@
+[ 2019-01-28T10:00:16+08:00 ] ::1 /Fun1/Admin/Login/index.html.html
+ERR: 非法操作:index.html
+
+[ 2019-01-28T10:00:26+08:00 ] ::1 /Fun1/Admin/Login/index.html.html
+ERR: 非法操作:index.html
+
+[ 2019-01-28T10:00:29+08:00 ] ::1 /Fun1/Admin/Login/index.html.html
+ERR: 非法操作:index.html
+
+[ 2019-01-28T10:00:34+08:00 ] ::1 /Fun1/Admin/Login/index.html.html
+ERR: 非法操作:index.html
+
+[ 2019-01-28T10:00:37+08:00 ] ::1 /Fun1/Admin/Login/index.html.html
+ERR: 非法操作:index.html
+
+[ 2019-01-28T10:12:38+08:00 ] ::1 /Fun1/Admin/Management/recover.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `fun_admin` [ RunTime:0.0180s ]
+SQL: UPDATE `fun_admin` SET `adminRecycle`='0' WHERE `adminId` = 10 LIMIT 1  [ RunTime:0.0000s ]
+
+[ 2019-01-28T10:13:26+08:00 ] ::1 /Fun1/Admin/Management/editManagement.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `fun_admin` [ RunTime:0.0210s ]
+SQL: UPDATE `fun_admin` SET `adminName`='普通管理员4',`adminSex`='0',`adminPhone`='13425689995',`adminAddress`='',`adminDepartment`='',`adminQQ`='1125556642',`adminWeChat`='',`adminEmail`='111111@qq.com',`adminState`='0',`adminDescription`='' WHERE `adminId` = 10 LIMIT 1  [ RunTime:0.0000s ]
+
+[ 2019-01-28T10:14:35+08:00 ] ::1 /Fun1/Admin/Management/editManagement.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `fun_admin` [ RunTime:0.0140s ]
+SQL: UPDATE `fun_admin` SET `adminName`='普通管理员5',`adminSex`='0',`adminPhone`='13425689995',`adminAddress`='广东省广州市从化区',`adminDepartment`='运营部',`adminQQ`='1125556642',`adminWeChat`='5465dhsh',`adminEmail`='111111@qq.com',`adminState`='0',`adminDescription`='我是普通管理员5！' WHERE `adminId` = 10 LIMIT 1  [ RunTime:0.0010s ]
+
+[ 2019-01-28T10:15:10+08:00 ] ::1 /Fun1/Admin/Management/editManagement.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004000s ]
+SQL: SHOW COLUMNS FROM `fun_admin` [ RunTime:0.0070s ]
+SQL: UPDATE `fun_admin` SET `adminName`='gly',`adminSex`='0',`adminPhone`='13425689995',`adminAddress`='广东省广州市从化区',`adminDepartment`='运营部',`adminQQ`='1125556642',`adminWeChat`='5465dhsh',`adminEmail`='111111@qq.com',`adminState`='0',`adminDescription`='我是普通管理员5！' WHERE `adminId` = 10 LIMIT 1  [ RunTime:0.0000s ]
+
+[ 2019-01-28T10:26:53+08:00 ] ::1 /Fun1/Admin/Material/inputJson.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `fun_material` [ RunTime:0.0050s ]
+SQL: SELECT `materialInput` FROM `fun_material` WHERE `materialId` = 'fdf' LIMIT 1   [ RunTime:0.0010s ]
+
+[ 2019-01-28T15:12:42+08:00 ] ::1 /Fun1/Admin/Material/inputJson.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `fun_material` [ RunTime:0.0200s ]
+SQL: SELECT `materialInput` FROM `fun_material` WHERE `materialId` = 'THYE' LIMIT 1   [ RunTime:0.0000s ]
+
+[ 2019-01-28T15:12:46+08:00 ] ::1 /Fun1/Admin/Material/inputJson.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004001s ]
+SQL: SHOW COLUMNS FROM `fun_material` [ RunTime:0.0060s ]
+SQL: SELECT `materialInput` FROM `fun_material` WHERE `materialId` = 'DAJIDALI1' LIMIT 1   [ RunTime:0.0000s ]
+
+[ 2019-01-28T15:12:50+08:00 ] ::1 /Fun1/Admin/Material/inputJson.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `fun_material` [ RunTime:0.0220s ]
+SQL: SELECT `materialInput` FROM `fun_material` WHERE `materialId` = 'CJJDS' LIMIT 1   [ RunTime:0.0010s ]
+
+[ 2019-01-28T15:13:02+08:00 ] ::1 /Fun1/Admin/Material/inputJson.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `fun_material` [ RunTime:0.0140s ]
+SQL: SELECT `materialInput` FROM `fun_material` WHERE `materialId` = 'MBWCQK' LIMIT 1   [ RunTime:0.0010s ]
+
+[ 2019-01-28T15:13:12+08:00 ] ::1 /Fun1/Admin/Material/inputJson.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `fun_material` [ RunTime:0.0210s ]
+SQL: SELECT `materialInput` FROM `fun_material` WHERE `materialId` = 'IPHONEXS' LIMIT 1   [ RunTime:0.0000s ]
+
+[ 2019-01-28T15:13:32+08:00 ] ::1 /Fun1/Admin/Material/inputJson.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `fun_material` [ RunTime:0.0140s ]
+SQL: SELECT `materialInput` FROM `fun_material` WHERE `materialId` = 'SHENGCHUANGZAO' LIMIT 1   [ RunTime:0.0000s ]
+
+[ 2019-01-28T15:13:54+08:00 ] ::1 /Fun1/Admin/Material/inputJson.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `fun_material` [ RunTime:0.0220s ]
+SQL: SELECT `materialInput` FROM `fun_material` WHERE `materialId` = 'fdf' LIMIT 1   [ RunTime:0.0010s ]
+
+[ 2019-01-28T16:23:52+08:00 ] ::1 /Fun1/Admin/Material/inputJson.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `fun_material` [ RunTime:0.0230s ]
+SQL: SELECT `materialInput` FROM `fun_material` WHERE `materialId` = 'DSYY' LIMIT 1   [ RunTime:0.0010s ]
+
+[ 2019-01-28T16:23:59+08:00 ] ::1 /Fun1/Admin/Material/inputJson.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004000s ]
+SQL: SHOW COLUMNS FROM `fun_material` [ RunTime:0.0140s ]
+SQL: SELECT `materialInput` FROM `fun_material` WHERE `materialId` = 'MYTX' LIMIT 1   [ RunTime:0.0000s ]
+
+[ 2019-01-28T16:56:47+08:00 ] ::1 /Fun1/Admin/Material/inputJson.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `fun_material` [ RunTime:0.0160s ]
+SQL: SELECT `materialInput` FROM `fun_material` WHERE `materialId` = 'BXBX' LIMIT 1   [ RunTime:0.0000s ]
+
+[ 2019-01-28T16:57:00+08:00 ] ::1 /Fun1/Admin/Material/inputJson.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003001s ]
+SQL: SHOW COLUMNS FROM `fun_material` [ RunTime:0.0100s ]
+SQL: SELECT `materialInput` FROM `fun_material` WHERE `materialId` = 'ZITI' LIMIT 1   [ RunTime:0.0000s ]
+
+[ 2019-01-28T17:13:47+08:00 ] ::1 /Fun1/Admin/Material/inputJson.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `fun_material` [ RunTime:0.0170s ]
+SQL: SELECT `materialInput` FROM `fun_material` WHERE `materialId` = 'SHIYIGUANJINAZI' LIMIT 1   [ RunTime:0.0000s ]
+

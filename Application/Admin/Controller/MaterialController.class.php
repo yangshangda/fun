@@ -6,12 +6,52 @@ class MaterialController extends CommonController {
 	//列表
 	public function index() {
 		$fun_material_table = M('fun_material');
+
+		$name = I('name');
+		if(!empty($name)){
+        	$where['materialTitle'] = array('like','%'.$name.'%');
+        	$this->name = $name;
+        }
+
+        $description = I('description');
+        if(!empty($description)){
+        	$where['materialDescription'] = array('like','%'.$description.'%');
+        	$this->description = $description;
+        }
+
+        $status = I('status');
+        if($status == 1){
+        	$where['materialRecommend'] = 1;
+        	$this->status = $status;
+        }else if($status == '-1'){
+        	$where['materialRecommend'] = 0;
+        	$this->status = '-1';
+        }
+
+        $start_time = I('start_time');
+        $end_time = I('end_time');
+        if(!empty($start_time) && empty($end_time)){
+        	$where['materialCreateTime'] = array('GT',$start_time.' 00:00:00');
+        	$this->start_time = $start_time;
+        }else if(empty($start_time) && !empty($end_time)){
+        	$where['materialCreateTime'] = array('LT',$end_time.' 23:59:59');
+        	$this->end_time = $end_time;
+        }else if(!empty($start_time) && !empty($end_time)){
+        	$where['materialCreateTime'] = array('between',array($start_time.' 00:00:00',$end_time.' 23:59:59'));
+        	$this->start_time = $start_time;
+        	$this->end_time = $end_time;
+        }
+        // if(!empty($status)){
+        // 	$where['materialRecommend'] = $status;
+        // 	$this->status = $status;
+        // }
 		//$where['materialRecommend'] = '1';
-		$materialList = $fun_material_table->where()->order('materialCreateTime desc')->select();
-		$count      = $fun_material_table->where()->count();// 查询满足要求的总记录数
+		
+		$count      = $fun_material_table->where($where)->count();// 查询满足要求的总记录数
 		$Page       = new \Think\Page($count,10);// 实例化分页类 传入总记录数和每页显示的记录数
 		$show       = $Page->show();// 分页显示输出
 		$this->assign('page',$show);// 赋值分页输出
+		$materialList = $fun_material_table->where($where)->order('materialCreateTime desc')->limit($Page->firstRow.','.$Page->listRows)->select();
 		$this->count = $count;
 		$this->info = $materialList;
 		$this->display('index');

@@ -1,0 +1,74 @@
+[ 2019-01-29T09:07:20+08:00 ] ::1 /Fun1/Admin/Goods/index
+ERR: 1146:Table 'funtest.category' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `category`
+
+[ 2019-01-29T13:38:44+08:00 ] ::1 /Fun1/Admin/Material/inputJson.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002001s ]
+SQL: SHOW COLUMNS FROM `fun_material` [ RunTime:0.0080s ]
+SQL: SELECT `materialInput` FROM `fun_material` WHERE `materialId` = 'QLWM1' LIMIT 1   [ RunTime:0.0000s ]
+
+[ 2019-01-29T13:38:49+08:00 ] ::1 /Fun1/Admin/Material/inputJson.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `fun_material` [ RunTime:0.0200s ]
+SQL: SELECT `materialInput` FROM `fun_material` WHERE `materialId` = 'QSSYFX' LIMIT 1   [ RunTime:0.0000s ]
+
+[ 2019-01-29T13:40:29+08:00 ] ::1 /Fun1/Admin/Material/inputJson.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `fun_material` [ RunTime:0.0250s ]
+SQL: SELECT `materialInput` FROM `fun_material` WHERE `materialId` = 'fdf' LIMIT 1   [ RunTime:0.0000s ]
+
+[ 2019-01-29T13:46:27+08:00 ] ::1 /Fun1/Admin/Article/addArticle.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `fun_article` [ RunTime:0.0220s ]
+SQL: UPDATE `fun_article` SET `articleTitle`='情感类66666',`articleCover`='http://localhost/Fun1/Public/upload/temp/2019-01/29//article4871c61ee30f795a0efdf29f99cf8aa09620739.jpg',`articleDescription`='你离婚后，666666？',`articleContent`='&lt;p&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;生活中是越来越受年轻人的喜欢了，猫并没有狗那么黏人，照顾起来也会&lt;/p&gt;&lt;p&gt;方便一些，人也不 &amp;nbsp;会&lt;/p&gt;',`articleType`='1',`articleRecommend`='0' WHERE `articleId` = 8 LIMIT 1  [ RunTime:0.0010s ]
+
+[ 2019-01-29T17:51:41+08:00 ] ::1 /Fun1/Admin/Article/setRecommend.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `fun_article` [ RunTime:0.0060s ]
+SQL: UPDATE `fun_article` SET `articleRecommend`='1' WHERE `articleId` = 17 LIMIT 1  [ RunTime:0.0000s ]
+
+[ 2019-01-29T17:51:45+08:00 ] ::1 /Fun1/Admin/Article/setRecommend.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `fun_article` [ RunTime:0.0060s ]
+SQL: UPDATE `fun_article` SET `articleRecommend`='0' WHERE `articleId` = 17 LIMIT 1  [ RunTime:0.0000s ]
+
+[ 2019-01-29T18:01:12+08:00 ] ::1 /Fun1/Admin/Banner/addBanner.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003001s ]
+SQL: SHOW COLUMNS FROM `fun_banner` [ RunTime:0.0180s ]
+SQL: UPDATE `fun_banner` SET `articleId`='2',`bannerTitle`='测试3',`bannerImage`='https://img.d1xz.net/d/2018/10/5bc9345e2fb14.jpg',`bannerStatus`='0' WHERE `bannerId` = 3 LIMIT 1  [ RunTime:0.0010s ]
+
+[ 2019-01-29T18:01:21+08:00 ] ::1 /Fun1/Admin/Banner/setStatus.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004001s ]
+SQL: SHOW COLUMNS FROM `fun_banner` [ RunTime:0.0070s ]
+SQL: UPDATE `fun_banner` SET `bannerStatus`='1' WHERE `bannerId` = 3 LIMIT 1  [ RunTime:0.0010s ]
+
+[ 2019-01-29T18:01:27+08:00 ] ::1 /Fun1/Admin/Banner/setStatus.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `fun_banner` [ RunTime:0.0060s ]
+SQL: UPDATE `fun_banner` SET `bannerStatus`='0' WHERE `bannerId` = 3 LIMIT 1  [ RunTime:0.0000s ]
+
+[ 2019-01-29T18:01:30+08:00 ] ::1 /Fun1/Admin/Banner/setStatus.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `fun_banner` [ RunTime:0.0060s ]
+SQL: UPDATE `fun_banner` SET `bannerStatus`='1' WHERE `bannerId` = 3 LIMIT 1  [ RunTime:0.0010s ]
+

@@ -6,8 +6,14 @@ class BannerController extends CommonController {
 	//文章列表
 	public function index() {
 		$fun_banner_table = M('fun_banner');
-		$bannerList = $fun_banner_table->where()->select();
-		$count=count($bannerList);
+		
+
+		$count      = $fun_banner_table->where($where)->count();// 查询满足要求的总记录数
+		$Page       = new \Think\Page($count,10);// 实例化分页类 传入总记录数和每页显示的记录数
+		$show       = $Page->show();// 分页显示输出
+		$this->assign('page',$show);// 赋值分页输出
+
+		$bannerList = $fun_banner_table->where($where)->select();
 		
 		$this->count = $count;
 		$this->info = $bannerList;

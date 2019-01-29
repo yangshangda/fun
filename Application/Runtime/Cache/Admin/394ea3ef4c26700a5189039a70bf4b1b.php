@@ -15,12 +15,13 @@
 <link rel="stylesheet" type="text/css" href="/Fun1/Public/lib/Hui-iconfont/1.0.8/iconfont.css" />
 <link rel="stylesheet" type="text/css" href="/Fun1/Public/static/h-ui.admin/skin/yellow/skin.css" id="skin" />
 <link rel="stylesheet" type="text/css" href="/Fun1/Public/static/h-ui.admin/css/style.css" />
-<title>文章列表</title>
-<!-- <link href="/Fun1/Public/ueditor/themes/default/css/umeditor.min.css" rel="stylesheet" />
+<link rel="stylesheet" type="text/css" href="/Fun1/Public/lib/css/lhgcalendar.css" /><!--日历样式-->
+<title>素材列表</title>
+<link href="/Fun1/Public/ueditor/themes/default/css/umeditor.min.css" rel="stylesheet" />
 <script src="/Fun1/Public/ueditor/third-party/jquery.min.js"></script>
 <script src="/Fun1/Public/ueditor/umeditor.config.js"></script>
 <script src="/Fun1/Public/ueditor/umeditor.min.js"></script>
-<script src="/Fun1/Public/ueditor/lang/zh-cn/zh-cn.js"></script> -->
+<script src="/Fun1/Public/ueditor/lang/zh-cn/zh-cn.js"></script>
 
 </head>
 <body>
@@ -34,7 +35,29 @@
 		</span> 
 		<span class="r">共有数据：<strong><?php echo ($count); ?></strong> 条</span> 
 	</div>
-	
+
+	<div style="margin-top:10px; ">
+		<form action="<?php echo U('Material/index');?>" method="get">
+	        <div class="controls">
+	        	<label for="">时间:</label>
+	        	<input type="text" id="start_time" style="width:150px;" name="start_time" value="<?php echo ($start_time); ?>" class="J_calendar input-text" placeholder="开始时间">~
+				<input type="text" id="end_time" name="end_time" style="width:150px;" value="<?php echo ($end_time); ?>" class="J_calendar input-text" placeholder="结束时间">
+	        	<label for="">素材名:</label>
+				<input style="width:150px" type="text" value="<?php echo ($name); ?>" class="input-text" id="name" name="name" placeholder="请输入素材名">
+				<label for="">描述:</label>
+				<input style="width:150px" type="text" value="<?php echo ($description); ?>" class="input-text" id="description" name="description" placeholder="请输入描述">
+				<label for="">是否上线:</label>
+				<span class="select-box inline">
+	                <select name="status" class="select" id="status">
+	                	<option value="2">全部</option>
+	                    <option value="1" <?php if($status == '1'): ?>selected="selected"<?php endif; ?>>上线</option>
+	                    <option value="-1" <?php if($status == '-1'): ?>selected="selected"<?php endif; ?>>下线</option>
+	                </select>	          
+	            </span>  
+	            <button style="color: white;" id="submit" type="submit" class="btn btn-blue"><i class="Hui-iconfont"></i> 搜索</button>
+	        </div>
+	    </form>
+    </div>
 	
 	<div class="mt-20">
 		<table class="table table-border table-bordered table-bg table-hover table-sort table-responsive">
@@ -84,8 +107,6 @@
 		</table>
 	</div>
 	<?php echo ($page); ?>
-
-	<div class="dataTables_paginate paging_simple_numbers" id="DataTables_Table_0_paginate"><span><a class="paginate_button current" aria-controls="DataTables_Table_0" data-dt-idx="0" tabindex="0"><?php echo ($page); ?></a></span></div>
 </div>
 
 
@@ -188,13 +209,43 @@
 <!-- <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script> -->
 <!-- <script type="text/javascript" src="/Fun1/Public/lib/datatables/1.10.0/jquery.dataTables.min.js"></script>  -->
 <script type="text/javascript" src="/Fun1/Public/lib/datatables/1.10.0/new.jquery.dataTables.min.js"></script> 
-<script type="text/javascript" src="/Fun1/Public/lib/laypage/1.2/laypage.js"></script>
+<!-- <script type="text/javascript" src="/Fun1/Public/lib/laypage/1.2/laypage.js"></script> -->
 <script src="/Fun1/Public/lib/jquery/jquery.upload.js"></script>
+<script src="/Fun1/Public/lib/lhgcalendar.js"></script> <!--日历js-->
 <!-- <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script> -->
 <!-- <script src="/Fun1/Public/lib/jquery/jquery-3.0.0.min.js"></script> -->
 <!-- <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script> -->
 <!-- <script type="text/javascript" src="https://code.jquery.com/jquery-3.0.0.min.js"></script> -->
 <!-- <script type="text/javascript" src="http://libs.baidu.com/jquery/2.1.4/jquery.min.js"></script> -->
+<script type="text/javascript">
+	function showCalendarByOption(elem, hasSeconds, hasTime) {
+	console.log(elem);
+	if (elem == '.J_calendar') {
+	    var format = 'yyyy-MM-dd';
+	    // var format = 'yyyy-MM-dd HH:mm:ss';
+	} else {
+	    var format = 'yyyy-MM-dd';
+	}
+	$(elem).calendar({format: format});
+	}
+
+	$('.J_calendar').ready(function () {
+	showCalendarByOption('.J_calendar', false);
+	});
+	$('.J_calendar1').ready(function () {
+	showCalendarByOption('.J_calendar1', false);
+	});
+	$('#submit').click(function(){
+		var start_time = $('#start_time').val();
+		var start = new Date(start_time.replace("-", "/").replace("-", "/"));
+		var end_time = $('#end_time').val();
+		var end = new Date(end_time.replace("-", "/").replace("-", "/"));
+		if(end < start) {
+			alert('开始时间不能大于结束时间！');
+			return false;
+		}
+	})
+</script>
 <script type="text/javascript">
 
 $('.table-sort').dataTable({

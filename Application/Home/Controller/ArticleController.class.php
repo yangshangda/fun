@@ -57,4 +57,48 @@ class ArticleController extends CommonController {
 		exit(json_encode($allSortArticle));
 	}
 
+	//文章log
+	public function log() {
+		$fun_articlelog_table = M('fun_articlelog');
+		$userOpenId = I('userOpenId');
+		$articleId = I('articleId');
+		$where['userOpenId'] = $userOpenId;
+		$where['articleId'] = $articleId;
+		$hasId = $fun_articlelog_table->where($where)->select();
+		$data['createTime'] = date("Y-m-d h:i:s");
+		if(!empty($hasId)) {
+			$fun_articlelog_table->where($where)->save($data);
+			die;
+		}
+		$data['userOpenId'] = $userOpenId;
+		$data['articleId'] = $articleId;
+		$fun_articlelog_table->where($where)->add($data);
+		//$articleList = $fun_articlelog_table->where($where)->add($data);	
+		//exit(json_encode($articleList));
+	}
+
+	//文章mylog
+	public function mylog() {
+		$fun_articlelog_table = M('fun_articlelog');
+		$where['userOpenId'] = I('userOpenId');
+		$articleId = $fun_articlelog_table->where($where)->order('createTime desc')->getField('articleid',true);
+		if(empty($articleId)) {
+			die;
+		}
+		$fun_article_table = M('fun_article');
+		$where1['articleId'] = array('in',$articleId);
+		$articleList = $fun_article_table->where($where1)->select();
+
+		// $articleId = $fun_articlelog_table->where($where)->select();
+		
+		exit(json_encode($articleList));
+	}
+
+	public function delelog() {
+		$fun_articlelog_table = M('fun_articlelog');
+		$where['userOpenId'] = I('userOpenId');
+		$fun_articlelog_table->where($where)->delete();	
+
+	}
+
 }

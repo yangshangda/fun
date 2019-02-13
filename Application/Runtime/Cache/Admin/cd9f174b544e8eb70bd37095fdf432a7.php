@@ -19,10 +19,10 @@
 <script type="text/javascript" src="lib/DD_belatedPNG_0.0.8a-min.js" ></script>
 <script>DD_belatedPNG.fix('*');</script>
 <![endif]-->
-<title>管理员表</title>
+<title>管理员回收站</title>
 </head>
 <body>
-<nav class="breadcrumb"><i class="Hui-iconfont">&#xe67f;</i> 首页 <span class="c-gray en">&gt;</span> 管理员表 <span class="c-gray en">&gt;</span> fun_admin <a class="btn btn-success radius r" style="line-height:1.6em;margin-top:3px" href="javascript:location.replace(location.href);" title="刷新" ><i class="Hui-iconfont">&#xe68f;</i></a></nav>
+<nav class="breadcrumb"><i class="Hui-iconfont">&#xe67f;</i> 首页 <span class="c-gray en">&gt;</span> 管理员 <span class="c-gray en">&gt;</span> 回收站 <a class="btn btn-success radius r" style="line-height:1.6em;margin-top:3px" href="javascript:location.replace(location.href);" title="刷新" ><i class="Hui-iconfont">&#xe68f;</i></a></nav>
 <div class="page-container">
 
 	<div class="cl pd-5 bg-1 bk-gray mt-20">
@@ -77,6 +77,7 @@
 			</tbody>
 		</table>
 	</div>
+	<?php echo ($page); ?>
 </div>
 
 
@@ -89,7 +90,7 @@
 
 <!--请在下方写此页面业务相关的脚本-->
 <script type="text/javascript" src="/Fun1/Public/lib/My97DatePicker/4.8/WdatePicker.js"></script> 
-<script type="text/javascript" src="/Fun1/Public/lib/datatables/1.10.0/jquery.dataTables.min.js"></script> 
+<script type="text/javascript" src="/Fun1/Public/lib/datatables/1.10.0/new.jquery.dataTables.min.js"></script> 
 <script type="text/javascript" src="/Fun1/Public/lib/laypage/1.2/laypage.js"></script>
 <script type="text/javascript">
 

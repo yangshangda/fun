@@ -7,8 +7,12 @@ class ManagementController extends CommonController {
 
 		$admin_table = M('fun_admin');
 		$where['adminRecycle'] = '0';
-		$info = $admin_table->where($where)->select();
-		$count = count($info);
+		$count      = $admin_table->where($where)->count();// 查询满足要求的总记录数
+		$Page       = new \Think\Page($count,10);// 实例化分页类 传入总记录数和每页显示的记录数
+		$show       = $Page->show();// 分页显示输出
+		$this->assign('page',$show);// 赋值分页输出
+
+		$info = $admin_table->where($where)->limit($Page->firstRow.','.$Page->listRows)->select();
 		
 		$this->info = $info;
 		$this->count = $count;
@@ -95,8 +99,12 @@ class ManagementController extends CommonController {
 
 		$admin_table = M('fun_admin');
 		$where['adminRecycle'] = '1';
-		$info = $admin_table->where($where)->select();
-		$count = count($info);
+		$count      = $admin_table->where($where)->count();// 查询满足要求的总记录数
+		$Page       = new \Think\Page($count,10);// 实例化分页类 传入总记录数和每页显示的记录数
+		$show       = $Page->show();// 分页显示输出
+		$this->assign('page',$show);// 赋值分页输出
+
+		$info = $admin_table->where($where)->limit($Page->firstRow.','.$Page->listRows)->select();
 		
 		$this->info = $info;
 		$this->count = $count;

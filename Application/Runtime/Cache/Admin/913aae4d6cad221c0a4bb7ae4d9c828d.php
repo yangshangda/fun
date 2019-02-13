@@ -86,6 +86,7 @@
 			</tbody>
 		</table>
 	</div>
+	<?php echo ($page); ?>
 </div>
 
 <!-- Modal -->
@@ -235,7 +236,7 @@
 
 <!--请在下方写此页面业务相关的脚本-->
 <script type="text/javascript" src="/Fun1/Public/lib/My97DatePicker/4.8/WdatePicker.js"></script> 
-<script type="text/javascript" src="/Fun1/Public/lib/datatables/1.10.0/jquery.dataTables.min.js"></script> 
+<script type="text/javascript" src="/Fun1/Public/lib/datatables/1.10.0/new.jquery.dataTables.min.js"></script> 
 <script type="text/javascript" src="/Fun1/Public/lib/laypage/1.2/laypage.js"></script>
 <script type="text/javascript">
 

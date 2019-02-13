@@ -6,8 +6,12 @@ class QuestionController extends CommonController {
 	//问卷列表
 	public function index() {
 		$fun_questionnaire_table = M('fun_questionnaire');
-		$questionnaireList = $fun_questionnaire_table->where()->select();
-		$count=count($questionnaireList);
+		$count      = $fun_questionnaire_table->where($where)->count();// 查询满足要求的总记录数
+		$Page       = new \Think\Page($count,10);// 实例化分页类 传入总记录数和每页显示的记录数
+		$show       = $Page->show();// 分页显示输出
+		$this->assign('page',$show);// 赋值分页输出
+
+		$questionnaireList = $fun_questionnaire_table->where($where)->limit($Page->firstRow.','.$Page->listRows)->select();
 		
 		$this->count = $count;
 		$this->info = $questionnaireList;
@@ -17,8 +21,12 @@ class QuestionController extends CommonController {
 	//问卷列表
 	public function test() {
 		$fun_test_table = M('fun_test');
-		$testList = $fun_test_table->where()->select();
-		$count=count($testList);
+		$count      = $fun_test_table->where($where)->count();// 查询满足要求的总记录数
+		$Page       = new \Think\Page($count,10);// 实例化分页类 传入总记录数和每页显示的记录数
+		$show       = $Page->show();// 分页显示输出
+		$this->assign('page',$show);// 赋值分页输出
+		$testList = $fun_test_table->where()->limit($Page->firstRow.','.$Page->listRows)->select();
+
 		
 		$this->count = $count;
 		$this->info = $testList;

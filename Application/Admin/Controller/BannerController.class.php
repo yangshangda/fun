@@ -3,7 +3,7 @@ namespace Admin\Controller;
 use Think\Controller;
 class BannerController extends CommonController {
 
-	//文章列表
+	//轮播图列表
 	public function index() {
 		$fun_banner_table = M('fun_banner');
 		
@@ -13,11 +13,11 @@ class BannerController extends CommonController {
 		$show       = $Page->show();// 分页显示输出
 		$this->assign('page',$show);// 赋值分页输出
 
-		$bannerList = $fun_banner_table->where($where)->select();
+		$bannerList = $fun_banner_table->where($where)->limit($Page->firstRow.','.$Page->listRows)->select();
 		
 		$this->count = $count;
 		$this->info = $bannerList;
-		$this->display();
+		$this->display('index');
 	}
 
 	//添加轮播图

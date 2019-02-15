@@ -10,6 +10,5 @@ class UserController extends CommonController {
 		$user_info = $fun_user_table->where($where)->select();
 		exit(json_encode(array_values($user_info)));
 	}
-	
 
 }

@@ -1,0 +1,19 @@
+[ 2019-02-15T11:37:13+08:00 ] ::1 /Fun1/Admin/Question/addQuestionnaire.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004000s ]
+
+[ 2019-02-15T11:37:50+08:00 ] ::1 /Fun1/Admin/Question/addQuestionnaire.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004000s ]
+SQL: SHOW COLUMNS FROM `fun_questionnaire` [ RunTime:0.0100s ]
+SQL: UPDATE `fun_questionnaire` SET `questionTitle`='测试4',`questionCover`='http://localhost/Fun1/Public/upload/temp/2018-11/22//questionaire00a7757adf1d01d1321e21e5b4f548737709398.jpg',`questionDescription`='这是测试添加的东西4！！！',`questionPayState`='1',`questionType`='3',`preMoney`='999.00',`nowMoney`='0.01' WHERE `questionId` = 4 LIMIT 1  [ RunTime:0.0010s ]
+
+[ 2019-02-15T11:38:23+08:00 ] ::1 /Fun1/Admin/Question/addQuestionnaire.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `fun_questionnaire` [ RunTime:0.0160s ]
+SQL: UPDATE `fun_questionnaire` SET `questionTitle`='测试一',`questionCover`='http://localhost/Fun1/Public/upload/temp/2018-11/22//article72d56e79cbd30e0145019f4c7e442c951484839.jpg',`questionDescription`='这是测试添加的东西一！！！',`questionPayState`='0',`questionType`='1',`preMoney`='10.00',`nowMoney`='1.0' WHERE `questionId` = 1 LIMIT 1  [ RunTime:0.0000s ]
+

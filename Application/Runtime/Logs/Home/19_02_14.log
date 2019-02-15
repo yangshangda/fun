@@ -1,0 +1,4 @@
+[ 2019-02-14T14:25:35+08:00 ] ::1 /Fun1/Home/Test/result
+ERR: 1048:Column 'result' cannot be null
+ [ SQL语句 ] : INSERT INTO `fun_result` (`createTime`,`userOpenId`,`qid`,`score`,`result`,`questionTitle`,`questionDescription`,`questionCover`) VALUES ('2019-02-14 02:25:35','null','0','0',NULL,NULL,NULL,NULL)
+

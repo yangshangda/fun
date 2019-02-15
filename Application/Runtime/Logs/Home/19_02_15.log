@@ -1,0 +1,31 @@
+[ 2019-02-15T09:53:20+08:00 ] ::1 /Fun1/Home/Test/result
+ERR: 1048:Column 'result' cannot be null
+ [ SQL语句 ] : INSERT INTO `fun_result` (`createTime`,`userOpenId`,`qid`,`score`,`result`,`questionTitle`,`questionDescription`,`questionCover`) VALUES ('2019-02-15 09:53:20','oUExV4460s9TNOuJwLXUIACzApbk','2','10',NULL,'测试2','这是测试添加的东西一！！！','http://localhost/Fun1/Public/upload/temp/2018-11/22//questionaire00a7757adf1d01d1321e21e5b4f548737709398.jpg')
+
+[ 2019-02-15T11:37:30+08:00 ] ::1 /Fun1/Public/static/h-ui.admin/skin/yellow/skin.css
+ERR: 无法加载控制器:Public
+
+[ 2019-02-15T15:12:02+08:00 ] ::1 /Fun1/Public/static/h-ui.admin/skin/yellow/skin.css
+ERR: 无法加载控制器:Public
+
+[ 2019-02-15T15:12:04+08:00 ] ::1 /Fun1/Public/static/h-ui.admin/skin/yellow/skin.css
+ERR: 无法加载控制器:Public
+
+[ 2019-02-15T15:30:11+08:00 ] ::1 /Fun1/Public/static/h-ui.admin/skin/yellow/skin.css
+ERR: 无法加载控制器:Public
+
+[ 2019-02-15T15:30:11+08:00 ] ::1 /Fun1/Public/css/lhgcalendar.css
+ERR: 无法加载控制器:Public
+
+[ 2019-02-15T15:57:22+08:00 ] ::1 /Fun1/Home/uSER/list
+ERR: 无法加载控制器:USER
+
+[ 2019-02-15T17:57:44+08:00 ] ::1 /Fun1/Public/static/h-ui.admin/skin/yellow/skin.css
+ERR: 无法加载控制器:Public
+
+[ 2019-02-15T17:57:44+08:00 ] ::1 /Fun1/Public/css/lhgcalendar.css
+ERR: 无法加载控制器:Public
+
+[ 2019-02-15T17:58:46+08:00 ] ::1 /Fun1/Public/static/h-ui.admin/skin/yellow/skin.css
+ERR: 无法加载控制器:Public
+

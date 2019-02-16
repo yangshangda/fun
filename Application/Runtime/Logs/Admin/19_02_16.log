@@ -1,0 +1,158 @@
+[ 2019-02-16T15:30:23+08:00 ] ::1 /Fun1/Admin/Consult/index
+ERR: 无法加载控制器:Consult
+
+[ 2019-02-16T16:05:13+08:00 ] ::1 /Fun1/Admin/Consult/setStatus.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003001s ]
+SQL: SHOW COLUMNS FROM `fun_consult` [ RunTime:0.0120s ]
+SQL: UPDATE `fun_consult` SET `status`='1' WHERE `id` = 4 LIMIT 1  [ RunTime:0.0000s ]
+
+[ 2019-02-16T16:05:18+08:00 ] ::1 /Fun1/Admin/Consult/setStatus.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `fun_consult` [ RunTime:0.0260s ]
+SQL: UPDATE `fun_consult` SET `status`='0' WHERE `id` = 4 LIMIT 1  [ RunTime:0.0010s ]
+
+[ 2019-02-16T16:05:25+08:00 ] ::1 /Fun1/Admin/Consult/setStatus.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004000s ]
+SQL: SHOW COLUMNS FROM `fun_consult` [ RunTime:0.0220s ]
+SQL: UPDATE `fun_consult` SET `status`='0' WHERE `id` = 3 LIMIT 1  [ RunTime:0.0000s ]
+
+[ 2019-02-16T16:05:29+08:00 ] ::1 /Fun1/Admin/Consult/setStatus.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003001s ]
+SQL: SHOW COLUMNS FROM `fun_consult` [ RunTime:0.0110s ]
+SQL: UPDATE `fun_consult` SET `status`='1' WHERE `id` = 3 LIMIT 1  [ RunTime:0.0010s ]
+
+[ 2019-02-16T16:28:41+08:00 ] ::1 /Fun1/Admin/Consult/setRecommend.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004000s ]
+SQL: SHOW COLUMNS FROM `fun_consult` [ RunTime:0.0060s ]
+SQL: UPDATE `fun_consult` SET `recommend`='1' WHERE `id` = 4 LIMIT 1  [ RunTime:0.0000s ]
+
+[ 2019-02-16T16:28:46+08:00 ] ::1 /Fun1/Admin/Consult/setRecommend.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `fun_consult` [ RunTime:0.0160s ]
+SQL: UPDATE `fun_consult` SET `recommend`='0' WHERE `id` = 4 LIMIT 1  [ RunTime:0.0000s ]
+
+[ 2019-02-16T16:41:33+08:00 ] ::1 /Fun1/Admin/Consult/setDown.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.004000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.006000s ]
+SQL: SHOW COLUMNS FROM `fun_consult` [ RunTime:0.0270s ]
+SQL: SELECT `createTime` FROM `fun_consult` WHERE `recommend` = 1 ORDER BY createTime asc LIMIT 1   [ RunTime:0.0010s ]
+SQL: UPDATE `fun_consult` SET `createTime`='2019-01-28 03:41:34' LIMIT 1  [ RunTime:0.0000s ]
+
+[ 2019-02-16T16:41:58+08:00 ] ::1 /Fun1/Admin/Consult/setDown.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004000s ]
+SQL: SHOW COLUMNS FROM `fun_consult` [ RunTime:0.0250s ]
+SQL: SELECT `createTime` FROM `fun_consult` WHERE `status` = 1 ORDER BY createTime asc LIMIT 1   [ RunTime:0.0010s ]
+SQL: UPDATE `fun_consult` SET `createTime`='2019-01-27 03:41:34' LIMIT 1  [ RunTime:0.0010s ]
+
+[ 2019-02-16T16:45:58+08:00 ] ::1 /Fun1/Admin/Consult/setDown.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004000s ]
+SQL: SHOW COLUMNS FROM `fun_consult` [ RunTime:0.0240s ]
+SQL: SELECT `createTime` FROM `fun_consult` WHERE `status` = 1 ORDER BY createTime asc LIMIT 1   [ RunTime:0.0000s ]
+SQL: UPDATE `fun_consult` SET `createTime`='2019-01-27 03:41:33' WHERE `id` = 4 LIMIT 1  [ RunTime:0.0000s ]
+
+[ 2019-02-16T16:46:05+08:00 ] ::1 /Fun1/Admin/Consult/setTop.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004000s ]
+SQL: SHOW COLUMNS FROM `fun_consult` [ RunTime:0.0260s ]
+SQL: UPDATE `fun_consult` SET `createTime`='2019-02-16 04:46:04' WHERE `id` = 4 LIMIT 1  [ RunTime:0.0010s ]
+
+[ 2019-02-16T16:58:20+08:00 ] ::1 /Fun1/Admin/Material/inputJson.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004000s ]
+SQL: SHOW COLUMNS FROM `fun_material` [ RunTime:0.0300s ]
+SQL: SELECT `materialInput` FROM `fun_material` WHERE `materialId` = '' LIMIT 1   [ RunTime:0.0010s ]
+
+[ 2019-02-16T18:01:44+08:00 ] ::1 /Fun1/Admin/Consult/addConsult.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.004000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.006000s ]
+NOTIC: [8] Undefined variable: name D:\myphp_www\PHPTutorial\WWW\Fun1\Application\Admin\Controller\ConsultController.class.php 第 85 行.
+SQL: SHOW COLUMNS FROM `fun_consult` [ RunTime:0.0080s ]
+NOTIC: [2] Missing argument 1 for Think\Model::where(), called in D:\myphp_www\PHPTutorial\WWW\Fun1\Application\Admin\Controller\ConsultController.class.php on line 104 and defined D:\myphp_www\PHPTutorial\WWW\Fun1\ThinkPHP\Library\Think\Model.class.php 第 1797 行.
+NOTIC: [8] Undefined variable: where D:\myphp_www\PHPTutorial\WWW\Fun1\ThinkPHP\Library\Think\Model.class.php 第 1805 行.
+NOTIC: [8] Undefined variable: where D:\myphp_www\PHPTutorial\WWW\Fun1\ThinkPHP\Library\Think\Model.class.php 第 1808 行.
+NOTIC: [8] Undefined variable: where D:\myphp_www\PHPTutorial\WWW\Fun1\ThinkPHP\Library\Think\Model.class.php 第 1816 行.
+ERR: 1048:Column 'name' cannot be null
+ [ SQL语句 ] : INSERT INTO `fun_consult` (`name`,`img`,`sex`,`grade`,`phone`,`address`,`background`,`description`,`recommend`,`status`,`createTime`) VALUES (NULL,'http://localhost/Fun1/Public/upload/temp/2019-02/16//consult6af3f50b73d079c15f229034a5819b983684648.jpg','0','2','1355-1562-255','lalala','bbb','aaa','1','0','2019-02-16 06:01:44')
+ERR: 1048:Column 'name' cannot be null
+ [ SQL语句 ] : INSERT INTO `fun_consult` (`name`,`img`,`sex`,`grade`,`phone`,`address`,`background`,`description`,`recommend`,`status`,`createTime`) VALUES (NULL,'http://localhost/Fun1/Public/upload/temp/2019-02/16//consult6af3f50b73d079c15f229034a5819b983684648.jpg','0','2','1355-1562-255','lalala','bbb','aaa','1','0','2019-02-16 06:01:44')
+
+[ 2019-02-16T18:02:06+08:00 ] ::1 /Fun1/Admin/Consult/addConsult.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003001s ]
+NOTIC: [8] Undefined variable: name D:\myphp_www\PHPTutorial\WWW\Fun1\Application\Admin\Controller\ConsultController.class.php 第 85 行.
+SQL: SHOW COLUMNS FROM `fun_consult` [ RunTime:0.0070s ]
+NOTIC: [2] Missing argument 1 for Think\Model::where(), called in D:\myphp_www\PHPTutorial\WWW\Fun1\Application\Admin\Controller\ConsultController.class.php on line 104 and defined D:\myphp_www\PHPTutorial\WWW\Fun1\ThinkPHP\Library\Think\Model.class.php 第 1797 行.
+NOTIC: [8] Undefined variable: where D:\myphp_www\PHPTutorial\WWW\Fun1\ThinkPHP\Library\Think\Model.class.php 第 1805 行.
+NOTIC: [8] Undefined variable: where D:\myphp_www\PHPTutorial\WWW\Fun1\ThinkPHP\Library\Think\Model.class.php 第 1808 行.
+NOTIC: [8] Undefined variable: where D:\myphp_www\PHPTutorial\WWW\Fun1\ThinkPHP\Library\Think\Model.class.php 第 1816 行.
+ERR: 1048:Column 'name' cannot be null
+ [ SQL语句 ] : INSERT INTO `fun_consult` (`name`,`img`,`sex`,`grade`,`phone`,`address`,`background`,`description`,`recommend`,`status`,`createTime`) VALUES (NULL,'http://localhost/Fun1/Public/upload/temp/2019-02/16//consult6af3f50b73d079c15f229034a5819b983684648.jpg','0','2','1355-1562-255','lalala','bbb','aaa','1','0','2019-02-16 06:02:06')
+ERR: 1048:Column 'name' cannot be null
+ [ SQL语句 ] : INSERT INTO `fun_consult` (`name`,`img`,`sex`,`grade`,`phone`,`address`,`background`,`description`,`recommend`,`status`,`createTime`) VALUES (NULL,'http://localhost/Fun1/Public/upload/temp/2019-02/16//consult6af3f50b73d079c15f229034a5819b983684648.jpg','0','2','1355-1562-255','lalala','bbb','aaa','1','0','2019-02-16 06:02:06')
+
+[ 2019-02-16T18:04:40+08:00 ] ::1 /Fun1/Admin/Consult/addConsult.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.004000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005000s ]
+NOTIC: [8] Undefined variable: name D:\myphp_www\PHPTutorial\WWW\Fun1\Application\Admin\Controller\ConsultController.class.php 第 85 行.
+SQL: SHOW COLUMNS FROM `fun_consult` [ RunTime:0.0240s ]
+NOTIC: [2] Missing argument 1 for Think\Model::where(), called in D:\myphp_www\PHPTutorial\WWW\Fun1\Application\Admin\Controller\ConsultController.class.php on line 104 and defined D:\myphp_www\PHPTutorial\WWW\Fun1\ThinkPHP\Library\Think\Model.class.php 第 1797 行.
+NOTIC: [8] Undefined variable: where D:\myphp_www\PHPTutorial\WWW\Fun1\ThinkPHP\Library\Think\Model.class.php 第 1805 行.
+NOTIC: [8] Undefined variable: where D:\myphp_www\PHPTutorial\WWW\Fun1\ThinkPHP\Library\Think\Model.class.php 第 1808 行.
+NOTIC: [8] Undefined variable: where D:\myphp_www\PHPTutorial\WWW\Fun1\ThinkPHP\Library\Think\Model.class.php 第 1816 行.
+ERR: 1048:Column 'name' cannot be null
+ [ SQL语句 ] : INSERT INTO `fun_consult` (`name`,`img`,`sex`,`grade`,`phone`,`address`,`background`,`description`,`recommend`,`status`,`createTime`) VALUES (NULL,'','1','1','','','','','0','0','2019-02-16 06:04:40')
+ERR: 1048:Column 'name' cannot be null
+ [ SQL语句 ] : INSERT INTO `fun_consult` (`name`,`img`,`sex`,`grade`,`phone`,`address`,`background`,`description`,`recommend`,`status`,`createTime`) VALUES (NULL,'','1','1','','','','','0','0','2019-02-16 06:04:40')
+
+[ 2019-02-16T18:06:29+08:00 ] ::1 /Fun1/Admin/Consult/addConsult.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005001s ]
+NOTIC: [8] Undefined variable: name D:\myphp_www\PHPTutorial\WWW\Fun1\Application\Admin\Controller\ConsultController.class.php 第 85 行.
+SQL: SHOW COLUMNS FROM `fun_consult` [ RunTime:0.0270s ]
+NOTIC: [2] Missing argument 1 for Think\Model::where(), called in D:\myphp_www\PHPTutorial\WWW\Fun1\Application\Admin\Controller\ConsultController.class.php on line 104 and defined D:\myphp_www\PHPTutorial\WWW\Fun1\ThinkPHP\Library\Think\Model.class.php 第 1797 行.
+NOTIC: [8] Undefined variable: where D:\myphp_www\PHPTutorial\WWW\Fun1\ThinkPHP\Library\Think\Model.class.php 第 1805 行.
+NOTIC: [8] Undefined variable: where D:\myphp_www\PHPTutorial\WWW\Fun1\ThinkPHP\Library\Think\Model.class.php 第 1808 行.
+NOTIC: [8] Undefined variable: where D:\myphp_www\PHPTutorial\WWW\Fun1\ThinkPHP\Library\Think\Model.class.php 第 1816 行.
+ERR: 1048:Column 'name' cannot be null
+ [ SQL语句 ] : INSERT INTO `fun_consult` (`name`,`img`,`sex`,`grade`,`phone`,`address`,`background`,`description`,`recommend`,`status`,`createTime`) VALUES (NULL,'','1','1','','','','','0','0','2019-02-16 06:06:29')
+ERR: 1048:Column 'name' cannot be null
+ [ SQL语句 ] : INSERT INTO `fun_consult` (`name`,`img`,`sex`,`grade`,`phone`,`address`,`background`,`description`,`recommend`,`status`,`createTime`) VALUES (NULL,'','1','1','','','','','0','0','2019-02-16 06:06:29')
+
+[ 2019-02-16T18:06:48+08:00 ] ::1 /Fun1/Admin/Consult/addConsult.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+NOTIC: [8] Undefined variable: name D:\myphp_www\PHPTutorial\WWW\Fun1\Application\Admin\Controller\ConsultController.class.php 第 85 行.
+SQL: SHOW COLUMNS FROM `fun_consult` [ RunTime:0.0070s ]
+NOTIC: [2] Missing argument 1 for Think\Model::where(), called in D:\myphp_www\PHPTutorial\WWW\Fun1\Application\Admin\Controller\ConsultController.class.php on line 104 and defined D:\myphp_www\PHPTutorial\WWW\Fun1\ThinkPHP\Library\Think\Model.class.php 第 1797 行.
+NOTIC: [8] Undefined variable: where D:\myphp_www\PHPTutorial\WWW\Fun1\ThinkPHP\Library\Think\Model.class.php 第 1805 行.
+NOTIC: [8] Undefined variable: where D:\myphp_www\PHPTutorial\WWW\Fun1\ThinkPHP\Library\Think\Model.class.php 第 1808 行.
+NOTIC: [8] Undefined variable: where D:\myphp_www\PHPTutorial\WWW\Fun1\ThinkPHP\Library\Think\Model.class.php 第 1816 行.
+ERR: 1048:Column 'name' cannot be null
+ [ SQL语句 ] : INSERT INTO `fun_consult` (`name`,`img`,`sex`,`grade`,`phone`,`address`,`background`,`description`,`recommend`,`status`,`createTime`) VALUES (NULL,'','1','1','','','','','0','0','2019-02-16 06:06:48')
+ERR: 1048:Column 'name' cannot be null
+ [ SQL语句 ] : INSERT INTO `fun_consult` (`name`,`img`,`sex`,`grade`,`phone`,`address`,`background`,`description`,`recommend`,`status`,`createTime`) VALUES (NULL,'','1','1','','','','','0','0','2019-02-16 06:06:48')
+

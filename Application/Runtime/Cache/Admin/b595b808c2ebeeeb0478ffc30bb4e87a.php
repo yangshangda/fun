@@ -78,6 +78,15 @@
 			</dd>
 		</dl>
 		<dl id="menu-article">
+			<dt><i class="Hui-iconfont">&#xe616;</i> 咨询师管理<i class="Hui-iconfont menu_dropdown-arrow">&#xe6d5;</i></dt>
+			<dd>
+				<ul>
+					<li><a data-href="/Fun1/Admin/Consult/index" data-title="咨询师列表" href="javascript:void(0)">咨询师列表</a></li>
+					<!-- <li><a data-href="/Fun1/Admin/Question/test" data-title="测试列表" href="javascript:void(0)">测试列表</a></li> -->
+				</ul>
+			</dd>
+		</dl>
+		<dl id="menu-article">
 			<dt><i class="Hui-iconfont">&#xe616;</i> 素材管理<i class="Hui-iconfont menu_dropdown-arrow">&#xe6d5;</i></dt>
 			<dd>
 				<ul>

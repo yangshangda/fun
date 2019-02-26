@@ -121,6 +121,7 @@
 							<a class="btn btn-default radius" data-articleid="{$v.articleid}" onclick="setRecommend('0','{$v.articleid}')" href="javascript:;">不推送</a></if>
 							<if condition="$v.articlerecommend eq 0">
 							<a style="color: white;" class="btn btn-blue radius" data-articleid="{$v.articleid}" onclick="setRecommend('1','{$v.articleid}')" href="javascript:;">推&nbsp;&nbsp;&nbsp;送</a></if>
+							<a class="btn btn-warning radius" data-articleid="{$v.articleid}" onclick="setChange('{$v.articleid}')" href="javascript:;">还原到上一次修改</a>
 						</td>
 					</tr>
 				</volist>
@@ -371,6 +372,31 @@ function setRecommend(recommend,id) {
 		success : function(e){
 			//console.log(e);
 			//alert('操作成功！');
+			location.reload();
+		},
+		error : function(e){
+			console.log(e);
+			//layer.msg('error!',{icon:1,time:1000});
+			alert('网络错误');
+		}
+    });
+}
+
+// 还原修改
+function setChange(id) {
+    $.ajax({
+        url: "{:U('Article/changeArticle')}",
+        type : 'post',
+        data : {
+			id:id
+		},
+		success : function(e){
+			if(e == 'nochange') {
+				alert('该文章未被修改过哦！');
+				return;
+			}
+			//console.log(e);
+			alert('还原成功！');
 			location.reload();
 		},
 		error : function(e){

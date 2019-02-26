@@ -15,6 +15,7 @@ class WelcomeController extends CommonController {
 			$save_data = $fun_user_table->where($where)->save($data);
 			exit('had openid,save');
 		}else{
+			$data['createTime'] = date('Y-m-d');
 			$add_data = $fun_user_table->where()->add($data);
 			exit('success,add');
 		}

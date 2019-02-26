@@ -118,6 +118,7 @@
 							<a class="btn btn-success radius edit"  data-articleid="<?php echo ($v["articleid"]); ?>" data-articletitle="<?php echo ($v["articletitle"]); ?>" data-articlecover="<?php echo ($v["articlecover"]); ?>" data-articledescription="<?php echo ($v["articledescription"]); ?>" data-articlecontent="<?php echo ($v["articlecontent"]); ?>" data-articletype="<?php echo ($v["articletype"]); ?>" data-articlerecommend="<?php echo ($v["articlerecommend"]); ?>" id="edit"  data-toggle="modal" data-target="#modify">修改</a>
 							<?php if($v["articlerecommend"] == 1): ?><a class="btn btn-default radius" data-articleid="<?php echo ($v["articleid"]); ?>" onclick="setRecommend('0','<?php echo ($v["articleid"]); ?>')" href="javascript:;">不推送</a><?php endif; ?>
 							<?php if($v["articlerecommend"] == 0): ?><a style="color: white;" class="btn btn-blue radius" data-articleid="<?php echo ($v["articleid"]); ?>" onclick="setRecommend('1','<?php echo ($v["articleid"]); ?>')" href="javascript:;">推&nbsp;&nbsp;&nbsp;送</a><?php endif; ?>
+							<a class="btn btn-warning radius" data-articleid="<?php echo ($v["articleid"]); ?>" onclick="setChange('<?php echo ($v["articleid"]); ?>')" href="javascript:;">还原到上一次修改</a>
 						</td>
 					</tr><?php endforeach; endif; else: echo "" ;endif; ?>
 
@@ -367,6 +368,31 @@ function setRecommend(recommend,id) {
 		success : function(e){
 			//console.log(e);
 			//alert('操作成功！');
+			location.reload();
+		},
+		error : function(e){
+			console.log(e);
+			//layer.msg('error!',{icon:1,time:1000});
+			alert('网络错误');
+		}
+    });
+}
+
+// 还原修改
+function setChange(id) {
+    $.ajax({
+        url: "<?php echo U('Article/changeArticle');?>",
+        type : 'post',
+        data : {
+			id:id
+		},
+		success : function(e){
+			if(e == 'nochange') {
+				alert('该文章未被修改过哦！');
+				return;
+			}
+			//console.log(e);
+			alert('还原成功！');
 			location.reload();
 		},
 		error : function(e){

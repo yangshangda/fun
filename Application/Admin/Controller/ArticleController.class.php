@@ -62,7 +62,7 @@ class ArticleController extends CommonController {
 		$this->display('index');
 	}
 
-	//添加文章
+	//添加文章-修改文章
 	public function addArticle(){
 		// $data = I('post.');
 		$articleid = I('articleid');
@@ -74,14 +74,71 @@ class ArticleController extends CommonController {
 		$data['articleRecommend'] = I('recommend');
 
 		$article_table = M('fun_article');
+		$articlechange_table = M('fun_articlechange');
 		if(!empty($articleid)) {
 			$where['articleId'] = $articleid;
-			$article_update = $article_table->limit(1)->where($where)->save($data);die;
-		}else{
-			$data['articleCreateTime'] = date("Y-m-d h:i:s");
-			$article_add = $article_table->limit(1)->where()->add($data);die;
-		}		
+			$article_update = $article_table->limit(1)->where($where)->save($data);
 
+			$data['articleId'] = $articleid;
+			$data['createTime'] = date("Y-m-d h:i:s");
+			$articlechange_add = $articlechange_table->limit(1)->where()->add($data);die;
+		}else{
+			$data['articleId'] = (int)$article_table->limit(1)->order('articleId desc')->getField('articleId') + 1;
+			$data['articleCreateTime'] = date("Y-m-d h:i:s");
+			$article_add = $article_table->limit(1)->where()->add($data);
+			$data['createTime'] = date("Y-m-d h:i:s");
+			$articlechange_add = $articlechange_table->limit(1)->where()->add($data);die;
+
+		}		
+	}
+
+	// public function add() {
+	// 	$article_table = M('fun_article');
+	// 	$a = $article_table->where()->select();
+	// 	var_dump($a);
+
+	// 	$articlechange_table = M('fun_articlechange');
+	// 	foreach ($a as $key => $value) {
+	// 		$data['articleId'] = $value['articleid'];
+	// 		$data['articleTitle'] = $value['articletitle'];
+	// 		$data['articleCover'] = $value['articlecover'];
+	// 		$data['articleDescription'] = $value['articledescription'];
+	// 		$data['articleContent'] = $value['articlecontent'];
+	// 		$data['articleType'] = $value['articletype'];
+	// 		$data['articleRecommend'] = $value['articlerecommend'];
+	// 		$data['createTime'] = date("Y-m-d h:i:s");
+	// 		$articlechange_table->where()->add($data);
+	// 	}
+
+	// }
+
+	//还原修改文章
+	public function changeArticle(){
+		// $data = I('post.');
+		$articleid = I('id');
+		$articlechange_table = M('fun_articlechange');
+
+		$where['articleId'] = $articleid;
+		$count = $articlechange_table->where($where)->count();
+		if($count < 2) {
+			exit('nochange');
+		}
+
+		$info = $articlechange_table->where($where)->order('createTime desc')->limit(2)->select();
+
+		$data['articleTitle'] = $info[1]['articletitle'];
+		$data['articleCover'] = $info[1]['articlecover'];
+		$data['articleDescription'] = $info[1]['articledescription'];
+		$data['articleContent'] = $info[1]['articlecontent'];
+		$data['articleType'] = $info[1]['articletype'];
+		$data['articleRecommend'] = $info[1]['articlerecommend'];
+
+		$article_table = M('fun_article');
+		$article_update = $article_table->limit(1)->where($where)->save($data);
+
+		$data['articleId'] = $articleid;
+		$data['createTime'] = date("Y-m-d h:i:s");
+		$articlechange_add = $articlechange_table->limit(1)->where()->add($data);die;
 	}
 
 	//修改是否推送

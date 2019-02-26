@@ -31,7 +31,7 @@
 			<thead>
 				<tr class="text-c">
 					<th width="70">questionID</th>
-					<th width="70">testID</th>
+					<!-- <th width="70">testID</th> -->
 					<th>题号</th>
 					<th>标题</th>
 					<th>标题图片</th>
@@ -49,7 +49,7 @@
 			<tbody>
 				<?php if(is_array($info)): $i = 0; $__LIST__ = $info;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$v): $mod = ($i % 2 );++$i;?><tr class="text-c">										
 						<td><?php echo ($v["questionid"]); ?></td>
-						<td><?php echo ($v["testid"]); ?></td>						
+						<!-- <td><?php echo ($v["testid"]); ?></td> -->						
 						<td><?php echo ($v["testnumber"]); ?></td>
 						<td><?php echo ($v["testtitle"]); ?></td>
 						<td>

@@ -167,7 +167,7 @@
 		<div class="formControls col-xs-8 col-sm-9"> <span class="select-box" style="width:150px;">
 			<select id="state" class="select" name="state" size="1">
 				<option value="0">普通管理员</option>
-				<option value="1">超级管理员</option>
+				<?php if($_SESSION['state']== 1): ?><option value="1">超级管理员</option><?php endif; ?>
 			</select>
 			</span>
 		</div>

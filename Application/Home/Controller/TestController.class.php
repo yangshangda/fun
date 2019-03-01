@@ -32,6 +32,7 @@ class TestController extends CommonController {
 
 		$where['userOpenId'] = $userOpenId;
 		$where['qid'] = $qid;
+		$where['status'] = 1;
 		$has = $fun_result_table->where($where)->select();
 
 		$data['createTime'] = date("Y-m-d h:i:s");
@@ -64,6 +65,7 @@ class TestController extends CommonController {
 	public function mylog() {
 		$fun_result_table = M('fun_result');
 		$where['userOpenId'] = I('userOpenId');
+		$where['status'] = 1;
 		$testList = $fun_result_table->where($where)->order('createTime desc')->select();
 		if(empty($testList)) {
 			die;
@@ -77,7 +79,8 @@ class TestController extends CommonController {
 	public function delelog() {
 		$fun_result_table = M('fun_result');
 		$where['userOpenId'] = I('userOpenId');
-		$fun_result_table->where($where)->delete();	
+		$data['status'] = 2;
+		$fun_result_table->where($where)->save($data);	
 
 	}
 
@@ -85,6 +88,7 @@ class TestController extends CommonController {
 	public function detailLog() {
 		$fun_result_table = M('fun_result');
 		$where['userOpenId'] = I('userOpenId');
+		$where['status'] = 1;
 		$where['qid'] = I('qid');
 		$log = $fun_result_table->where($where)->limit(1)->select();
 		if(empty($log)) {

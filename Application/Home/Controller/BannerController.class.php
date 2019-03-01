@@ -7,7 +7,7 @@ class BannerController extends CommonController {
 	public function index() {
 		$fun_banner_table = M('fun_banner');
 		$where['bannerStatus'] = 1;
-		$banner_info = $fun_banner_table->where($where)->select();
+		$banner_info = $fun_banner_table->order('bannerCreateTime desc')->where($where)->select();
 		exit(json_encode($banner_info));
 	}
 	// public function a() {

@@ -76,6 +76,7 @@ class ArticleController extends CommonController {
 		$articleId = I('articleId');
 		$where['userOpenId'] = $userOpenId;
 		$where['articleId'] = $articleId;
+		$where['status'] = 1;
 		$hasId = $fun_articlelog_table->where($where)->select();
 		$data['createTime'] = date("Y-m-d h:i:s");
 		if(!empty($hasId)) {
@@ -93,6 +94,7 @@ class ArticleController extends CommonController {
 	public function mylog() {
 		$fun_articlelog_table = M('fun_articlelog');
 		$where['userOpenId'] = I('userOpenId');
+		$where['status'] = 1;
 		$articleId = $fun_articlelog_table->where($where)->order('createTime desc')->getField('articleid',true);
 		if(empty($articleId)) {
 			die;
@@ -106,10 +108,12 @@ class ArticleController extends CommonController {
 		exit(json_encode($articleList));
 	}
 
+	//用户删除文章历史记录，只改变status
 	public function delelog() {
 		$fun_articlelog_table = M('fun_articlelog');
 		$where['userOpenId'] = I('userOpenId');
-		$fun_articlelog_table->where($where)->delete();	
+		$data['status'] = 2;
+		$fun_articlelog_table->where($where)->save($data);
 
 	}
 
@@ -149,7 +153,7 @@ class ArticleController extends CommonController {
 		$where['userOpenId'] = I('userOpenId');
 		$noCollect = $collect_table->where($where)->limit(1)->delete();
 	}
-	
+
 	//收藏
 	public function iCollect() {
 		$collect_table = M('fun_articlecollect');

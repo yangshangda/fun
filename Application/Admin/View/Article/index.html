@@ -122,6 +122,7 @@
 							<if condition="$v.articlerecommend eq 0">
 							<a style="color: white;" class="btn btn-blue radius" data-articleid="{$v.articleid}" onclick="setRecommend('1','{$v.articleid}')" href="javascript:;">推&nbsp;&nbsp;&nbsp;送</a></if>
 							<a class="btn btn-warning radius" data-articleid="{$v.articleid}" onclick="setChange('{$v.articleid}')" href="javascript:;">还原到上一次修改</a>
+							<a class="btn btn-danger radius" data-articleid="{$v.articleid}" onclick="dele('{$v.articleid}')" href="javascript:;">删除</a>	
 						</td>
 					</tr>
 				</volist>
@@ -410,6 +411,29 @@ function setChange(id) {
 $(function () {
  	$('.select:first').trigger("click");
   });
+
+// 删除
+function dele(id) {
+	if(confirm("确定删除该文章吗?")){
+		$.ajax({
+	        url: "{:U('Article/dele')}",
+	        type : 'post',
+	        data : {
+				id:id,
+			},
+			success : function(e){
+				//console.log(e);
+				alert('操作成功！');
+				location.reload();
+			},
+			error : function(e){
+				console.log(e);
+				//layer.msg('error!',{icon:1,time:1000});
+				alert('网络错误');
+			}
+	    });
+	}
+}
 </script> 
 </body>
 </html>

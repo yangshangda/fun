@@ -151,5 +151,13 @@ class ArticleController extends CommonController {
 
 	}
 
+	//删除
+	public function dele(){
+		$where['articleId'] = I('id');
+		$article_table = M('fun_article');
+		$dele_article = $article_table->limit(1)->where($where)->delete();die;
+
+	}
+
 
 }

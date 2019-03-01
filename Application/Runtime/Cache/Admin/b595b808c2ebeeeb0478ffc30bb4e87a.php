@@ -96,6 +96,15 @@
 			</dd>
 		</dl>
 		<dl id="menu-article">
+			<dt><i class="Hui-iconfont">&#xe616;</i> 数据统计<i class="Hui-iconfont menu_dropdown-arrow">&#xe6d5;</i></dt>
+			<dd>
+				<ul>
+					<li><a data-href="/Fun1/Admin/Record/index" data-title="柱状图统计" href="javascript:void(0)">柱状图统计</a></li>
+					<li><a data-href="/Fun1/Admin/Record/charts-1" data-title="折线图图统计" href="javascript:void(0)">折线图统计</a></li>
+				</ul>
+			</dd>
+		</dl>
+		<dl id="menu-article">
 			<dt><i class="Hui-iconfont">&#xe616;</i> 用户管理<i class="Hui-iconfont menu_dropdown-arrow">&#xe6d5;</i></dt>
 			<dd>
 				<ul>

@@ -66,6 +66,8 @@
 							<a class="btn btn-default radius" data-bannerid="{$v.bannerid}" onclick="setStatus('0','{$v.bannerid}')" href="javascript:;">不发布</a></if>
 							<if condition="$v.bannerstatus eq 0">
 							<a style="color: white;" class="btn btn-blue radius" data-bannerid="{$v.bannerid}" onclick="setStatus('1','{$v.bannerid}')" href="javascript:;">发&nbsp;&nbsp;&nbsp;布</a></if>
+							<a style="color: white;" class="btn btn-yellow radius" onclick="setTop('{$v.bannerid}')" href="javascript:;">置顶</a>
+							<a class="btn btn-danger radius" data-bannerid="{$v.bannerid}" onclick="dele('{$v.bannerid}')" href="javascript:;">删除</a>
 						</td>
 					</tr>
 				</volist>
@@ -279,6 +281,51 @@ function setStatus(status,id) {
 			alert('网络错误');
 		}
     });
+}
+// 删除
+function dele(id) {
+	if(confirm("确定删除该轮播图吗?")){
+		$.ajax({
+	        url: "{:U('Banner/dele')}",
+	        type : 'post',
+	        data : {
+				id:id,
+			},
+			success : function(e){
+				//console.log(e);
+				alert('操作成功！');
+				location.reload();
+			},
+			error : function(e){
+				console.log(e);
+				//layer.msg('error!',{icon:1,time:1000});
+				alert('网络错误');
+			}
+	    });
+	}
+}
+
+// 置顶
+function setTop(id) {
+    if(confirm("确认置顶此轮播图吗？")){
+    	$.ajax({
+	        url: "{:U('Banner/setTop')}",
+	        type : 'post',
+	        data : {
+				id:id,
+			},
+			success : function(e){
+				//console.log(e);
+				alert('操作成功！');
+				location.reload();
+			},
+			error : function(e){
+				console.log(e);
+				//layer.msg('error!',{icon:1,time:1000});
+				alert('网络错误');
+			}
+	    });
+    }
 }
 </script> 
 </body>

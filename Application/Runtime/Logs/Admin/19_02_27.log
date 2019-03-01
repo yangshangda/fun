@@ -1,0 +1,97 @@
+[ 2019-02-27T09:56:04+08:00 ] ::1 /Fun1/Admin/Article/addArticle.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `fun_article` [ RunTime:0.0110s ]
+SQL: SHOW COLUMNS FROM `fun_articlechange` [ RunTime:0.0240s ]
+SQL: SELECT `articleId` FROM `fun_article` ORDER BY articleId desc LIMIT 1   [ RunTime:0.0010s ]
+NOTIC: [2] Missing argument 1 for Think\Model::where(), called in D:\myphp_www\PHPTutorial\WWW\Fun1\Application\Admin\Controller\ArticleController.class.php on line 88 and defined D:\myphp_www\PHPTutorial\WWW\Fun1\ThinkPHP\Library\Think\Model.class.php 第 1797 行.
+NOTIC: [8] Undefined variable: where D:\myphp_www\PHPTutorial\WWW\Fun1\ThinkPHP\Library\Think\Model.class.php 第 1805 行.
+NOTIC: [8] Undefined variable: where D:\myphp_www\PHPTutorial\WWW\Fun1\ThinkPHP\Library\Think\Model.class.php 第 1808 行.
+NOTIC: [8] Undefined variable: where D:\myphp_www\PHPTutorial\WWW\Fun1\ThinkPHP\Library\Think\Model.class.php 第 1816 行.
+SQL: INSERT INTO `fun_article` (`articleTitle`,`articleCover`,`articleDescription`,`articleContent`,`articleType`,`articleRecommend`,`articleId`,`articleCreateTime`) VALUES ('weq','http://localhost/Fun1/Public/upload/temp/2019-02/27//article529d42e09e91ccb754b727ce49784d8b6482290.jpg','ewq','&lt;p&gt;ewqe&lt;/p&gt;','1','0','19','2019-02-27 09:56:04') [ RunTime:0.0000s ]
+NOTIC: [2] Missing argument 1 for Think\Model::where(), called in D:\myphp_www\PHPTutorial\WWW\Fun1\Application\Admin\Controller\ArticleController.class.php on line 90 and defined D:\myphp_www\PHPTutorial\WWW\Fun1\ThinkPHP\Library\Think\Model.class.php 第 1797 行.
+NOTIC: [8] Undefined variable: where D:\myphp_www\PHPTutorial\WWW\Fun1\ThinkPHP\Library\Think\Model.class.php 第 1805 行.
+NOTIC: [8] Undefined variable: where D:\myphp_www\PHPTutorial\WWW\Fun1\ThinkPHP\Library\Think\Model.class.php 第 1808 行.
+NOTIC: [8] Undefined variable: where D:\myphp_www\PHPTutorial\WWW\Fun1\ThinkPHP\Library\Think\Model.class.php 第 1816 行.
+SQL: INSERT INTO `fun_articlechange` (`articleTitle`,`articleCover`,`articleDescription`,`articleContent`,`articleType`,`articleRecommend`,`articleId`,`createTime`) VALUES ('weq','http://localhost/Fun1/Public/upload/temp/2019-02/27//article529d42e09e91ccb754b727ce49784d8b6482290.jpg','ewq','&lt;p&gt;ewqe&lt;/p&gt;','1','0','19','2019-02-27 09:56:04') [ RunTime:0.0090s ]
+
+[ 2019-02-27T09:56:11+08:00 ] ::1 /Fun1/Admin/Article/changeArticle.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `fun_articlechange` [ RunTime:0.0110s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `fun_articlechange` WHERE `articleId` = 19 LIMIT 1   [ RunTime:0.0150s ]
+
+[ 2019-02-27T10:01:16+08:00 ] ::1 /Fun1/Admin/Article/dele.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001001s ]
+SQL: SHOW COLUMNS FROM `fun_article` [ RunTime:0.0080s ]
+SQL: DELETE FROM `fun_article` WHERE `articleId` = 19 LIMIT 1  [ RunTime:0.0000s ]
+
+[ 2019-02-27T10:03:58+08:00 ] ::1 /Fun1/Admin/Banner/addBanner.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `fun_banner` [ RunTime:0.0080s ]
+NOTIC: [2] Missing argument 1 for Think\Model::where(), called in D:\myphp_www\PHPTutorial\WWW\Fun1\Application\Admin\Controller\BannerController.class.php on line 38 and defined D:\myphp_www\PHPTutorial\WWW\Fun1\ThinkPHP\Library\Think\Model.class.php 第 1797 行.
+NOTIC: [8] Undefined variable: where D:\myphp_www\PHPTutorial\WWW\Fun1\ThinkPHP\Library\Think\Model.class.php 第 1805 行.
+NOTIC: [8] Undefined variable: where D:\myphp_www\PHPTutorial\WWW\Fun1\ThinkPHP\Library\Think\Model.class.php 第 1808 行.
+NOTIC: [8] Undefined variable: where D:\myphp_www\PHPTutorial\WWW\Fun1\ThinkPHP\Library\Think\Model.class.php 第 1816 行.
+SQL: INSERT INTO `fun_banner` (`articleId`,`bannerTitle`,`bannerImage`,`bannerStatus`,`bannerCreateTime`) VALUES ('4','ds','http://localhost/Fun1/Public/upload/temp/2019-02/27//bannerbfbfdb4a77d0fe49f92ff2282926faff7636138.jpg','0','2019-02-27 10:03:58') [ RunTime:0.0010s ]
+
+[ 2019-02-27T10:04:03+08:00 ] ::1 /Fun1/Admin/Banner/setStatus.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `fun_banner` [ RunTime:0.0100s ]
+SQL: UPDATE `fun_banner` SET `bannerStatus`='1' WHERE `bannerId` = 5 LIMIT 1  [ RunTime:0.0000s ]
+
+[ 2019-02-27T10:04:10+08:00 ] ::1 /Fun1/Admin/Banner/setStatus.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `fun_banner` [ RunTime:0.0070s ]
+SQL: UPDATE `fun_banner` SET `bannerStatus`='0' WHERE `bannerId` = 5 LIMIT 1  [ RunTime:0.0010s ]
+
+[ 2019-02-27T10:04:16+08:00 ] ::1 /Fun1/Admin/Banner/dele.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `fun_banner` [ RunTime:0.0030s ]
+SQL: DELETE FROM `fun_banner` WHERE `bannerId` = 5 LIMIT 1  [ RunTime:0.0000s ]
+
+[ 2019-02-27T10:09:05+08:00 ] ::1 /Fun1/Admin/Banner/setTop.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `fun_banner` [ RunTime:0.0050s ]
+SQL: UPDATE `fun_banner` SET `bannerCreateTime`='2019-02-27 10:09:04' WHERE `bannerId` = 2 LIMIT 1  [ RunTime:0.0000s ]
+
+[ 2019-02-27T10:09:20+08:00 ] ::1 /Fun1/Admin/Banner/setTop.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `fun_banner` [ RunTime:0.0030s ]
+SQL: UPDATE `fun_banner` SET `bannerCreateTime`='2019-02-27 10:09:19' WHERE `bannerId` = 1 LIMIT 1  [ RunTime:0.0000s ]
+
+[ 2019-02-27T11:01:12+08:00 ] ::1 /Fun1/Admin/Material/inputJson.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `fun_material` [ RunTime:0.0040s ]
+SQL: SELECT `materialInput` FROM `fun_material` WHERE `materialId` = 'DAANZHISHU' LIMIT 1   [ RunTime:0.0000s ]
+
+[ 2019-02-27T11:01:22+08:00 ] ::1 /Fun1/Admin/Material/addMaterial.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `fun_material` [ RunTime:0.0070s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `fun_material` WHERE `materialId` = 'DAANZHISHU' AND `id` NOT IN ('45') LIMIT 1   [ RunTime:0.0070s ]
+SQL: UPDATE `fun_material` SET `materialId`='DAANZHISHU',`materialCover`='http://v3.dwstatic.com/bi/201805/23/3ad7a9208a15055b45c68ed38fd30000.jpg?w=360&amp;h=320',`materialTitle`='答案之书',`materialInput`='[{\"id\":\"name\",\"printhit\":\"输入问题,告诉你答案\",\"label\":\"问题\",\"length\":\"20\"}]',`materialDescription`='答案之书',`materialRecommend`='1' WHERE `id` = 45 LIMIT 1  [ RunTime:0.0010s ]
+
+[ 2019-02-27T11:02:33+08:00 ] ::1 /Fun1/Admin/Goods/index
+ERR: 1146:Table 'funtest.category' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `category`
+

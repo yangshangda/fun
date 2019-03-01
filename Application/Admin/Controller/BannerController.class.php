@@ -50,5 +50,23 @@ class BannerController extends CommonController {
 
 	}
 
+	//删除
+	public function dele(){
+		$where['bannerId'] = I('id');
+		$banner_table = M('fun_banner');
+		$banner_dele = $banner_table->limit(1)->where($where)->delete();die;
+
+	}
+
+	//置顶
+	public function setTop(){
+		// $data = I('post.');
+		$where['bannerId'] = I('id');
+		$data['bannerCreateTime'] = date('Y-m-d h:i:s');
+		$banner_table = M('fun_banner');
+		$banner_set_top = $banner_table->limit(1)->where($where)->save($data);die;
+
+	}
+
 
 }

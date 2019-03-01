@@ -119,6 +119,7 @@
 							<?php if($v["articlerecommend"] == 1): ?><a class="btn btn-default radius" data-articleid="<?php echo ($v["articleid"]); ?>" onclick="setRecommend('0','<?php echo ($v["articleid"]); ?>')" href="javascript:;">不推送</a><?php endif; ?>
 							<?php if($v["articlerecommend"] == 0): ?><a style="color: white;" class="btn btn-blue radius" data-articleid="<?php echo ($v["articleid"]); ?>" onclick="setRecommend('1','<?php echo ($v["articleid"]); ?>')" href="javascript:;">推&nbsp;&nbsp;&nbsp;送</a><?php endif; ?>
 							<a class="btn btn-warning radius" data-articleid="<?php echo ($v["articleid"]); ?>" onclick="setChange('<?php echo ($v["articleid"]); ?>')" href="javascript:;">还原到上一次修改</a>
+							<a class="btn btn-danger radius" data-articleid="<?php echo ($v["articleid"]); ?>" onclick="dele('<?php echo ($v["articleid"]); ?>')" href="javascript:;">删除</a>	
 						</td>
 					</tr><?php endforeach; endif; else: echo "" ;endif; ?>
 
@@ -406,6 +407,29 @@ function setChange(id) {
 $(function () {
  	$('.select:first').trigger("click");
   });
+
+// 删除
+function dele(id) {
+	if(confirm("确定删除该文章吗?")){
+		$.ajax({
+	        url: "<?php echo U('Article/dele');?>",
+	        type : 'post',
+	        data : {
+				id:id,
+			},
+			success : function(e){
+				//console.log(e);
+				alert('操作成功！');
+				location.reload();
+			},
+			error : function(e){
+				console.log(e);
+				//layer.msg('error!',{icon:1,time:1000});
+				alert('网络错误');
+			}
+	    });
+	}
+}
 </script> 
 </body>
 </html>

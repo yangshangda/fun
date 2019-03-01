@@ -63,6 +63,8 @@
 							<a class="btn btn-success radius edit" data-bannerid="<?php echo ($v["bannerid"]); ?>" data-articleid="<?php echo ($v["articleid"]); ?>" data-bannertitle="<?php echo ($v["bannertitle"]); ?>" data-bannerimage="<?php echo ($v["bannerimage"]); ?>" data-bannerstatus="<?php echo ($v["bannerstatus"]); ?>" id="edit" href="javascript:void(0);" data-toggle="modal" data-target="#modify">修改</a>
 							<?php if($v["bannerstatus"] == 1): ?><a class="btn btn-default radius" data-bannerid="<?php echo ($v["bannerid"]); ?>" onclick="setStatus('0','<?php echo ($v["bannerid"]); ?>')" href="javascript:;">不发布</a><?php endif; ?>
 							<?php if($v["bannerstatus"] == 0): ?><a style="color: white;" class="btn btn-blue radius" data-bannerid="<?php echo ($v["bannerid"]); ?>" onclick="setStatus('1','<?php echo ($v["bannerid"]); ?>')" href="javascript:;">发&nbsp;&nbsp;&nbsp;布</a><?php endif; ?>
+							<a style="color: white;" class="btn btn-yellow radius" onclick="setTop('<?php echo ($v["bannerid"]); ?>')" href="javascript:;">置顶</a>
+							<a class="btn btn-danger radius" data-bannerid="<?php echo ($v["bannerid"]); ?>" onclick="dele('<?php echo ($v["bannerid"]); ?>')" href="javascript:;">删除</a>
 						</td>
 					</tr><?php endforeach; endif; else: echo "" ;endif; ?>
 
@@ -275,6 +277,51 @@ function setStatus(status,id) {
 			alert('网络错误');
 		}
     });
+}
+// 删除
+function dele(id) {
+	if(confirm("确定删除该轮播图吗?")){
+		$.ajax({
+	        url: "<?php echo U('Banner/dele');?>",
+	        type : 'post',
+	        data : {
+				id:id,
+			},
+			success : function(e){
+				//console.log(e);
+				alert('操作成功！');
+				location.reload();
+			},
+			error : function(e){
+				console.log(e);
+				//layer.msg('error!',{icon:1,time:1000});
+				alert('网络错误');
+			}
+	    });
+	}
+}
+
+// 置顶
+function setTop(id) {
+    if(confirm("确认置顶此轮播图吗？")){
+    	$.ajax({
+	        url: "<?php echo U('Banner/setTop');?>",
+	        type : 'post',
+	        data : {
+				id:id,
+			},
+			success : function(e){
+				//console.log(e);
+				alert('操作成功！');
+				location.reload();
+			},
+			error : function(e){
+				console.log(e);
+				//layer.msg('error!',{icon:1,time:1000});
+				alert('网络错误');
+			}
+	    });
+    }
 }
 </script> 
 </body>

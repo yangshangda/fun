@@ -142,7 +142,7 @@ class MaterialController extends CommonController {
 		$where['materialId'] = I('id');
 		//$data['materialCreateTime'] = date('Y-m-d h:i:s');
 		$fun_material_table = M('fun_material');
-		$material_set_top = $fun_material_table->limit(1)->where($where)->delete();die;
+		$material_dele = $fun_material_table->limit(1)->where($where)->delete();die;
 
 	}
 

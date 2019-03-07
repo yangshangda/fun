@@ -21,4 +21,8 @@ class WelcomeController extends CommonController {
 		}
 	}
 
+	public function a() {
+
+	}
+
 }
